@@ -1,0 +1,9 @@
+/Library/
+/Logs/
+/Temp/
+/UserSettings/
+*.csproj
+*.vsconfig
+*.sln
+/Builds/
+/Assets/Firebase/

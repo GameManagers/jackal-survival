@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2894726291382493626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2894726291382493624}
+  - component: {fileID: 2894726291382493627}
+  m_Layer: 0
+  m_Name: MapSpawner_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2894726291382493624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894726291382493626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2894726291382493627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894726291382493626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87bc758b20b6bd4eb09d7f800cebc91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWarningTime: 360
+  chestDropInterval: 15
+  enemyInLevels:
+  - enemy: {fileID: 989169428907917616, guid: fe9a9233813e0a64980596527d1fc6b5, type: 3}
+    curvePriority:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9310608
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.1990751
+        value: 0.8159383
+        inSlope: 0.006228758
+        outSlope: 0.006228758
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4097464
+        value: 0.5004359
+        inSlope: -0.044751693
+        outSlope: -0.044751693
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.088176385
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - enemy: {fileID: 3480536548855083064, guid: 52cf5d0a7c8dda54c8fd8de9fa6345b3, type: 3}
+    curvePriority:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.8018868
+        inSlope: 2.0691824
+        outSlope: 2.0691824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.10714286
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0.28954998
+        outSlope: 0.28954998
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.30952382
+      - serializedVersion: 3
+        time: 1
+        value: 0.29481137
+        inSlope: 2.085401
+        outSlope: 2.085401
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.11309528
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - enemy: {fileID: 1276462543702384205, guid: e9433a7beffc75c42a79760ca6aebf2d, type: 3}
+    curvePriority:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.35277689
+        inSlope: 2.0691824
+        outSlope: 2.0691824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.10714286
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.5
+        inSlope: 0.28954998
+        outSlope: 0.28954998
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.30952382
+      - serializedVersion: 3
+        time: 1
+        value: 0.7933471
+        inSlope: 2.085401
+        outSlope: 2.085401
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.11309528
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - enemy: {fileID: 7280453383904870399, guid: 9d54e5301e6b6ab4fac3b4683ad38b51, type: 3}
+    curvePriority:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  MaxEnemyInSec: 200
+  spawnIntervalCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startMaxEnemyInMap: 50
+  endMaxEnemyInMap: 500
+  zoneEndTimeMultiple: 3
+  bossInterval: 180
+  hpMulti: 70
+  dmgMulti: 5
+  expMulti: 10
+  weightMulti: 20

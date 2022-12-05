@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_UIHome
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 484bd4071abc7d14f8e8b688c8f81938, type: 3}
+    - {fileID: 102900000, guid: 88d79d64cfe7a5e49984194731e79726, type: 3}
+    - {fileID: 102900000, guid: 28b0ad9b68fdbba4eb764732dd70f5f1, type: 3}
+    - {fileID: 102900000, guid: e2d4094f9a60beb4eb71b83d7d406af4, type: 3}
+    - {fileID: 102900000, guid: 21ad19f7d7f47754bb14ea588594bde3, type: 3}
+    - {fileID: 102900000, guid: 702ac8f494504c945b2fbc8a1f31f913, type: 3}
+    - {fileID: 102900000, guid: 1e058586c265cee4c88432454e9449f3, type: 3}
+    - {fileID: 102900000, guid: 51edb0d5a9a036545b0404b53ee65ddd, type: 3}
+    - {fileID: 102900000, guid: 39f93bebadd35c549a328dcd5c87575c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5b5f6430107385d44bc37eb617373f60, type: 3}
+  - {fileID: 21300000, guid: 13e84750a3c2aef4e890d7b16a93ea7c, type: 3}
+  - {fileID: 21300000, guid: fb39ed504edd58b498e62993ed4be367, type: 3}
+  - {fileID: 21300000, guid: 5a05d2d116537b1429390257eeec4281, type: 3}
+  - {fileID: 21300000, guid: a579acd154e5f2948bb61015e583c433, type: 3}
+  - {fileID: 21300000, guid: 2e942de1132779a429179834dc6c2da6, type: 3}
+  - {fileID: 21300000, guid: b5b8a312cb5265c48b371b03b634534d, type: 3}
+  - {fileID: 21300000, guid: a7d4b512a79f10343b00edded1f0d95e, type: 3}
+  - {fileID: 21300000, guid: 9cb5406264147e04c8366c933967b892, type: 3}
+  - {fileID: 21300000, guid: 0e345762dd915904fb5265acaa2194a1, type: 3}
+  - {fileID: 21300000, guid: d12c9b926f5387147ba215fa4dbee22c, type: 3}
+  - {fileID: 21300000, guid: be1990c2c8f6bc34d8d8988ecdbcea7c, type: 3}
+  - {fileID: 21300000, guid: 2035dad237da04349a48e244c39628ce, type: 3}
+  - {fileID: 21300000, guid: d3a5d043c0be1a1469d3a71580ab66d1, type: 3}
+  - {fileID: 21300000, guid: 7bf80c5364c6537448cb1c04511a5ec9, type: 3}
+  - {fileID: 21300000, guid: 7698af53d50d71940a616cc1e20cb0bd, type: 3}
+  - {fileID: 21300000, guid: 37efb66366a7a264f835cdc41173fcb4, type: 3}
+  - {fileID: 21300000, guid: 4f142eb34928c9a44a4147314ab2e326, type: 3}
+  - {fileID: -164855000, guid: f0a028f335fdaa44f8d1dd9ab528c97e, type: 3}
+  - {fileID: 111893233, guid: f0a028f335fdaa44f8d1dd9ab528c97e, type: 3}
+  - {fileID: -277786104, guid: f0a028f335fdaa44f8d1dd9ab528c97e, type: 3}
+  - {fileID: 21300000, guid: 9cc2d264e750f2e4d92da022cb75c692, type: 3}
+  - {fileID: 21300000, guid: 51d65074a4ba2324195deaa745cc8264, type: 3}
+  - {fileID: 21300000, guid: 67a5fbd4549a29d459faab71b9cfec52, type: 3}
+  - {fileID: 21300000, guid: 1022e825da7be5c4c868892bc3052a67, type: 3}
+  - {fileID: 21300000, guid: c2679896b34eff0428f4fc96e58d6cd6, type: 3}
+  - {fileID: 21300000, guid: cb42e2076ba5b454386e795b14a30acc, type: 3}
+  - {fileID: 21300000, guid: 71a28b677e2b7964c8ce19dfc6ca4d75, type: 3}
+  - {fileID: 21300000, guid: 9d3eac38a4d32dd43b713bf4c40c43d6, type: 3}
+  - {fileID: 21300000, guid: b6efe698e43d84247a36baf98c46ea77, type: 3}
+  - {fileID: 21300000, guid: 98c2cb98f884c1644a3348859deda2b9, type: 3}
+  - {fileID: 21300000, guid: c05bf3d82743d364484d7897968d5bd9, type: 3}
+  - {fileID: 21300000, guid: 8bb1e6d814e8c2648b27c2c6da4d6b0f, type: 3}
+  - {fileID: 21300000, guid: 6b6930f83f9907c4ab15f46483473016, type: 3}
+  - {fileID: 21300000, guid: 776ff50939ed6ad4dbaeb5e94d07aa19, type: 3}
+  - {fileID: 21300000, guid: d29d39198211782469dd71a613a0b7b6, type: 3}
+  - {fileID: 21300000, guid: e5d65c4924400cc439f358c78bb5d04d, type: 3}
+  - {fileID: 21300000, guid: 3e5953999e7f4f74eafae736eeb3042e, type: 3}
+  - {fileID: 21300000, guid: b47d5699c37744b498d0c024bc1739be, type: 3}
+  - {fileID: 21300000, guid: 47e7dba989611294897eb9d7f1f35f48, type: 3}
+  - {fileID: 21300000, guid: 97b27fd9b830c234eb777c1dd8c8461f, type: 3}
+  - {fileID: 21300000, guid: 538eab0a831bdc44481c469199fe3fc4, type: 3}
+  - {fileID: 21300000, guid: e5a8623afc97c644d9d1bda1f5d97631, type: 3}
+  - {fileID: 21300000, guid: c1c88b5a5831bd843adcda6b4f5c7f17, type: 3}
+  - {fileID: 21300000, guid: 1262de7a5bd48c1469d1056480c71066, type: 3}
+  - {fileID: 21300000, guid: c703feaa348517d47beddbb0634a967a, type: 3}
+  - {fileID: 21300000, guid: 95b8e63bc1bff3c479dba7c617a96535, type: 3}
+  - {fileID: 21300000, guid: b3c6e70cfc493444d8c3f5931de4a72b, type: 3}
+  - {fileID: 21300000, guid: 1c2ad82cb581b3d428b395da2b479d8d, type: 3}
+  - {fileID: 21300000, guid: 80c0ca4cc3ecfef4fa92b77c463394d1, type: 3}
+  - {fileID: 21300000, guid: a9ace07c58f87f840962779d410d79ca, type: 3}
+  - {fileID: 21300000, guid: 1f41481d776446641b5cd1cfa63a5b1a, type: 3}
+  - {fileID: 21300000, guid: c5720b9d0876e954d80d899b7ab249ee, type: 3}
+  - {fileID: 21300000, guid: bfa801dd7e8eed947aafde5bf2465b25, type: 3}
+  - {fileID: 21300000, guid: eac238dd1fed4eb4c970e56f5a57ea88, type: 3}
+  - {fileID: 21300000, guid: 8e2fd65ea6c6a3b47802112ccde91845, type: 3}
+  - {fileID: 21300000, guid: fde07e5ed6ff5614ab9322bec049d2fe, type: 3}
+  - {fileID: 21300000, guid: db7e024fe3fb8c74196db27ced5cf1fd, type: 3}
+  - {fileID: 21300000, guid: 24c1ef6f6cf5f1f4298156a701c47d55, type: 3}
+  - {fileID: 21300000, guid: 92dc18afc774dd540bd3f7b6ef27496a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - circle
+  - UPGRADE_chest_button
+  - SlotChest1
+  - star_hidden
+  - ad_play
+  - behind_popup
+  - Layer 504
+  - key_big
+  - IC2
+  - Revive_button
+  - sellect_game
+  - back_bar
+  - CONTINUE_button
+  - key_play
+  - watch_video_ads
+  - Layer 126 copy 2
+  - UPGRADE_button
+  - jackal
+  - hand_tutorial_0
+  - hand_tutorial_1
+  - hand_tutorial_2
+  - back_bar
+  - xn_reward_button
+  - behind_bar
+  - Button
+  - banner
+  - Button Vang
+  - Title
+  - Skill_mockup_chest
+  - behind_popup
+  - SlotChest
+  - sellect_button
+  - back_bar_level_skill
+  - Button Do
+  - pause
+  - back_bar
+  - ads_unlock_jeep
+  - key_play 1
+  - x2_reward_button
+  - Skill_mockup_evol _chest
+  - Layer 503
+  - small icon
+  - Skill_mockup_energy
+  - Skill_mockup 1
+  - back_bar
+  - SlotChest2
+  - Tab_open_button
+  - Skill_mockup_energy_chest
+  - REROLL_button
+  - watch_button
+  - Play_button
+  - back_banner
+  - Skill_mockup_evol
+  - behind_bar_on_off
+  - Button Xanh
+  - banner
+  - back_time
+  - ad_play (1)
+  - banner (1)
+  - Upgrade_bar
+  m_RenderDataMap: {}
+  m_Tag: SA_UIHome
+  m_IsVariant: 0

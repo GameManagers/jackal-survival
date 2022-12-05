@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4642157247214023749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4642157247214023748}
+  - component: {fileID: 3877831273405566793}
+  m_Layer: 0
+  m_Name: Fx_Shock_Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4642157247214023748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4642157247214023749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5261157655043405892}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3877831273405566793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4642157247214023749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c1f5cf432f9e04d85c2fad5a9080c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolingKey: Fx_Shock_Wave
+  dontNeedDespawn: 0
+  useAnimator: 0
+  loopAnim: 0
+  fadeDie: 0
+  timeStay: 1
+  timefade: 1
+  spr: {fileID: 0}
+  spriteSet: []
+  playTime: 0
+  particles: {fileID: 1125667978458079005}
+--- !u!1001 &2348015528898660783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4642157247214023748}
+    m_Modifications:
+    - target: {fileID: 3389801637263283890, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385966950046145790, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_Name
+      value: High voltage electricity blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 093e63220a5db5f469632416f958c064, type: 3}
+--- !u!198 &1125667978458079005 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3389801637263283890, guid: 093e63220a5db5f469632416f958c064, type: 3}
+  m_PrefabInstance: {fileID: 2348015528898660783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5261157655043405892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7608462881174811115, guid: 093e63220a5db5f469632416f958c064, type: 3}
+  m_PrefabInstance: {fileID: 2348015528898660783}
+  m_PrefabAsset: {fileID: 0}

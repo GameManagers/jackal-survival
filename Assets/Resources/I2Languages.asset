@@ -1,0 +1,1084 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: btn_character
+      TermType: 0
+      Description: 
+      Languages:
+      - Equipment
+      Flags: 00
+      Languages_Touch: []
+    - Term: btn_play
+      TermType: 0
+      Description: 
+      Languages:
+      - PLAY
+      Flags: 00
+      Languages_Touch: []
+    - Term: btn_shop
+      TermType: 0
+      Description: 
+      Languages:
+      - Shop
+      Flags: 00
+      Languages_Touch: []
+    - Term: btn_talent
+      TermType: 0
+      Description: 
+      Languages:
+      - Talents
+      Flags: 00
+      Languages_Touch: []
+    - Term: btn_wporld
+      TermType: 0
+      Description: 
+      Languages:
+      - World
+      Flags: 00
+      Languages_Touch: []
+    - Term: desc_talent
+      TermType: 0
+      Description: 
+      Languages:
+      - Talents can permanently make you stronger!
+      Flags: 00
+      Languages_Touch: []
+    - Term: title_buy_gas
+      TermType: 0
+      Description: 
+      Languages:
+      - BUY GAS
+      Flags: 00
+      Languages_Touch: []
+    - Term: title_locked
+      TermType: 0
+      Description: 
+      Languages:
+      - Locked
+      Flags: 00
+      Languages_Touch: []
+    - Term: title_random_talent
+      TermType: 0
+      Description: 
+      Languages:
+      - GET RANDOM TALENT
+      Flags: 00
+      Languages_Touch: []
+    - Term: tit_glbUpgrade_hp
+      TermType: 0
+      Description: 
+      Languages:
+      - MAX HP
+      Flags: 00
+      Languages_Touch: []
+    - Term: tit_glbUpgrade_damage
+      TermType: 0
+      Description: 
+      Languages:
+      - DAMAGE
+      Flags: 00
+      Languages_Touch: []
+    - Term: tit_glbUpgrade_reward
+      TermType: 0
+      Description: 
+      Languages:
+      - REWARD
+      Flags: 00
+      Languages_Touch: []
+    - Term: desc_condition_count_coin
+      TermType: 0
+      Description: 
+      Languages:
+      - SPEND A TOTAL {0} COINS
+      Flags: 00
+      Languages_Touch: []
+    - Term: desc_condition_count_kill
+      TermType: 0
+      Description: 
+      Languages:
+      - KILL A TOTAL {0} ENEMIES
+      Flags: 00
+      Languages_Touch: []
+    - Term: desc_condition_count_level
+      TermType: 0
+      Description: 
+      Languages:
+      - REACH LEVEL {0}
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lightning_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Sky Rocket
+      Flags: 00
+      Languages_Touch: []
+    - Term: Machine_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Machine Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rocket_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Rocket Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Short_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Short Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Gravity_Tower_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Black Hole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Molotov_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Molotov
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cannon_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Cannon Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lazer_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Lazer Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Flame_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Flame Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Zone_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Radian Zone
+      Flags: 00
+      Languages_Touch: []
+    - Term: EVA_Shield_name
+      TermType: 0
+      Description: 
+      Languages:
+      - EVA Shield
+      Flags: 00
+      Languages_Touch: []
+    - Term: Saw_Blade_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Saw Blade Support
+      Flags: 00
+      Languages_Touch: []
+    - Term: Zeus_Spear_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Zeus Spear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tesla_Coil_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Tesla Coil
+      Flags: 00
+      Languages_Touch: []
+    - Term: Blade_Saw_Gun_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Blade Saw Gun
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Wave_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Shock Wave
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Type_A_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Drone A
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Type_B_Support_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Drone B
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lightning_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Call A Salvo Of Missiles From The Air
+      Flags: 00
+      Languages_Touch: []
+    - Term: Machine_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shoot Bullets Continuously
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rocket_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shoot Rockets With A Wide Explosion Area
+      Flags: 00
+      Languages_Touch: []
+    - Term: Short_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shot A Salvo Of Bullets Each Time
+      Flags: 00
+      Languages_Touch: []
+    - Term: Gravity_Tower_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Creat Black Hole On The Ground
+      Flags: 00
+      Languages_Touch: []
+    - Term: Molotov_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Throw Molotov That Leaves Burning Zone On The Ground
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cannon_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shot A Bullet That Creates A Shock Wave When Collides With Enemy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lazer_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shoot A Laser Piercing All Enemy And Deal Damage Continuously
+      Flags: 00
+      Languages_Touch: []
+    - Term: Flame_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Deals Continuous Damage In A Small Area In Front Of You
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Zone_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Deals Continuous Damage To Nearby Enemies
+      Flags: 00
+      Languages_Touch: []
+    - Term: EVA_Shield_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Block Damage In A Short Duration
+      Flags: 00
+      Languages_Touch: []
+    - Term: Saw_Blade_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Call Blade Saws That Rotate Around You
+      Flags: 00
+      Languages_Touch: []
+    - Term: Zeus_Spear_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shot A Spear That Connect To Another Spear With Chain Lightning That Deal
+        Damage Continuously
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tesla_Coil_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shoot A Bolt Of Lightning That Bounces Back And Forth
+      Flags: 00
+      Languages_Touch: []
+    - Term: Blade_Saw_Gun_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shoot A Saw Blade That Will Return When The Maximum Distance Is Reached
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Wave_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Create A Huge Shock Wave That Push Enemy Back
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Type_A_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Fire A Large Amount Of Rockets At The Surrounding Area
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Type_B_Support_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Fire A Large Amount Of Rockets At The Surrounding Area
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cooldown_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Cooldown Reduce
+      Flags: 00
+      Languages_Touch: []
+    - Term: Bullet_Speed_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Bullet Speed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Bullet_Damage_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Bullet Damage
+      Flags: 00
+      Languages_Touch: []
+    - Term: Max_Hp_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Max HP
+      Flags: 00
+      Languages_Touch: []
+    - Term: Exp_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase EXP
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Absorb_Range_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Absorb Range
+      Flags: 00
+      Languages_Touch: []
+    - Term: Effect_Area_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Area Effect
+      Flags: 00
+      Languages_Touch: []
+    - Term: Effect_Duration_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Skill Duration
+      Flags: 00
+      Languages_Touch: []
+    - Term: Coin_Value_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Reward
+      Flags: 00
+      Languages_Touch: []
+    - Term: Hp_Recovery_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Hp Recover
+      Flags: 00
+      Languages_Touch: []
+    - Term: Damage_Reviced_Reduction_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Armor
+      Flags: 00
+      Languages_Touch: []
+    - Term: Luck_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Luck
+      Flags: 00
+      Languages_Touch: []
+    - Term: Projectile_Number_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Bullet Echo
+      Flags: 00
+      Languages_Touch: []
+    - Term: Move_Speed_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Move Speed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Crit_Incease_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Crit Rate
+      Flags: 00
+      Languages_Touch: []
+    - Term: Push_Back_Force_Increase_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Push Back Force
+      Flags: 00
+      Languages_Touch: []
+    - Term: Revival_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Rivival
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cooldown_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Reduce {0}% Cooldown Time Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Bullet_Speed_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Bullet Speed Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Bullet_Damage_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Damage Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Max_Hp_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Max HP Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Exp_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% EXP Received Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Item_Absorb_Range_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Item Absorb Range Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Effect_Area_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Effect Area Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Effect_Duration_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Skill Duration Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Coin_Value_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Coin Received Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Hp_Recovery_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% HP Recovery Per Second Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Damage_Reviced_Reduction_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Reduce {0}% Damage Received Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Luck_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Of Luck Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Projectile_Number_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Add {0} Projectile Shot Each Time Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Move_Speed_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Moving Speed Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Crit_Incease_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Critical Rate Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Push_Back_Force_Increase_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase {0}% Push Back Force Per Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Revival_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Player Can Revive With 50% Max HP {0} Time After They Die
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lightning_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Sky Rocket Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Machine_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Machine Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rocket_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Rocket Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Short_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Short Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Gravity_Tower_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Black Hole Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Molotov_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Molotov Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cannon_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Cannon Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lazer_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Lazer Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Flame_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Flame Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Zone_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Radian Zone Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: EVA_Shield_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - EVA Shield Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Saw_Blade_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Saw Blade Support Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Zeus_Spear_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Zeus Spear Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tesla_Coil_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Tesla Coil Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Blade_Saw_Gun_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Blade Saw Gun Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Wave_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Shock Wave Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Support_Evole_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Drone Evole
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lightning_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Rocket Damage And Explosion Range
+      Flags: 00
+      Languages_Touch: []
+    - Term: Machine_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Machine Gun Shoots More Bullets At A Higher Rate
+      Flags: 00
+      Languages_Touch: []
+    - Term: Rocket_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Rocket Damage And Explosion Range
+      Flags: 00
+      Languages_Touch: []
+    - Term: Short_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Short Gun Bullet Pierces Through Enemy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Gravity_Tower_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Black Hole Deals Massive Damage At The End
+      Flags: 00
+      Languages_Touch: []
+    - Term: Molotov_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Damage And Damage Frequency
+      Flags: 00
+      Languages_Touch: []
+    - Term: Cannon_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Canon Pierces Through Enemy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Lazer_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Laser Gun Turret Rotates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Flame_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Flame Gun Leave The Burn Effect On Enemy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Zone_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Damaging Area
+      Flags: 00
+      Languages_Touch: []
+    - Term: EVA_Shield_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Shield Explodes Dealing Damage To Nearby Enemies At The End
+      Flags: 00
+      Languages_Touch: []
+    - Term: Saw_Blade_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Saw Blade Count And Rotate Speed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Zeus_Spear_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - The Spears Deal Damage To Nearby Enemies
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tesla_Coil_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Lightning Bolt Bounces More Times
+      Flags: 00
+      Languages_Touch: []
+    - Term: Blade_Saw_Gun_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Blade Saw Now Stay At The End Point For Short Duration Before Coming Back
+      Flags: 00
+      Languages_Touch: []
+    - Term: Shock_Wave_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Damage And Effect Area
+      Flags: 00
+      Languages_Touch: []
+    - Term: Drone_Support_Evole_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Drone Shoots Both Direction With Higher Rate
+      Flags: 00
+      Languages_Touch: []
+    - Term: Add_Projectile_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase The Amount Of Ammo
+      Flags: 00
+      Languages_Touch: []
+    - Term: Reduce_Cooldown_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Cooldown Reduction
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Damage_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Damage
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Projectile_Speed_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Bullet Speed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Effect_Radius_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Effect Radius
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Effect_Duration_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Effect Duration
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Hit_Per_Sec_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Damage Rate
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Number_Of_Effect_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Number Of Effects
+      Flags: 00
+      Languages_Touch: []
+    - Term: Increase_Push_Back_Force_Upgrade_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Increase Push Back Force
+      Flags: 00
+      Languages_Touch: []
+    - Term: Hp_Chest_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Hp Recover
+      Flags: 00
+      Languages_Touch: []
+    - Term: Hp_Chest_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Recover 30% Max Hp
+      Flags: 00
+      Languages_Touch: []
+    - Term: Coin_Chest_name
+      TermType: 0
+      Description: 
+      Languages:
+      - Coin Bag
+      Flags: 00
+      Languages_Touch: []
+    - Term: Coin_Chest_desc
+      TermType: 0
+      Description: 
+      Languages:
+      - Receive {0} Coins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Welcome To Jackal Survival. Let'S Control The Vehicle And Try To Survive
+        The Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Each Vehicle Will Have A Separate Weapon, Weapons And Support Abilities Will
+        Be Used Automatically
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Those Are Monsters, You Will Lose Health Points If You Touch Them. Let'S
+        Destroy Them
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Monsters Will Drop Experience Pieces When Destroyed.
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Experience Pieces Will Help Upgrade Vehicles At The Current Level
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_6
+      TermType: 0
+      Description: 
+      Languages:
+      - When The Experience Bar Is Full, The Vehicle Will Be Upgraded And You Can
+        Select One Of The 3 Random Abilities
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_7
+      TermType: 0
+      Description: 
+      Languages:
+      - Please Choose 1 Skill
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_8
+      TermType: 0
+      Description: 
+      Languages:
+      - You Can Also Upgrade Existing Abilities
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_9
+      TermType: 0
+      Description: 
+      Languages:
+      - Or Select Support Skill For Increase Attribute And Prepare For Skill Evolving
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_10
+      TermType: 0
+      Description: 
+      Languages:
+      - When You Meet The Conditions, You Can Evolve Active Skills. Evolving Skills
+        Will Have Extremely Powerful Abilities
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Congratulations! You Survived The Level.
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_12
+      TermType: 0
+      Description: 
+      Languages:
+      - This Is The Waiting Room For You To Prepare Before Each Match. You Can .
+        . .
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Upgrade Or Buy New Vehicles
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Upgrade Basic Stats
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Start And Win New Maps
+      Flags: 00
+      Languages_Touch: []
+    - Term: Tut_Desc_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Or Challenge With Endless Mode When You Find The Key
+      Flags: 00
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 1
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbyCQAKnwJJh6BcOFMM4cfB0on0vijBJVIm2uEtYRPRMxRfufW0Y3_5ZBZmD8uAFiUie/exec
+    Google_SpreadsheetKey: 1g9w_IJH-HPifE-bcVqesE9ZOQEDyFwM5zB27ekkoak4
+    Google_SpreadsheetName: I2Loc JSS Localization
+    Google_LastUpdatedVersion: 1666840759561
+    Google_Password: change_this
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateDelay: 5
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1

@@ -1,0 +1,285 @@
+
+CHEST PINK1.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Close_Down
+  rotate: false
+  xy: 1062, 1920
+  size: 105, 83
+  orig: 105, 83
+  offset: 0, 0
+  index: -1
+Close_gray
+  rotate: false
+  xy: 558, 1940
+  size: 103, 63
+  orig: 103, 63
+  offset: 0, 0
+  index: -1
+Close_up
+  rotate: false
+  xy: 788, 1930
+  size: 101, 73
+  orig: 101, 73
+  offset: 0, 0
+  index: -1
+Glow00
+  rotate: false
+  xy: 1482, 1503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow01
+  rotate: false
+  xy: 0, 1445
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow02
+  rotate: false
+  xy: 501, 1426
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow03
+  rotate: false
+  xy: 1002, 1002
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow04
+  rotate: false
+  xy: 1503, 1002
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow05
+  rotate: false
+  xy: 0, 944
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow06
+  rotate: false
+  xy: 501, 925
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow07
+  rotate: false
+  xy: 1002, 501
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow08
+  rotate: false
+  xy: 1503, 501
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow09
+  rotate: false
+  xy: 0, 443
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow10
+  rotate: false
+  xy: 501, 424
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow11
+  rotate: false
+  xy: 1002, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow12
+  rotate: false
+  xy: 1503, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Light2
+  rotate: false
+  xy: 1227, 1915
+  size: 145, 88
+  orig: 145, 88
+  offset: 0, 0
+  index: -1
+Open
+  rotate: false
+  xy: 975, 1927
+  size: 86, 76
+  orig: 86, 76
+  offset: 0, 0
+  index: -1
+Open_Gray
+  rotate: false
+  xy: 1373, 1913
+  size: 108, 90
+  orig: 108, 90
+  offset: 0, 0
+  index: -1
+Open_Gray2
+  rotate: false
+  xy: 890, 1928
+  size: 84, 75
+  orig: 84, 75
+  offset: 0, 0
+  index: -1
+item1
+  rotate: false
+  xy: 124, 1951
+  size: 51, 52
+  orig: 51, 52
+  offset: 0, 0
+  index: -1
+item1 copy
+  rotate: false
+  xy: 176, 1951
+  size: 51, 52
+  orig: 51, 52
+  offset: 0, 0
+  index: -1
+item2
+  rotate: false
+  xy: 334, 1948
+  size: 52, 55
+  orig: 52, 55
+  offset: 0, 0
+  index: -1
+item2 copy
+  rotate: false
+  xy: 387, 1948
+  size: 52, 55
+  orig: 52, 55
+  offset: 0, 0
+  index: -1
+item3
+  rotate: false
+  xy: 228, 1950
+  size: 52, 53
+  orig: 52, 53
+  offset: 0, 0
+  index: -1
+item3 copy
+  rotate: false
+  xy: 281, 1950
+  size: 52, 53
+  orig: 52, 53
+  offset: 0, 0
+  index: -1
+item4
+  rotate: false
+  xy: 24, 1952
+  size: 49, 51
+  orig: 49, 51
+  offset: 0, 0
+  index: -1
+item4 copy
+  rotate: false
+  xy: 74, 1952
+  size: 49, 51
+  orig: 49, 51
+  offset: 0, 0
+  index: -1
+item5
+  rotate: false
+  xy: 440, 1946
+  size: 58, 57
+  orig: 58, 57
+  offset: 0, 0
+  index: -1
+item5 copy
+  rotate: false
+  xy: 499, 1946
+  size: 58, 57
+  orig: 58, 57
+  offset: 0, 0
+  index: -1
+lap lanh1
+  rotate: false
+  xy: 0, 1994
+  size: 7, 9
+  orig: 7, 9
+  offset: 0, 0
+  index: -1
+lap lanh3
+  rotate: false
+  xy: 16, 1994
+  size: 7, 9
+  orig: 7, 9
+  offset: 0, 0
+  index: -1
+laplanh2
+  rotate: false
+  xy: 8, 1994
+  size: 7, 9
+  orig: 7, 9
+  offset: 0, 0
+  index: -1
+light3
+  rotate: false
+  xy: 1168, 1918
+  size: 58, 85
+  orig: 58, 85
+  offset: 0, 0
+  index: -1
+light4
+  rotate: false
+  xy: 662, 1931
+  size: 125, 72
+  orig: 125, 72
+  offset: 0, 0
+  index: -1
+
+CHEST PINK12.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow13
+  rotate: false
+  xy: 0, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow14
+  rotate: false
+  xy: 501, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow15
+  rotate: false
+  xy: 1002, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Glow16
+  rotate: false
+  xy: 1503, 0
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1

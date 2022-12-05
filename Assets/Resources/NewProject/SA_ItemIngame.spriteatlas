@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SA_ItemIngame
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 65
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 65
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: af0075d86dec4824baa50b41b4e5b31c, type: 3}
+    - {fileID: 102900000, guid: e2062a6e96bd780458f7ec5731092ba6, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e99fd770ed22fcd4a9d37b281c5f6aaa, type: 3}
+  - {fileID: -290203526, guid: 0eb76880a7d5bb04cbe5ddef180f939c, type: 3}
+  - {fileID: -1554623229, guid: 0eb76880a7d5bb04cbe5ddef180f939c, type: 3}
+  - {fileID: 21300000, guid: 11678b214fdf4c8439af0182d9a0301d, type: 3}
+  - {fileID: 21300000, guid: 3bf5e9d1135c7d549942433db17b4642, type: 3}
+  - {fileID: 1022330047, guid: 380377a26a31b654494c5ea81b7dc283, type: 3}
+  - {fileID: -587005956, guid: 380377a26a31b654494c5ea81b7dc283, type: 3}
+  - {fileID: 21300000, guid: c9f25c43070642442bbea0ceabb4d225, type: 3}
+  - {fileID: 21300000, guid: 34efdcd3869347741a07811c1a70cbc3, type: 3}
+  - {fileID: -1898895289, guid: e23d09b5edd197c4c9374171cf8838a6, type: 3}
+  - {fileID: 1875013168, guid: e23d09b5edd197c4c9374171cf8838a6, type: 3}
+  - {fileID: -1719846233, guid: bc1c8966655eda340a5469617aba6daf, type: 3}
+  - {fileID: 2067698093, guid: bc1c8966655eda340a5469617aba6daf, type: 3}
+  - {fileID: 21300000, guid: 010fa0876954b804aad5001609547afc, type: 3}
+  - {fileID: -462729695, guid: 4ecac258c1aa60340a07c4537c820ff4, type: 3}
+  - {fileID: -1792598486, guid: 4ecac258c1aa60340a07c4537c820ff4, type: 3}
+  - {fileID: 220613513, guid: 38a8e598e4f08754790b2f40d20d1908, type: 3}
+  - {fileID: -348221328, guid: 38a8e598e4f08754790b2f40d20d1908, type: 3}
+  - {fileID: 21300000, guid: 0724d3e851003504fb4ee86924c603f9, type: 3}
+  - {fileID: 21300000, guid: d983612965030484caf5bc8cf37948e5, type: 3}
+  - {fileID: -314015285, guid: 18caa589a6c293643b8f176fb54f5209, type: 3}
+  - {fileID: 1206082463, guid: 18caa589a6c293643b8f176fb54f5209, type: 3}
+  - {fileID: 21300000, guid: f574b4992272c184db8d56266402cd92, type: 3}
+  - {fileID: 21300000, guid: 6a5992a9586cf214ead62a559517d53d, type: 3}
+  - {fileID: 21300000, guid: 661c261abf61b8345adf44fa264778fc, type: 3}
+  - {fileID: 21300000, guid: e1f4a01b6403a8c479dd6e818d028aee, type: 3}
+  - {fileID: 21300000, guid: 010a8c6b835ff0a4883e1e067727d954, type: 3}
+  - {fileID: 21300000, guid: d8913bbbc678fac4eb51d44813282671, type: 3}
+  - {fileID: 21300000, guid: 0d8818cb0646a8a40a04b1a034ccd412, type: 3}
+  - {fileID: 21300000, guid: 334b669c4a71318499a7d504fe8825cd, type: 3}
+  - {fileID: 21300000, guid: 7c1b7f2d92302864d8edb4f1ee550ef1, type: 3}
+  - {fileID: 21300000, guid: 04aa6a6fb29104c41b83245931077bf5, type: 3}
+  - {fileID: 21300000, guid: 2b9c16df98dc5a74e94be03a1a9aaeb6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - graveyard
+  - tank_0
+  - tank_1
+  - bingo
+  - radar arrow
+  - truck_1
+  - truck_0
+  - EXP_1
+  - boss chest rada
+  - batmobiphone_0
+  - batmobiphone_1
+  - humvee_0
+  - humvee_1
+  - EXP_2
+  - agrimotor_0
+  - agrimotor_1
+  - jeep_0
+  - jeep_1
+  - EXP_4
+  - coin
+  - basher_1
+  - basher_0
+  - Normal_chest
+  - magnet
+  - boss_chest
+  - key_small
+  - coin_bag
+  - coin_chest
+  - xienthit
+  - normal chest rada
+  - EXP_3
+  - heal
+  - Bomb_circle_Idle
+  m_RenderDataMap: {}
+  m_Tag: SA_ItemIngame
+  m_IsVariant: 0

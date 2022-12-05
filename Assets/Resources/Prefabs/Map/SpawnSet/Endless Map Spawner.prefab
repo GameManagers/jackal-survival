@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1107044777112842665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107044777112842663}
+  - component: {fileID: 1107044777112842662}
+  m_Layer: 0
+  m_Name: Endless Map Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107044777112842663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107044777112842665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107044777112842662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107044777112842665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3885a3c9dbc791a49affafa61af453ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWarningTime: 300
+  chestInterval: 20
+  multiplierOnMinutes: 1.1
+  bossSpawnInterval: 60
+  startMaxEnemyInMap: 50
+  maxEnemyAddPerSec: 0.5
+  maxMaxEnemyInMAp: 700
+  startEnemyPerSec: 1
+  enemyPerSecAddedPerSec: 0.2
+  maxEnemyPerSec: 200
+  bossInterval: 60
+  hpMulti: 50
+  dmgMulti: 10
+  expMulti: 10
+  weightMulti: 20
+  startCoinMultiple: 1
+  coinMultipleAddPerMin: 0.3
+  spawnSets:
+  - enemy: {fileID: 5242092007072484517, guid: 69b375a8a4db9ff458f0f93c6cc03230, type: 3}
+    startPriority: 1
+    mintuteStartPriorityAdd: 0
+    prioriAddEachMinutes: 10
+    maxPriority: 30
+  - enemy: {fileID: 1697641063458662581, guid: 266553b6aff92aa469b59e7c49565705, type: 3}
+    startPriority: 1
+    mintuteStartPriorityAdd: 0
+    prioriAddEachMinutes: 1
+    maxPriority: 30
+  - enemy: {fileID: 6067706037782314326, guid: b08a6269cdfec85499ac9b6319f61c80, type: 3}
+    startPriority: 1
+    mintuteStartPriorityAdd: 0
+    prioriAddEachMinutes: 10
+    maxPriority: 30
+  - enemy: {fileID: 989169428907917616, guid: 5a6fa01b8faf20f408dbe6b26bf7083a, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 5
+    prioriAddEachMinutes: 10
+    maxPriority: 60
+  - enemy: {fileID: 3480536548855083064, guid: 9a141128fc496d64e8c1a4b53182272a, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 5
+    prioriAddEachMinutes: 20
+    maxPriority: 60
+  - enemy: {fileID: 6687371314407544524, guid: 6617aaa59530ddd4b9b8336748c27074, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 5
+    prioriAddEachMinutes: 20
+    maxPriority: 60
+  - enemy: {fileID: 8808663427096057083, guid: e52176ebc60e5e942b4c72de0911a2f9, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 10
+    prioriAddEachMinutes: 30
+    maxPriority: 90
+  - enemy: {fileID: 5294685447471832221, guid: aa9e2ac9e9fc83c4194ccfd9f9feb0d7, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 10
+    prioriAddEachMinutes: 30
+    maxPriority: 90
+  - enemy: {fileID: 1276462543702384205, guid: e9433a7beffc75c42a79760ca6aebf2d, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 10
+    prioriAddEachMinutes: 30
+    maxPriority: 90
+  - enemy: {fileID: 6709014229246993144, guid: 35732881aa484104f91c89f161a29d77, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 15
+    prioriAddEachMinutes: 30
+    maxPriority: 100
+  - enemy: {fileID: 8532395263814515741, guid: b1dba32a4547d8b4c9c27f03cf2d5faf, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 15
+    prioriAddEachMinutes: 30
+    maxPriority: 100
+  - enemy: {fileID: 661164069547853799, guid: 4f35af6415f12ba4db6e982a2031c3cd, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 15
+    prioriAddEachMinutes: 30
+    maxPriority: 100
+  - enemy: {fileID: 2258410684111996816, guid: 389e7a1be3e3c594c96087df72edcdce, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 20
+    prioriAddEachMinutes: 30
+    maxPriority: 100
+  - enemy: {fileID: 3113519195509302229, guid: d3476ba043efcec4bbe1b39cbeca5fbf, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 20
+    prioriAddEachMinutes: 30
+    maxPriority: 100
+  - enemy: {fileID: 7280453383904870399, guid: 9d54e5301e6b6ab4fac3b4683ad38b51, type: 3}
+    startPriority: 0
+    mintuteStartPriorityAdd: 20
+    prioriAddEachMinutes: 30
+    maxPriority: 100

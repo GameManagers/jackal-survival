@@ -1,0 +1,41 @@
+
+warning.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 1
+  rotate: false
+  xy: 0, 162
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+Test
+  rotate: false
+  xy: 177, 80
+  size: 33, 95
+  orig: 33, 95
+  offset: 0, 0
+  index: -1
+WARNING
+  rotate: false
+  xy: 0, 0
+  size: 249, 79
+  orig: 249, 79
+  offset: 0, 0
+  index: -1
+warning_L
+  rotate: false
+  xy: 11, 97
+  size: 82, 78
+  orig: 82, 78
+  offset: 0, 0
+  index: -1
+warning_R
+  rotate: false
+  xy: 94, 97
+  size: 82, 78
+  orig: 82, 78
+  offset: 0, 0
+  index: -1

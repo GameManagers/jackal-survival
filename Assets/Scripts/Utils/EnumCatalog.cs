@@ -161,3 +161,29 @@ public enum EItemInGame
     Boss_Chest,
     EndlessKey,
 }
+
+
+#region Mail Enum
+
+enum MailType
+{
+    System,
+    Update,
+    Reward,
+}
+enum TypeReward
+{
+    PVP = 1,
+    UpdateVersion = 2,
+    AdminPush = 3,
+}
+
+enum MailStatus
+{
+    NEW = 0,
+    READ = 1,
+    COLLECTED = 2,
+    DELETED = 3,
+}
+
+#endregion

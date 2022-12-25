@@ -33,7 +33,10 @@ namespace WE.UI
         public Button NextZoneButton;
         public Button PreviousZoneButton;
         public Button NoAdsButton;
+        public Button AvatarButton;
+
         public GameObject buttonMoreGame;
+
 
 
         Tween tween;
@@ -65,6 +68,7 @@ namespace WE.UI
             SelectCarButton.onClick.AddListener(OpenSlectCarPopup);
             NextZoneButton.onClick.AddListener(NextZone);
             PreviousZoneButton.onClick.AddListener(PreviousZone);
+            AvatarButton.onClick.AddListener(OpenUIAvatar);
             hackCoin.SetActive(Constant.IS_TESTER_JACKAL);
             hackLevel.SetActive(Constant.IS_TESTER_JACKAL);
             buttonMoreGame.SetActive(FireBaseRemoteConfig.GetBoolConfig("ActiveMoreGames", false));
@@ -109,6 +113,7 @@ namespace WE.UI
             SelectCarButton.onClick.RemoveListener(OpenSlectCarPopup);
             NextZoneButton.onClick.RemoveListener(NextZone);
             PreviousZoneButton.onClick.RemoveListener(PreviousZone);
+            AvatarButton.onClick.RemoveListener(OpenUIAvatar);
         }
         public void StartCamapaign()
         {
@@ -146,6 +151,18 @@ namespace WE.UI
         {
             UIManager.Instance.OpenPopupMoreGames();
         }
+
+        public void OpenPopupMail()
+        {
+            MailController.Instance.GetMail(null, null);
+            UIManager.Instance.OpenPopupMail();
+        }
+
+        public void OpenUIAvatar()
+        {
+            UIManager.Instance.OpenUIAvatar();
+        }
+
         public void OnTick()
         {
             NoAdsButton.enabled = !Player.Instance.IsOnNoAds();

@@ -9,6 +9,8 @@ using WE.Utils;
 using WE.Support;
 using WE.Unit;
 using TMPro;
+using static MailController;
+
 namespace WE.Manager
 {
     public class UIManager : MonoBehaviour
@@ -46,6 +48,13 @@ namespace WE.Manager
         public UIPopupMoreGames popupMoreGames;
         [FoldoutGroup("Assign UI")]
         public PopUpNoAds popUpNoAds;
+        [FoldoutGroup("Assign UI")]
+        public UIMailPopup uIMailPopup;
+        [FoldoutGroup("Assign UI")]
+        public UIMailDetail uIMailDetailPopup;
+
+        [FoldoutGroup("Assign UI")]
+        public UIAvatar uIAvatar;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup textNotEnoughtCoin;
@@ -315,6 +324,23 @@ namespace WE.Manager
         public void OpenPopupNoAds()
         {
             popUpNoAds.Show();
+        }
+
+        public void OpenPopupMail()
+        {
+            uIMailPopup.InitMail();
+            uIMailPopup.Show();
+        }
+
+        public void OpenPopupMailDetail(string idMail, int type, DataMailDetail data)
+        {
+            uIMailDetailPopup.LoadInfo(idMail, type, data);
+            uIMailDetailPopup.Show();
+        }
+
+        public void OpenUIAvatar()
+        {
+            uIAvatar.Show();
         }
     }
 }

@@ -93,6 +93,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5106a6c045bcfdd4eb0522e2339fb7af, type: 3}
   - {fileID: 21300000, guid: 736437c0912ae1c4881c88d646d74aca, type: 3}
   - {fileID: 21300000, guid: 532903f067805a2408d8fda8573051c2, type: 3}
+  - {fileID: 21300000, guid: 5b84a5017dfdbef4cb2c13eabbf05ad3, type: 3}
   - {fileID: 21300000, guid: 2c812d21a86a5274f929aa4073c9d8c0, type: 3}
   - {fileID: 21300000, guid: 8d84f841763ffd34687472a70132928b, type: 3}
   - {fileID: 21300000, guid: e0a531514376681498c7614f3ca271d1, type: 3}
@@ -118,6 +119,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8fe0f3546897ec44a826fc04dcc679e3, type: 3}
   - {fileID: 21300000, guid: 8141aa6436298aa49b041028aeb8159b, type: 3}
   - {fileID: 21300000, guid: 75897ca415fb93e44bfba323d9e7a472, type: 3}
+  - {fileID: 21300000, guid: 7e36eeb4c32f6d04ca9f40ee27c039db, type: 3}
+  - {fileID: 21300000, guid: b619d415fa9d72442812f53fbae39b26, type: 3}
   - {fileID: 21300000, guid: 87a3d6650f1a4eb429824907320d119e, type: 3}
   - {fileID: 21300000, guid: f883d4850c848694282adff1535d5681, type: 3}
   - {fileID: 21300000, guid: 26cce8d5084add249be7739ec592439b, type: 3}
@@ -143,6 +146,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a2447aa896d2f044e81334209652dc7a, type: 3}
   - {fileID: 21300000, guid: fdb37eb8349cf6140bd1216a932cf551, type: 3}
   - {fileID: 21300000, guid: 32639a2933b622e49b31ceb40a3756b6, type: 3}
+  - {fileID: 21300000, guid: 19cf2c292d8823d4f9607ab0d1fc83bc, type: 3}
   - {fileID: 21300000, guid: 02bea5493a5c98d4b980a4323b258ec9, type: 3}
   - {fileID: 21300000, guid: 68d9764950c582d4aaf3abcdbd405496, type: 3}
   - {fileID: 21300000, guid: ddd59c59f3969af4e899fb199ca30df0, type: 3}
@@ -175,6 +179,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fca35fedf0f45b84babb365a807c61e4, type: 3}
   - {fileID: 21300000, guid: 78c2255eda677ff47be942327ea45827, type: 3}
   - {fileID: 21300000, guid: 4465885e5f9ff904a9e0a0de63fe9fd2, type: 3}
+  - {fileID: 21300000, guid: 9ee68c5e33f859343aa91e18187dcdf7, type: 3}
   - {fileID: 21300000, guid: fdfd8d6e96b76424c90e31064921d3e1, type: 3}
   - {fileID: 21300000, guid: 9af76f7e22254ca4bbcb389362910276, type: 3}
   - {fileID: 21300000, guid: a43adb9e8504a694eb6141144f531f5c, type: 3}
@@ -192,6 +197,7 @@ SpriteAtlas:
   - Exp_Increase
   - Damage_Reviced_Reduction_Increase
   - EVA_Shield_Evole
+  - mail_icon
   - new
   - Rocket_Gun_Evole
   - Shock_Zone_Support
@@ -217,6 +223,8 @@ SpriteAtlas:
   - Crit_Incease
   - Evo_Land_mine_deploy
   - setting_button
+  - buton_delete
+  - mail
   - Max_Hp_Increase
   - next_zone_button
   - Bullet_Speed_Increase
@@ -242,6 +250,7 @@ SpriteAtlas:
   - gold_bar
   - Tesla_Coil_Support_Evole
   - Shock_Wave_Support_Evole
+  - button_claim
   - Blade_Saw_Gun
   - gravity_hidden
   - next_jeep_button
@@ -274,6 +283,7 @@ SpriteAtlas:
   - previous_jeep_button
   - DAMAGE_ICON
   - Bullet_Damage_Increase
+  - button_delete
   - ads_button
   - Flame_Gun_Evole
   - Cooldown_Increase

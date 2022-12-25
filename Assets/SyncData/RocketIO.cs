@@ -6,8 +6,6 @@ using BestHTTP.SocketIO.Transports;
 using System;
 using UniRx;
 using Newtonsoft.Json;
-using UnityEditor.PackageManager.Requests;
-using UnityEditor;
 
 public class RocketIO : SingletonClass<RocketIO>, IService
 {
@@ -17,7 +15,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     private static Socket socket;
 
     private const string server = "http://127.0.0.1:8000/socket.io/";
-    private const string server_test = "http://127.0.0.1:8000/socket.io/";
+    private const string server_test = "http://192.168.0.103:8000/socket.io/";
 
 
     public ConnectState connectState = ConnectState.INITIAL;
@@ -142,7 +140,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         if (IsLogined)
         {
             return Observable.Return(Unit.Default);
-        } else
+        } 
+        else
         {
           if(Logining)
             {
@@ -170,6 +169,9 @@ public class RocketIO : SingletonClass<RocketIO>, IService
                         {
                             OnLoginSuccess(e);
                             Logining = false;
+                            _loginAsyncSubject.OnNext(Unit.Default);
+                            _loginAsyncSubject.OnCompleted();
+                            Logining = false;
                         }, (exception) =>
                         {
                             Logining = false;
@@ -191,6 +193,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     public void OnLoginSuccess(MessageResponse msg)
     {
         DebugCustom.LogColor("OnLoginSucess: ");
+
+        MailController.Instance.GetMail(null, null);
         PersionModel profile = JsonConvert.DeserializeObject<PersionModel>(msg.Body.ToString());
         LoginState = ELoginState.LOGINED; 
     }
@@ -218,8 +222,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     {
         try
         {
-            DebugCustom.LogColor("------------ send msg 1 ---------: ", JsonUtility.ToJson(messageData, true));
-            
+            DebugCustom.LogColor("msg name ", messageData.Name);
+
             socket.Emit("msg", (socket, packet, args) =>
             {
                 MessageResponse mesageData = JsonConvert.DeserializeObject<MessageResponse>(args[0].ToString());
@@ -251,6 +255,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         }
         catch (Exception e)
         {
+            Debug.Log("error msg");
             Debug.LogException(e);
         }
     }
@@ -265,6 +270,9 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     {
         DebugCustom.LogColorJson(TAG, "OnDisconnect", args, packet);
         connectState = ConnectState.ACTION_DISCONNECTED;
+
+        LoginState = ELoginState.LOGOUT;
+        Logining = false;
     }
 
     //public static void OnDestroy()
@@ -315,5 +323,55 @@ public class RocketIO : SingletonClass<RocketIO>, IService
             return request;
         }
     }
+
+    #region Mail
+    public void SendRequestMail(MessageRequest request, Action<MessageResponse> SuccessCallback, Action<MessageError> ErrorCallback = null)
+    {
+        MessageData messageData = new MessageData(request.Name, request);
+    
+        SendMsgMail(messageData, response =>
+        {
+            if (SuccessCallback != null)
+            {
+                SuccessCallback(response);
+            }
+        }, rocketError =>
+        {
+            if (ErrorCallback != null)
+            {
+                ErrorCallback(rocketError);
+            }
+            DebugCustom.LogErrorJson(rocketError);
+        });
+        
+    }
+
+    private void SendMsgMail(MessageData messageData, Action<MessageResponse> SuccessCallback, Action<MessageError> ErrorCallback = null)
+    {
+        try
+        {
+            socket.Emit("mail", (socket, packet, args) =>
+            {
+                DebugCustom.LogColorJson(args);
+                MessageResponse mesageData = JsonConvert.DeserializeObject<MessageResponse>(args[0].ToString());
+                if (mesageData != null)
+                {
+                    SuccessCallback(mesageData);
+                }
+                else
+                {
+                    if (ErrorCallback != null)
+                        ErrorCallback(new MessageError());
+                }
+            }, messageData);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+    }
+    #endregion
+
+
 
 }

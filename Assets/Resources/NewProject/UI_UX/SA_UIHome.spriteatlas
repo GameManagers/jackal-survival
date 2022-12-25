@@ -111,6 +111,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cb42e2076ba5b454386e795b14a30acc, type: 3}
   - {fileID: 21300000, guid: 71a28b677e2b7964c8ce19dfc6ca4d75, type: 3}
   - {fileID: 21300000, guid: 9d3eac38a4d32dd43b713bf4c40c43d6, type: 3}
+  - {fileID: 21300000, guid: 21c4714880d8bf147ae35ebc633cb40c, type: 3}
   - {fileID: 21300000, guid: b6efe698e43d84247a36baf98c46ea77, type: 3}
   - {fileID: 21300000, guid: 98c2cb98f884c1644a3348859deda2b9, type: 3}
   - {fileID: 21300000, guid: c05bf3d82743d364484d7897968d5bd9, type: 3}
@@ -129,10 +130,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1262de7a5bd48c1469d1056480c71066, type: 3}
   - {fileID: 21300000, guid: c703feaa348517d47beddbb0634a967a, type: 3}
   - {fileID: 21300000, guid: 95b8e63bc1bff3c479dba7c617a96535, type: 3}
+  - {fileID: 21300000, guid: 101b488bdb7fae34eaa32cc41b7eeb16, type: 3}
   - {fileID: 21300000, guid: b3c6e70cfc493444d8c3f5931de4a72b, type: 3}
   - {fileID: 21300000, guid: 1c2ad82cb581b3d428b395da2b479d8d, type: 3}
   - {fileID: 21300000, guid: 80c0ca4cc3ecfef4fa92b77c463394d1, type: 3}
   - {fileID: 21300000, guid: a9ace07c58f87f840962779d410d79ca, type: 3}
+  - {fileID: 21300000, guid: 51ddfb0de55baa2439c6ffa1cecc8ff5, type: 3}
   - {fileID: 21300000, guid: 1f41481d776446641b5cd1cfa63a5b1a, type: 3}
   - {fileID: 21300000, guid: c5720b9d0876e954d80d899b7ab249ee, type: 3}
   - {fileID: 21300000, guid: bfa801dd7e8eed947aafde5bf2465b25, type: 3}
@@ -172,6 +175,7 @@ SpriteAtlas:
   - Button Vang
   - Title
   - Skill_mockup_chest
+  - avata_0
   - behind_popup
   - SlotChest
   - sellect_button
@@ -190,10 +194,12 @@ SpriteAtlas:
   - back_bar
   - SlotChest2
   - Tab_open_button
+  - bg black
   - Skill_mockup_energy_chest
   - REROLL_button
   - watch_button
   - Play_button
+  - thanhtruot
   - back_banner
   - Skill_mockup_evol
   - behind_bar_on_off

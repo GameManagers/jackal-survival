@@ -55,6 +55,8 @@ namespace WE.Manager
 
         [FoldoutGroup("Assign UI")]
         public UIAvatar uIAvatar;
+        [FoldoutGroup("Assign UI")]
+        public UIChangeName uIChangeName;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup textNotEnoughtCoin;
@@ -341,6 +343,11 @@ namespace WE.Manager
         public void OpenUIAvatar()
         {
             uIAvatar.Show();
+        }
+        public void ShowPopupRename()
+        {
+            Debug.Log("Show popup rename");
+            uIChangeName.Show();
         }
     }
 }

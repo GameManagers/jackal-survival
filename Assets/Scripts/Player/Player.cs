@@ -184,6 +184,12 @@ namespace WE.Unit
             playerData.AddCoin(val);
             TigerForge.EventManager.EmitEvent(Constant.ON_COINS_CHANGE);
         }
+
+        public void ChangeName()
+        {
+            TigerForge.EventManager.EmitEvent(Constant.ON_CHANGE_NAME);
+        }
+
         public void AddEndlessKey(int val)
         {
             playerData.AddKey(val);

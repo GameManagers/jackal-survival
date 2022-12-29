@@ -98,6 +98,7 @@ namespace WE.UI
 
         public void OnClickClaim()
         {
+            DebugCustom.LogColor("On click claim all");
             MailController.Instance.ClaimMail(_idMail, _typeMail,
             rewards =>
             {
@@ -124,6 +125,8 @@ namespace WE.UI
 
         public void OnClickDelete()
         {
+            DebugCustom.LogColor("On click delete all");
+
             MailController.Instance.RemoveMail(_idMail, _typeMail, () =>
             {
                 if (_uiMailPopup != null)

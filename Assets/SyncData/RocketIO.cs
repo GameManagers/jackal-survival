@@ -6,6 +6,8 @@ using BestHTTP.SocketIO.Transports;
 using System;
 using UniRx;
 using Newtonsoft.Json;
+using WE.UI;
+using WE.Unit;
 
 public class RocketIO : SingletonClass<RocketIO>, IService
 {
@@ -196,6 +198,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
 
         MailController.Instance.GetMail(null, null);
         PersionModel profile = JsonConvert.DeserializeObject<PersionModel>(msg.Body.ToString());
+        OnLogin(profile);
+
         LoginState = ELoginState.LOGINED; 
     }
 
@@ -372,6 +376,14 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     }
     #endregion
 
+    private void OnLogin(PersionModel profile)
+    {
+        DebugCustom.LogError("OnLogin");
 
+        Context.profile = profile;
+        Player.Instance.ChangeName();
+        DebugCustom.LogColor(profile.DisplayName);
+        DebugCustom.LogColor(profile.UserId);
+    }
 
 }

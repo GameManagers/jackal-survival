@@ -28,6 +28,8 @@ namespace WE.Utils
         public static string ON_COINS_CHANGE_IN_GAME => "ON_COINS_CHANGE_IN_GAME";
         public static string ON_CHANGE_ZONE => "ON_CHANGE_ZONE";
 
+        public static string ON_CHANGE_NAME => "ON_CHANGE_NAME";
+
         public static string ON_RECEVICE_EXP => "ON_RECEVICE_EXP";
 
         public static string ON_ADD_GLOBAL_UPGRADE => "ON_ADD_GLOBAL_UPGRADE";

@@ -25,6 +25,7 @@ namespace WE.UI
         public TextMeshProUGUI textZone;
         public TextMeshProUGUI textNoadsCountdown;
 
+        public TextMeshProUGUI textDisplayName;
 
         [Header("==========Assign Button=======")]
         public Button SettingButton;
@@ -58,6 +59,9 @@ namespace WE.UI
             }
 
             textCoins.text = Player.Instance.currentCoin.ToString();
+            textDisplayName.text = "Test"; 
+
+            EventManager.StartListening(Constant.ON_CHANGE_NAME, OnChangeName);
             EventManager.StartListening(Constant.ON_COINS_CHANGE, OnChangeCoin);
             EventManager.StartListening(Constant.ON_CHANGE_ZONE, OnChangeZone);
             EventManager.StartListening(Constant.TIMER_TICK_EVENT, OnTick);
@@ -100,9 +104,16 @@ namespace WE.UI
                 upgradeItems[i].OnUpgradeChange();
             }
         }
+
+        public void OnChangeName()
+        {
+            textDisplayName.text = Context.CurrentUserPlayfabProfile.DisplayName;
+        }
+
         public override void AfterHideAction()
         {
-            base.AfterHideAction(); 
+            base.AfterHideAction();
+            EventManager.StopListening(Constant.ON_CHANGE_NAME, OnChangeName);
             EventManager.StopListening(Constant.ON_COINS_CHANGE, OnChangeCoin);
             EventManager.StopListening(Constant.ON_CHANGE_ZONE, OnChangeZone);
             EventManager.StopListening(Constant.TIMER_TICK_EVENT, OnTick);

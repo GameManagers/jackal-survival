@@ -19,4 +19,13 @@ public class Context
             profile = value;
         }
     }
+
+    public static bool CheckNetwork()
+    {
+        if (!RocketIO.IsLogined || Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            return false;
+        }
+        return true;
+    }
 }

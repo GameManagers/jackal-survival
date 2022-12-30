@@ -23,7 +23,7 @@ public class MobieLoginRequest: MessageRequest
 
 [Serializable]
 [Message("SET_NAME")]
-public class SetNameRequest : MessageBase
+public class SetNameRequest : MessageRequest
 {
     public string DisplayName;
 }

@@ -59,7 +59,6 @@ namespace WE.UI
             }
 
             textCoins.text = Player.Instance.currentCoin.ToString();
-            textDisplayName.text = "Test"; 
 
             EventManager.StartListening(Constant.ON_CHANGE_NAME, OnChangeName);
             EventManager.StartListening(Constant.ON_COINS_CHANGE, OnChangeCoin);

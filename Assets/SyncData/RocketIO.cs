@@ -200,7 +200,25 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         PersionModel profile = JsonConvert.DeserializeObject<PersionModel>(msg.Body.ToString());
         OnLogin(profile);
 
-        LoginState = ELoginState.LOGINED; 
+        LoginState = ELoginState.LOGINED;
+    }
+
+    public void SendMessageG(MessageRequest request, Action<MessageResponse> SuccessCallback, Action<MessageError> ErrorCallback = null)
+    {
+        MessageData messageData = new MessageData(request.Name, request);
+
+        SendMsg(messageData, response =>
+        {
+            if (SuccessCallback != null)
+                SuccessCallback(response);
+        }, messageError =>
+        {
+            if (ErrorCallback != null)
+            {
+                ErrorCallback(messageError);
+            }
+            DebugCustom.LogErrorJson(messageError);
+        }); 
     }
 
     private void SendMessageP(MessageRequest messageOut, Action<MessageResponse> SuccessCallback, Action<MessageError> ErrorCallback = null)

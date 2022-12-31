@@ -5,6 +5,7 @@ using TMPro;
 using WE.Pooling;
 using DG.Tweening;
 using UnityEngine.UI;
+using BestHTTP.Extensions;
 
 public class UITextPopup : MonoBehaviour
 {
@@ -15,8 +16,9 @@ public class UITextPopup : MonoBehaviour
         //text.gameObject.SetActive(false);
         //bg.gameObject.SetActive(false);
     }
-    public void Show(float t = 1.5f)
+    public void Show(string msgShow, float t = 1.5f)
     {
+        text.text = msgShow;
         text.gameObject.SetActive(true);
         bg.gameObject.SetActive(true);
         bg.DOKill();

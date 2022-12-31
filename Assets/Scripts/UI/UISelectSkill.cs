@@ -135,14 +135,18 @@ namespace WE.UI
             currentCode = (item.currentCode);
             Hide();
         }
+
+                /**
+         * Comment no ads
+         */
         public void OnClick()
         {
             if (Selected)
                 return;
-            AdsManager.Instance.ShowRewardedAd(() => {
-                ReRoll();
-                GameplayManager.Instance.OnAdsInterShow();
-            }, Analytics.rewarded_video_show);
+            //AdsManager.Instance.ShowRewardedAd(() => {
+            //    ReRoll();
+            //    GameplayManager.Instance.OnAdsInterShow();
+            //}, Analytics.rewarded_video_show);
         }
         public void ReRoll()
         {

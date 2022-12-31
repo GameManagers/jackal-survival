@@ -263,9 +263,15 @@ namespace WE.Unit
             IsPlayTut = true;
             SaveData();
         }
+
+        /**
+         * Set no ads banner
+         */
+
         public bool IsOnNoAds()
         {
-            return timeCloseNoAds > DateTime.UtcNow;
+            return true;
+           // return timeCloseNoAds > DateTime.UtcNow;
         }
         public void SetNoAds()
         {

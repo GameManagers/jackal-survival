@@ -40,11 +40,14 @@ namespace WE.UI
             Player.Instance.Revival();
             Hide();
         }
+        /**
+         * Comment no ads
+         */
         public void OnClickAds()
         {
-            AdsManager.Instance.ShowRewardedAd(() => {
-                OnClicked();
-            }, Analytics.rewarded_video_show);
+            //AdsManager.Instance.ShowRewardedAd(() => {
+            //    OnClicked();
+            //}, Analytics.rewarded_video_show);
         }
         public void OnCloseClicked()
         {

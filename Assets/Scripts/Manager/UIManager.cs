@@ -59,15 +59,7 @@ namespace WE.Manager
         public UIChangeName uIChangeName;
 
         [FoldoutGroup("Assign Text")] 
-        public UITextPopup textNotEnoughtCoin;
-        [FoldoutGroup("Assign Text")]
-        public UITextPopup textNoInternet;
-        [FoldoutGroup("Assign Text")]
-        public UITextPopup textNoAds;
-
-
-
-
+        public UITextPopup uITextPopup;
 
 
         public bool tester;
@@ -299,15 +291,15 @@ namespace WE.Manager
         }
         public void ShowTextNotEnoughCoin()
         {
-            textNotEnoughtCoin.Show();  
+            uITextPopup.Show("Not Enought Coin");  
         }
         public void ShowTextNoAds()
         {
-            textNoAds.Show();
+            uITextPopup.Show("No Ads Avaiable");
         }
         public void ShowTextNoInternet()
         {
-            textNoInternet.Show();
+            uITextPopup.Show("No Internet Connection");
         }
         public void ShowTextAds(int id)
         {

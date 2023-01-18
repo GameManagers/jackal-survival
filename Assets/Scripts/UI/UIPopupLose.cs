@@ -102,7 +102,7 @@ namespace WE.UI
                 DoubleReward();
             }, Analytics.rewarded_video_show);
         }
-        public void DoubleReward()
+        private void DoubleReward()
         {
             //blockPanel.gameObject.SetActive(true);
             RewardButton.SetActive(false);

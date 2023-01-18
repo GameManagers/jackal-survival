@@ -4,7 +4,6 @@
 public class MessageBase 
 {
     public string Name { get; set; }
-    public bool Log { get; set; }
 
     public MessageBase()
     {
@@ -13,7 +12,6 @@ public class MessageBase
         {
             var message = (MessageAttribute)attr;
             Name = message.Name;
-            Log = message.Log;
             return;
         }
     }

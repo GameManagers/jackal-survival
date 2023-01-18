@@ -12,6 +12,13 @@ public enum GameType
     Campaign,
     Tutorial,
     Endless,
+    PVP,
+}
+public enum EWinTypePVP
+{
+    DIE = 0,
+    SCORE = 1,
+    DISCONNECT = 2,
 }
 public enum EAnimationState
 {

@@ -30,6 +30,7 @@ namespace WE.UI
         [Header("==========Assign Button=======")]
         public Button SettingButton;
         public Button PlayButton;
+        public Button PVPButton;
         public Button SelectCarButton;
         public Button NextZoneButton;
         public Button PreviousZoneButton;
@@ -68,6 +69,7 @@ namespace WE.UI
 
             SettingButton.onClick.AddListener(OpenSetting);
             PlayButton.onClick.AddListener(StartCamapaign);
+            PVPButton.onClick.AddListener(OpenPVPPopup);
             SelectCarButton.onClick.AddListener(OpenSlectCarPopup);
             NextZoneButton.onClick.AddListener(NextZone);
             PreviousZoneButton.onClick.AddListener(PreviousZone);
@@ -120,6 +122,7 @@ namespace WE.UI
 
             SettingButton.onClick.RemoveListener(OpenSetting);
             PlayButton.onClick.RemoveListener(StartCamapaign);
+            PVPButton.onClick.RemoveListener(OpenPVPPopup);
             SelectCarButton.onClick.RemoveListener(OpenSlectCarPopup);
             NextZoneButton.onClick.RemoveListener(NextZone);
             PreviousZoneButton.onClick.RemoveListener(PreviousZone);
@@ -129,6 +132,7 @@ namespace WE.UI
         {
             GameplayManager.Instance.StartGame(GameType.Campaign);
         }
+
         public void OpenSetting()
         {
             UIManager.Instance.OpenHomeSetting();
@@ -181,6 +185,11 @@ namespace WE.UI
         public void OpenNoAdsPopup()
         {
             UIManager.Instance.OpenPopupNoAds();
+        }
+
+        public void OpenPVPPopup()
+        {
+            UIManager.Instance.ShowPopupPVP();
         }
     }
 }

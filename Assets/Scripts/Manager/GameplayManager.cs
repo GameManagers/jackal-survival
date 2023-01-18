@@ -75,27 +75,56 @@ namespace WE.Manager
             ResolutionManager.Instance.ZoomInGamePannel();
             SoundManager.Instance.PlayMusicBattle();
             EnemySpawner.Instance.StartGame();
-            if (type != GameType.Campaign)
+            if (type != GameType.Campaign || type != GameType.PVP)
                 MapController.Instance.mapLooper.InitMap();
             ending = false;
             currentExpDrop = 0;
             cachedExp = 0;
-            if (type != GameType.Tutorial)
+
+            switch(type)
             {
-                UIManager.Instance.StartGame();
-                for (int i = 0; i < 10; i++)
-                {
-                    DropExp(Helper.GetRandomPosInScreen(), 1);
-                }
-                Analytics.LogLevelStart(Player.Instance.CurrentMap);
-                SkillController.Instance.GameInit();
-                canShowGameInter = false;
-                StartObserbInter();
+                case GameType.Campaign:
+                case GameType.Endless:
+                    UIManager.Instance.StartGame();
+                    for (int i = 0; i < 10; i++)
+                    {
+                        DropExp(Helper.GetRandomPosInScreen(), 1);
+                    }
+                    SkillController.Instance.GameInit();
+                    canShowGameInter = false;
+                    break;
+                case GameType.PVP:
+                    UIManager.Instance.StartGamePVP();
+                    for (int i = 0; i < 10; i++)
+                    {
+                        DropExp(Helper.GetRandomPosInScreen(), 1);
+                    }
+                    SkillController.Instance.GameInit();
+                    canShowGameInter = false;
+                    break;
+                default:
+                    TutorialController.Instance.StartTutorial();
+                    break;
             }
-            else
-            {
-                TutorialController.Instance.StartTutorial();
-            }
+            /**
+             * Comment no ads
+             */
+            //if (type != GameType.Tutorial)
+            //{
+            //    UIManager.Instance.StartGame();
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        DropExp(Helper.GetRandomPosInScreen(), 1);
+            //    }
+            // //   Analytics.LogLevelStart(Player.Instance.CurrentMap);
+            //    SkillController.Instance.GameInit();
+            //    canShowGameInter = false;
+            // //   StartObserbInter();
+            //}
+            //else
+            //{
+            //    TutorialController.Instance.StartTutorial();
+            //}
         }
         void StartObserbInter()
         {
@@ -134,15 +163,22 @@ namespace WE.Manager
         }
         public void ShowPopupEndGame(bool win)
         {
-            if (win)
+            if(CurrentGameplayType != GameType.PVP)
             {
-                UIManager.Instance.ShowPopupWin();
-            }
+                if (win)
+                {
+                    UIManager.Instance.ShowPopupWin();
+                }
+                else
+                {
+                    if (CurrentGameplayType == GameType.Tutorial)
+                        EventManager.EmitEvent(Constant.TUT_ON_QUIT_TUT);
+                    UIManager.Instance.ShowPopupLose();
+                }
+            } 
             else
             {
-                if(CurrentGameplayType == GameType.Tutorial)
-                    EventManager.EmitEvent(Constant.TUT_ON_QUIT_TUT);
-                UIManager.Instance.ShowPopupLose();
+
             }
         }
         //public void ObserbShowPopup(bool win)

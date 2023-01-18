@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using WE.UI;
+using WE.UI.PVP;
 using UnityEngine.UI;
 using DG.Tweening;
 using WE.Utils;
@@ -58,6 +59,11 @@ namespace WE.Manager
         [FoldoutGroup("Assign UI")]
         public UIChangeName uIChangeName;
 
+        [FoldoutGroup("Assign UI")]
+        public UIInGamePVP uiInGamePVP;
+        [FoldoutGroup("Assign UI")]
+        public UIPopupPVP uIPopupPVP;
+
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
 
@@ -77,6 +83,13 @@ namespace WE.Manager
             uiHome.Hide();
             uIInGame.Show();
         }
+
+        public void StartGamePVP()
+        {
+            uiHome.Hide();
+            uiInGamePVP.Show();
+        }
+
         public void ReturnHome()
         {
             if (currentGameUI != null)
@@ -340,6 +353,11 @@ namespace WE.Manager
         {
             Debug.Log("Show popup rename");
             uIChangeName.Show();
+        }
+
+        public void ShowPopupPVP()
+        {
+            uIPopupPVP.Show();
         }
     }
 }

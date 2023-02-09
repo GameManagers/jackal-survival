@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 15%
+  m_text: 100%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27462cc43c74860439a1fece59c120fc, type: 2}
   m_sharedMaterial: {fileID: -5626063376248406967, guid: 27462cc43c74860439a1fece59c120fc, type: 2}
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1493,12 +1493,14 @@ MonoBehaviour:
   IsControllTimeScale: 0
   IsActiveBackButton: 0
   IsGameplayUI: 0
+  playerInfo: {fileID: 0}
+  oppnentsInfo: {fileID: 0}
+  scoreBarPVP: {fileID: 0}
+  textReady: {fileID: 0}
   textCount: {fileID: 0}
-  textKill: {fileID: 0}
   textLevel: {fileID: 0}
   expBar: {fileID: 0}
   expBarFlash: {fileID: 0}
-  skillBar: {fileID: 0}
   skeletonGraphic: {fileID: 0}
   animIdle: 
   animShow: 
@@ -2617,7 +2619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

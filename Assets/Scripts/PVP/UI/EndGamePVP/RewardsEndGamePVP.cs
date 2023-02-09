@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RewardsEndGamePVP : MonoBehaviour
+namespace WE.UI.PVP.EndGame
 {
+    public class RewardsEndGamePVP : MonoBehaviour
+    {
 
+    }
 }

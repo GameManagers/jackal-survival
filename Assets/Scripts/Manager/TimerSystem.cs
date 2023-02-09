@@ -8,6 +8,7 @@ using DG.Tweening;
 using WE.Pooling;
 using Dragon.SDK;
 using WE.Support;
+using WE.PVP.Manager;
 
 namespace WE.Manager
 {
@@ -26,7 +27,6 @@ namespace WE.Manager
         {
             Player.Instance.Init();
             GameplayManager.Instance.SetState(GameState.MainUi);
-
             UIManager.Instance.Init();
 
             SoundManager.Instance.OnStart();

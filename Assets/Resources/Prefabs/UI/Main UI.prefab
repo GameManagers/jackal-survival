@@ -2322,6 +2322,7 @@ MonoBehaviour:
   textDisplayName: {fileID: 0}
   SettingButton: {fileID: 6929981581370791750}
   PlayButton: {fileID: 6929981581133943981}
+  PVPButton: {fileID: 0}
   SelectCarButton: {fileID: 6929981582955239541}
   NextZoneButton: {fileID: 6929981581390271613}
   PreviousZoneButton: {fileID: 6929981581048816883}

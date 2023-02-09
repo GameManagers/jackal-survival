@@ -111,7 +111,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cb42e2076ba5b454386e795b14a30acc, type: 3}
   - {fileID: 21300000, guid: 71a28b677e2b7964c8ce19dfc6ca4d75, type: 3}
   - {fileID: 21300000, guid: 9d3eac38a4d32dd43b713bf4c40c43d6, type: 3}
-  - {fileID: 21300000, guid: 21c4714880d8bf147ae35ebc633cb40c, type: 3}
   - {fileID: 21300000, guid: b6efe698e43d84247a36baf98c46ea77, type: 3}
   - {fileID: 21300000, guid: 98c2cb98f884c1644a3348859deda2b9, type: 3}
   - {fileID: 21300000, guid: c05bf3d82743d364484d7897968d5bd9, type: 3}
@@ -176,7 +175,6 @@ SpriteAtlas:
   - Button Vang
   - Title
   - Skill_mockup_chest
-  - avata_0
   - behind_popup
   - SlotChest
   - sellect_button

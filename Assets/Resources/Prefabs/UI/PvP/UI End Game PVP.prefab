@@ -709,9 +709,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WE.UI.UIPopupWin, Assembly-CSharp
-        m_MethodName: TakeReward
+      - m_Target: {fileID: 8890281461535166727}
+        m_TargetAssemblyTypeName: WE.UI.PVP.EndGame.UIEndGamePVP, Assembly-CSharp
+        m_MethodName: TakeRewardPVP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3573,6 +3573,7 @@ GameObject:
   - component: {fileID: 7749551946375915191}
   - component: {fileID: 7749551946375915189}
   - component: {fileID: 7749551946375915190}
+  - component: {fileID: 8890281461535166727}
   m_Layer: 5
   m_Name: UI End Game PVP
   m_TagString: Untagged
@@ -3640,6 +3641,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8890281461535166727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749551946375915192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38498027a499e5c44b0518ff1ad3e251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CloseButton: {fileID: 0}
+  UiAnim: {fileID: 0}
+  blockPanel: {fileID: 4995077999605069070}
+  hackObj: {fileID: 0}
+  IsControllTimeScale: 1
+  IsActiveBackButton: 0
+  IsGameplayUI: 1
+  RewardButton: {fileID: 7749551946918014906}
+  noThanks: {fileID: 2097363581760817189}
+  noThanksText: {fileID: 7749551947421338295}
 --- !u!1 &7749551946709366341
 GameObject:
   m_ObjectHideFlags: 0

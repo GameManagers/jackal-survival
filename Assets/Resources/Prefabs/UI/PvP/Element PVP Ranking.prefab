@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6554395293168945892}
   - component: {fileID: 3480318925520110128}
   - component: {fileID: 5948510660918902818}
+  - component: {fileID: 1499355199186260825}
   m_Layer: 5
   m_Name: Element PVP Ranking
   m_TagString: Untagged
@@ -31,6 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 86403665615575508}
+  - {fileID: 2565934956329072111}
   - {fileID: 5992018742496577128}
   - {fileID: 1383501393942844535}
   - {fileID: 7443245562992407933}
@@ -81,6 +83,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1499355199186260825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206009246373367632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b26b50b7752d84b8e44747e7463458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconRanking: {fileID: 5459763191388826843}
+  labelRanking: {fileID: 3135967271297453686}
+  labelPlayerName: {fileID: 5545410507011253058}
+  labelBattlePoint: {fileID: 8944777455298666452}
+  background: {fileID: 6912812951024661105}
+  iconAvatar: {fileID: 5513571762966818446}
+  colorRankTop: {r: 0, g: 0, b: 0, a: 0}
+  colorRankTopNormal: {r: 0, g: 0, b: 0, a: 0.43137255}
+  iconRank: {fileID: 2362786726634696309}
+  spriteCups:
+  - {fileID: 21300000, guid: 2e2a0f039bee59f49a57173be6ce18cd, type: 3}
+  - {fileID: 21300000, guid: 8b38a5b632dc3464f813fab98c2b2076, type: 3}
+  - {fileID: 21300000, guid: da103fad1a2026949a96a5c4edf59bc5, type: 3}
+  uiRewards:
+  - {fileID: 5076116963696676799}
 --- !u!1 &1289400498553434455
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +141,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6554395293168945892}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -344,7 +373,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6554395293168945892}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -730,7 +759,7 @@ RectTransform:
   - {fileID: 6628203679430466309}
   - {fileID: 7458403065992382744}
   m_Father: {fileID: 6554395293168945892}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -745,6 +774,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7149396639450344080}
   m_CullTransparentMesh: 1
+--- !u!1 &7912308945767408625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2565934956329072111}
+  - component: {fileID: 7550925570113925903}
+  - component: {fileID: 5459763191388826843}
+  m_Layer: 5
+  m_Name: Icon Cup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2565934956329072111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912308945767408625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6554395293168945892}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -266, y: 9.5}
+  m_SizeDelta: {x: 72.8469, y: 67.0802}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7550925570113925903
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912308945767408625}
+  m_CullTransparentMesh: 1
+--- !u!114 &5459763191388826843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912308945767408625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2e2a0f039bee59f49a57173be6ce18cd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &1631917103504112070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666618353549457357, guid: a1687acc4f79a0e4fa350b775de45d20, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2666618353549457357, guid: a1687acc4f79a0e4fa350b775de45d20, type: 3}
       propertyPath: m_AnchorMax.x
@@ -879,3 +984,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2666618353549457357, guid: a1687acc4f79a0e4fa350b775de45d20, type: 3}
   m_PrefabInstance: {fileID: 1631917103504112070}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5076116963696676799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5824357795713431161, guid: a1687acc4f79a0e4fa350b775de45d20, type: 3}
+  m_PrefabInstance: {fileID: 1631917103504112070}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5252c187045f5b48901ea7f2c0c68e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

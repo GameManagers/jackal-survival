@@ -172,25 +172,59 @@ public enum EItemInGame
 
 #region Mail Enum
 
-enum MailType
+public enum MailType
 {
     System,
     Update,
     Reward,
 }
-enum TypeReward
+public enum TypeReward
 {
     PVP = 1,
     UpdateVersion = 2,
     AdminPush = 3,
 }
 
-enum MailStatus
+public enum MailStatus
 {
     NEW = 0,
     READ = 1,
     COLLECTED = 2,
     DELETED = 3,
+}
+
+public enum TypeTimeRemain
+{
+    Day,
+    Hour,
+    Minute,
+    OutOfDate,
+}
+
+public enum ERankPVP
+{
+    Bronze3 = 0,
+    Bronze2 = 1,
+    Bronze1 = 2,
+    Silver3 = 3,
+    Silver2 = 4,
+    Silver1 = 5,
+    Gold3 = 6,
+    Gold2 = 7,
+    Gold1 = 8
+}
+
+public enum TypeAvatar
+{
+    Default = 0,
+    Avatar1 = 1,
+    Avatar2 = 2,
+    Avatar3 = 3,
+    Avatar4 = 4,
+    Avatar5 = 5,
+    Avatar6 = 6,
+    Avatar7 = 7,
+    Avatar8 = 8,
 }
 
 #endregion

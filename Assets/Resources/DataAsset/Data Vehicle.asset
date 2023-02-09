@@ -16,7 +16,6 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1661585026336752917, guid: cfcceff445bb9f24f8f77ee902d93a0a, type: 3}
     - {fileID: 5590086054196578267, guid: b3092646d896e3640b1632f234550fba, type: 3}
     - {fileID: 2652065313219109367, guid: 4a18382bb282a2e4db82bf756572baa8, type: 3}
     - {fileID: 7015495222444752279, guid: 9aeef37eccd9b484dacade110b6d07ee, type: 3}
@@ -75,22 +74,22 @@ MonoBehaviour:
       Data: 0
     - Name: ValueUnlock
       Entry: 3
-      Data: 2000
+      Data: 0
     - Name: BaseHp
       Entry: 4
-      Data: 1000
+      Data: 0
     - Name: BaseAttack
       Entry: 4
-      Data: 100
+      Data: 0
     - Name: BaseMoveSpeed
       Entry: 4
-      Data: 4.5
-    - Name: iconVisual
-      Entry: 10
       Data: 0
+    - Name: iconVisual
+      Entry: 6
+      Data: 
     - Name: nameCar
-      Entry: 1
-      Data: Military Jeep
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -129,7 +128,7 @@ MonoBehaviour:
       Data: 4
     - Name: iconVisual
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: nameCar
       Entry: 1
       Data: Humvee
@@ -171,7 +170,7 @@ MonoBehaviour:
       Data: 4
     - Name: iconVisual
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: nameCar
       Entry: 1
       Data: Tank 4-13
@@ -213,7 +212,7 @@ MonoBehaviour:
       Data: 4.5
     - Name: iconVisual
       Entry: 10
-      Data: 3
+      Data: 2
     - Name: nameCar
       Entry: 1
       Data: Truck
@@ -255,7 +254,7 @@ MonoBehaviour:
       Data: 3.5
     - Name: iconVisual
       Entry: 10
-      Data: 4
+      Data: 3
     - Name: nameCar
       Entry: 1
       Data: Basher
@@ -297,7 +296,7 @@ MonoBehaviour:
       Data: 4
     - Name: iconVisual
       Entry: 10
-      Data: 5
+      Data: 4
     - Name: nameCar
       Entry: 1
       Data: Batmobie
@@ -339,7 +338,7 @@ MonoBehaviour:
       Data: 4.5
     - Name: iconVisual
       Entry: 10
-      Data: 6
+      Data: 5
     - Name: nameCar
       Entry: 1
       Data: Agrimotor
@@ -373,7 +372,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 10
-      Data: 7
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -385,7 +384,7 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 10
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -397,7 +396,7 @@ MonoBehaviour:
       Data: 3
     - Name: $v
       Entry: 10
-      Data: 9
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -409,7 +408,7 @@ MonoBehaviour:
       Data: 4
     - Name: $v
       Entry: 10
-      Data: 10
+      Data: 9
     - Name: 
       Entry: 8
       Data: 
@@ -421,7 +420,7 @@ MonoBehaviour:
       Data: 5
     - Name: $v
       Entry: 10
-      Data: 11
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -433,7 +432,7 @@ MonoBehaviour:
       Data: 6
     - Name: $v
       Entry: 10
-      Data: 12
+      Data: 11
     - Name: 
       Entry: 8
       Data: 
@@ -445,7 +444,7 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 10
-      Data: 13
+      Data: 12
     - Name: 
       Entry: 8
       Data: 

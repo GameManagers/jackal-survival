@@ -3,25 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-[Message("GET_PVP_INFO")]
-public class GetPVPInfo : MessageRequest
-{
-}
-
-[Serializable]
-public class PVPInfo
-{
-  public int Season;
-  public long EndTime;
-}
-
 [Message("READY_PVP")]
 public class ReadyPVPMessage : MessageBase
 {
     public string SessionId;
     public string DisplayName;
-    public string AvatarUrl;
+    public TypeAvatar AvatarUrl;
     public string UserId;
     public int Status;
     public float Atk;
@@ -89,10 +76,10 @@ public class PlayerLeftMessage : MessageBase
 }
 
 
-[Message("GET_TOP_BP")]
-public class LeaderBoardPVP : MessageBase
+[Message("GET_TOPSCORE_PVP")]
+public class LeaderBoardPVP : MessageRequest
 {
-
+    public string LeaderBoardName = "PVP";
 }
 //-------------------------------------------DATA----------------------------------------------
 
@@ -103,7 +90,6 @@ public class EndGameData
     public string AvatarUrl;
     public string UserId;
     public string SessionId;
-    public float Level;
     public int Score;
     public int eloPre;
     public int eloCur;
@@ -126,8 +112,6 @@ public class GameScoreData
     public int Score;
     public float CurHP;
     public float MaxHP;
-    public int[] Skill;
-    public float Pos = 0;
 }
 
 
@@ -138,8 +122,8 @@ public class DataPVPRanking
     public List<InfoPVPRanking> TopUser;
     public InfoMyPVPRanking YourScore;
     public int Season;
-    public string EndTime;
-    public string CurrentTime;
+    public long EndTime;
+    public long CurrentTime;
 }
 
 [Serializable]

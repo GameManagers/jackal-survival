@@ -71,6 +71,10 @@ namespace WE.Unit
                 {
                     return 0;
                 }
+                else if (GameplayManager.Instance.CurrentGameplayType == GameType.PVP && GameplayManager.Instance.State != GameState.MainUi)
+                {
+                    return Context.PVPCurrentMap;
+                }
                 else
                     return playerData.currentMap;
             }

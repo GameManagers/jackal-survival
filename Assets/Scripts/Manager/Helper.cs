@@ -300,6 +300,19 @@ namespace WE.Support
                 return timer.ToString(@"hh\:mm");
             return timer.ToString(@"mm\:ss");
         }
+
+        public static string ConvertTimerLongTime(double second)
+        {
+            if (second < 0)
+                return string.Empty;
+            TimeSpan timer = TimeSpan.FromSeconds(second);
+
+            if (timer.TotalDays > 1)
+                return Math.Round(second / 86400).ToString() + "d " + Math.Round((second % 86400) / 3600).ToString() + "h";
+            if (timer.TotalHours > 1)
+                return Math.Round(second / 3600).ToString() + "h " + Math.Round((second % 3600) / 60).ToString() + "m";
+            return Math.Round(second / 60).ToString() + "m " + Math.Round(second % 60).ToString() + "s";
+        }
         public static string GetPercent(float minVal, float currentValue, float totalvalue)
         {
             float percent = currentValue / totalvalue * 100f;

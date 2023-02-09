@@ -36,15 +36,15 @@ namespace WE.UI
            
             if (_timeRemain > 86400)
             {
-                return Math.Round(_timeRemain / 86400).ToString() + " days";
+                return Math.Round(_timeRemain / 86400).ToString() + "d to expiry";
             }
             else if(_timeRemain > 3600)
             {
-                return Math.Round(_timeRemain / 3600).ToString() + " hours";
+                return Math.Round(_timeRemain / 3600).ToString() + "h to expiry";
             }
             else if(_timeRemain > 0)
             {
-                return Math.Round(_timeRemain / 60).ToString() + " minutes";
+                return Math.Round(_timeRemain / 60).ToString() + "m to expiry";
             }
             return "Out of Date";
         }

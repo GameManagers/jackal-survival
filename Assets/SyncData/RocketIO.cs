@@ -8,6 +8,8 @@ using UniRx;
 using Newtonsoft.Json;
 using WE.UI;
 using WE.Unit;
+using WE.PVP;
+using WE.PVP.Manager;
 
 public class RocketIO : SingletonClass<RocketIO>, IService
 {
@@ -19,6 +21,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     private const string server = "http://34.87.155.178:8000/socket.io/";
     private const string server_test = "http://192.168.0.103:8000/socket.io/";
 
+    public bool IsPublicServer = true;
 
     public ConnectState connectState = ConnectState.INITIAL;
 
@@ -47,6 +50,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
                 }
             case Server.Test:
                 {
+                    IsPublicServer = false;
                     return server_test;
                 }
             default:
@@ -77,11 +81,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
 
     public void Init()
     {
-
         LoginState = ELoginState.LOGOUT;
-
         Connect(GetServer(Server.Public));
-
     }
 
     public void Connect(string serverUri)
@@ -197,10 +198,16 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         DebugCustom.LogColor("OnLoginSucess: ");
 
         MailController.Instance.GetMail(null, null);
+        PVPManager.Instance.GetLeaderBoard(null, null);
         PersionModel profile = JsonConvert.DeserializeObject<PersionModel>(msg.Body.ToString());
         OnLogin(profile);
 
         LoginState = ELoginState.LOGINED;
+    }
+
+    public IObservable<Unit> LoginSequence(bool showLoading = false)
+    {
+        return Instance.SendLoginRequest(showLoading).AsUnitObservable();
     }
 
     public void SendMessageG(MessageRequest request, Action<MessageResponse> SuccessCallback, Action<MessageError> ErrorCallback = null)

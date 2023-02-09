@@ -55,6 +55,11 @@ namespace WE.Manager
         {
             currentConfig = zoneData.GetZoneConfig(CurrentMap);
         }
+
+        public void OnChangeZone(int zoneId)
+        {
+            currentConfig = zoneData.GetZoneConfig(zoneId);
+        }
     }
 }
 

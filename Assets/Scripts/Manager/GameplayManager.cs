@@ -12,6 +12,8 @@ using WE.Game;
 using WE.Pooling;
 using UniRx;
 using Dragon.SDK;
+using WE.PVP;
+
 namespace WE.Manager
 {
     public class GameplayManager : MonoBehaviour
@@ -94,7 +96,7 @@ namespace WE.Manager
                     canShowGameInter = false;
                     break;
                 case GameType.PVP:
-                    UIManager.Instance.StartGamePVP();
+                    ActiveBattlePvp();
                     for (int i = 0; i < 10; i++)
                     {
                         DropExp(Helper.GetRandomPosInScreen(), 1);
@@ -143,6 +145,13 @@ namespace WE.Manager
             canShowGameInter = false;
             StartObserbInter();
         }
+        public void ActiveBattlePvp()
+        {
+            UIManager.Instance.StartGamePVP();
+            UIManager.Instance.GetUIPVP().DisableTextReady(false);
+            PVPMode.Instance.SetStartGame();
+        }
+
         public float GetMultiple()
         {
             ZoneConfig config = MapController.Instance.currentMapConfig;
@@ -175,10 +184,6 @@ namespace WE.Manager
                         EventManager.EmitEvent(Constant.TUT_ON_QUIT_TUT);
                     UIManager.Instance.ShowPopupLose();
                 }
-            } 
-            else
-            {
-
             }
         }
         //public void ObserbShowPopup(bool win)
@@ -209,7 +214,7 @@ namespace WE.Manager
             ObjectPooler.Instance.ClearPool();
             yield return new WaitForSecondsRealtime(0.1f);
 
-            Player.Instance.LevelEnd(win && CurrentGameplayType != GameType.Tutorial);
+            Player.Instance.LevelEnd(win && CurrentGameplayType != GameType.Tutorial && CurrentGameplayType!= GameType.PVP);
             UIManager.Instance.ReturnHome();
             //MapController.Instance.Init();
             yield return new WaitForSecondsRealtime(0.1f);
@@ -235,7 +240,6 @@ namespace WE.Manager
                         }
                     }
                 }
-                else
                 {
                     currentTimePlay++;
                 }

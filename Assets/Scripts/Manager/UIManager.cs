@@ -11,6 +11,10 @@ using WE.Support;
 using WE.Unit;
 using TMPro;
 using static MailController;
+using WE.PVP.Manager;
+using DG.Tweening.Core.Easing;
+using System.Net.Sockets;
+using WE.UI.PVP.EndGame;
 
 namespace WE.Manager
 {
@@ -60,9 +64,11 @@ namespace WE.Manager
         public UIChangeName uIChangeName;
 
         [FoldoutGroup("Assign UI")]
+        public UIPopupPVP uIPopupPVP;
+        [FoldoutGroup("Assign UI")]
         public UIInGamePVP uiInGamePVP;
         [FoldoutGroup("Assign UI")]
-        public UIPopupPVP uIPopupPVP;
+        public UIEndGamePVP uIEndGamePVP;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
@@ -96,9 +102,9 @@ namespace WE.Manager
             {
                 currentGameUI.Hide();
             }
+            if (GameplayManager.Instance.CurrentGameplayType != GameType.PVP) uIInGame.Hide();
+            else uiInGamePVP.Hide();
             uIPauseInGame.Hide();
-
-            uIInGame.Hide();
             uiHome.Show();
         }
         public void PendingUI(UIBase ui)
@@ -314,6 +320,11 @@ namespace WE.Manager
         {
             uITextPopup.Show("No Internet Connection");
         }
+
+        public void ShowTextNotConnectServer()
+        {
+            uITextPopup.Show("Server maintenance");
+        }
         public void ShowTextAds(int id)
         {
             if(id == 0)
@@ -355,9 +366,33 @@ namespace WE.Manager
             uIChangeName.Show();
         }
 
+        public UIInGamePVP GetUIPVP()
+        {
+            return uiInGamePVP;
+        }
+
         public void ShowPopupPVP()
         {
+            Context.LoginServer(() =>
+            {
+                PVPManager.Instance.GetLeaderBoard(GetLeaderboardPVPSuccess, GetLeaderboardPVPFalse);
+            });
+        }
+
+        public void ShowPopupEndGamePVP()
+        {
+            uIEndGamePVP.Show();
+        }
+
+        private void GetLeaderboardPVPSuccess(DataPVPRanking data)
+        {
             uIPopupPVP.Show();
+            uIPopupPVP.InitPopupPVP(data);
+        }
+
+        private void GetLeaderboardPVPFalse(MessageError error)
+        {
+            uITextPopup.Show("PVP mode maintenance");
         }
     }
 }

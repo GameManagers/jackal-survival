@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using WE.Manager;
 
-public class UIEndGamePVP : MonoBehaviour
+namespace WE.UI.PVP.EndGame
 {
-    // Start is called before the first frame update
-    void Start()
+    public class UIEndGamePVP : UIBase
     {
-        
+        public GameObject RewardButton;
+        public GameObject noThanks;
+
+        public TextMeshProUGUI noThanksText;
+
+        public override void InitUI()
+        {
+        }
+        public override void Hide()
+        {
+            base.Hide();
+        }
+
+        public void TakeRewardPVP()
+        {
+            GameplayManager.Instance.EndGame(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

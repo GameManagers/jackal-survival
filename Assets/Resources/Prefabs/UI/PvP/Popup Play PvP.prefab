@@ -42,7 +42,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.000030517578}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2637992649112002298
 CanvasRenderer:
@@ -485,6 +485,86 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2004900384106597229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822471692286280727}
+  - component: {fileID: 4142954157905782445}
+  - component: {fileID: 5121326432384869090}
+  m_Layer: 5
+  m_Name: Not play PVP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &822471692286280727
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004900384106597229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3219655160527165661}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 45.75}
+  m_SizeDelta: {x: 700, y: 91.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4142954157905782445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004900384106597229}
+  m_CullTransparentMesh: 1
+--- !u!114 &5121326432384869090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004900384106597229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Not play pvp
 --- !u!1 &2517530872009072514
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4838229943066524959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7119451409374470134}
+        m_TargetAssemblyTypeName: WE.UI.PVP.UIPopupPVP, Assembly-CSharp
+        m_MethodName: StartPVP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5567815461344550299
 Animator:
   serializedVersion: 4
@@ -1290,6 +1382,7 @@ GameObject:
   - component: {fileID: 8420705827664181496}
   - component: {fileID: 5952161037147605142}
   - component: {fileID: 7119451409374470134}
+  - component: {fileID: 7240975876258644720}
   m_Layer: 5
   m_Name: Popup Play PvP
   m_TagString: Untagged
@@ -1369,14 +1462,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320da9158b5633646b0421b16970269a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CloseButton: {fileID: 0}
+  CloseButton: {fileID: 439494746161199322}
   UiAnim: {fileID: 0}
-  blockPanel: {fileID: 0}
+  blockPanel: {fileID: 1749096005364841863}
   hackObj: {fileID: 0}
   IsControllTimeScale: 0
-  IsActiveBackButton: 0
+  IsActiveBackButton: 1
   IsGameplayUI: 0
-  PlayPVPButton: {fileID: 0}
+  contentSizeFitter: {fileID: 3926840365607713093}
+  currentRankingPvp: {fileID: 6651602412590041140}
+  prefabsRanking: {fileID: 1499355199186260825, guid: b9721d5335db76c409926314230a7543, type: 3}
+  _scrollRect: {fileID: 4918878806056421116}
+  parentTransform: {fileID: 1590769973570804326}
+  _pvpMatchingController: {fileID: 7240975876258644720}
+  notifyNotUserInLeaderboard: {fileID: 6433315555964893557}
+  notifyUserNotPlayPvp: {fileID: 2004900384106597229}
+  PlayPVPButton: {fileID: 4538230965113587966}
+  _txtRemainTime: {fileID: 3800623585378692226}
+--- !u!114 &7240975876258644720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803415756629984391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0175bb800a138b64d9335895ff692c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabUiMatchingPVP: {fileID: 5057568267762978796, guid: 6a521c99024dc6449b5e19c6770821ad, type: 3}
 --- !u!1 &6075180349984992056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +2005,7 @@ GameObject:
   - component: {fileID: 3219655160527165661}
   - component: {fileID: 316108985452492411}
   m_Layer: 5
-  m_Name: Buttom
+  m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1910,6 +2025,7 @@ RectTransform:
   m_Children:
   - {fileID: 6874249374781868983}
   - {fileID: 5108150395649224616}
+  - {fileID: 822471692286280727}
   m_Father: {fileID: 9186187434826702057}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1937,6 +2053,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bg Current Ranking
       objectReference: {fileID: 0}
+    - target: {fileID: 1206009246373367632, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636760749068070264, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 5664246985042994542}
     - target: {fileID: 6554395293168945892, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2028,3 +2152,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6554395293168945892, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
   m_PrefabInstance: {fileID: 2023849555344401740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5664246985042994542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5948510660918902818, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
+  m_PrefabInstance: {fileID: 2023849555344401740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6651602412590041140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4636760749068070264, guid: c737605bb3dc7ba4c9673f9d086d3588, type: 3}
+  m_PrefabInstance: {fileID: 2023849555344401740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b26b50b7752d84b8e44747e7463458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

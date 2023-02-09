@@ -8,6 +8,7 @@ using UnityEngine;
 using WE.Manager;
 using WE.PVP;
 using WE.PVP.Manager;
+using WE.UI;
 using WE.UI.PVP;
 using WE.Unit;
 
@@ -45,15 +46,21 @@ public class PVPMatchingController : MonoBehaviour
         bool isInitRoom = false;
         isInitRoom = await PVPManager.Instance.JoinRoom(type, roomName, dataJoin, OnErrorInitRoom);
         if (isInitRoom)
-        {
-            PVPManager.Instance.Room.SendReadyPVP(dataJoin);
+        { 
             /**
              * Kh?i t?o UI Matching PVP
              */
-
-            PVPManager.Instance.Room.SendStartGame();
-            PVPManager.Instance.gameObject.AddComponent<PVPMode>();
             Debug.Log("Init room PVP");
+            //    _uiMatchingPVP = Instantiate(_prefabUiMatchingPVP);
+            //   _uiMatchingPVP.gameObject.SetActive(true);
+            _uiMatchingPVP = UIManager.Instance.GetUIMatchingPVP();
+            _uiMatchingPVP.Show();
+            _uiMatchingPVP.FillDataPlayer(dataJoin);
+            PVPManager.Instance.Room.SendReadyPVP(dataJoin);
+           
+
+           // PVPManager.Instance.Room.SendStartGame();
+            //PVPManager.Instance.gameObject.AddComponent<PVPMode>();
         }
     }
     private ReadyPVPMessage CreateDataJoin()
@@ -125,6 +132,8 @@ public class PVPMatchingController : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2);
 
+        PVPManager.Instance.Room.SendStartGame();
+        PVPManager.Instance.gameObject.AddComponent<PVPMode>();
     }
     private void RemoveHandle()
     {

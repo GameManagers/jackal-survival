@@ -120,11 +120,17 @@ namespace WE.PVP
             isStartGame = true;
             Player.Instance.OnHpChange += Current_OnHpChange;
         }
+
+        public void UpdateCurrentScore(int playerScore)
+        {
+            DebugCustom.LogColor("Score", playerScore);
+            this.playerScore = playerScore;
+            UpdateScore(this.PlayerScore, oppenentsScore);
+        }
         private void Current_OnHpChange()
         {
             uiGameplayPVP.UpdateHpBarCurrentPlayer(Player.Instance.CurrentHp, Player.Instance.MaxHp);
         }
-
 
         private void Opponents_ChangeScore(int _score, int _myScore)
         {
@@ -150,7 +156,26 @@ namespace WE.PVP
             PlayerDie();
         }
 
-
+        private void Update()
+        {
+            if (!isStartGame || isEndGame)
+                return;
+            if (TimeBattle <= 1f && !isSendInUpdate)
+            {
+                isSendInUpdate = true;
+                counterSendScore = 3;
+                tmpCachedTimeSend = 0.25f;
+                SendScore();
+            }
+            if (isSendInUpdate && counterSendScore > 0 && tmpCachedTimeSend <= 0f)
+            {
+                DebugCustom.Log("Send Score in Update");
+                counterSendScore--;
+                tmpCachedTimeSend = 0.25f;
+                SendScore();
+            }
+            tmpCachedTimeSend -= Time.deltaTime;
+        }
 
         public void SendScore()
         {
@@ -159,6 +184,13 @@ namespace WE.PVP
             data.CurHP = Player.Instance.CurrentHp;
             data.MaxHP = Player.Instance.MaxHp;
 
+            if(!Player.Instance.IsAlive)
+            {
+                if(PVPManager.Instance.StateMachine.CurrentState() == PVPSate.PLAYING)
+                {
+                    PlayerDie();
+                }
+            }
             PVPManager.Instance.Room.SendScore(data);
         }
 
@@ -171,7 +203,7 @@ namespace WE.PVP
             Player.Instance.tankMovement.Stop();
             TimerSystem.Instance.StopTimeScale(1, () => {});
 
-            UIManager.Instance.ShowPopupEndGamePVP();
+            UIManager.Instance.ShowPopupEndGamePVP(endGameMessage);
 
             if (endGameMessage.WinnerData.SessionId == PVPManager.Instance.DataPlayer.SessionId)
             {
@@ -188,9 +220,7 @@ namespace WE.PVP
         }
         private void OnEndGameByDisconnect()
         {
-            /**
-             * show popup end game by dis
-             */
+            UIManager.Instance.ShowPopupPVPUserDisconnect();
         }
         public void PlayerDie()
         {

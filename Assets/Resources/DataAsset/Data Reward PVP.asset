@@ -1,0 +1,371 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3e6e70ed57f7342b44ba2137b1120f, type: 3}
+  m_Name: Data Reward PVP
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: RankPVP
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[ERankPVP, Assembly-CSharp],[WE.Data.RankPVP,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ERankPVP, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 0
+    - Name: battlePoint
+      Entry: 3
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 3|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 1
+    - Name: battlePoint
+      Entry: 3
+      Data: 500
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 4|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 2
+    - Name: battlePoint
+      Entry: 3
+      Data: 700
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 5|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 3
+    - Name: battlePoint
+      Entry: 3
+      Data: 900
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 6|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 4
+    - Name: battlePoint
+      Entry: 3
+      Data: 1100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 7|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 5
+    - Name: battlePoint
+      Entry: 3
+      Data: 1300
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 7
+      Data: 8|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 6
+    - Name: battlePoint
+      Entry: 3
+      Data: 1300
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 7
+      Data: 9|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 7
+    - Name: battlePoint
+      Entry: 3
+      Data: 1700
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 7
+      Data: 10|WE.Data.RankPVP, Assembly-CSharp
+    - Name: eRank
+      Entry: 3
+      Data: 8
+    - Name: battlePoint
+      Entry: 3
+      Data: 2000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: RewardsTopPVP
+      Entry: 7
+      Data: 11|MS.Internal.Xml.XPath.ClonableStack`1[[WE.Data.RewardsTopPVP, Assembly-CSharp]],
+        System.Xml
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 12|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 1
+    - Name: rankMax
+      Entry: 3
+      Data: 1
+    - Name: gold
+      Entry: 3
+      Data: 500000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 2
+    - Name: rankMax
+      Entry: 3
+      Data: 2
+    - Name: gold
+      Entry: 3
+      Data: 300000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 3
+    - Name: rankMax
+      Entry: 3
+      Data: 3
+    - Name: gold
+      Entry: 3
+      Data: 100000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 4
+    - Name: rankMax
+      Entry: 3
+      Data: 10
+    - Name: gold
+      Entry: 3
+      Data: 50000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 11
+    - Name: rankMax
+      Entry: 3
+      Data: 20
+    - Name: gold
+      Entry: 3
+      Data: 10000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 21
+    - Name: rankMax
+      Entry: 3
+      Data: 100
+    - Name: gold
+      Entry: 3
+      Data: 5000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 101
+    - Name: rankMax
+      Entry: 3
+      Data: 1000
+    - Name: gold
+      Entry: 3
+      Data: 1000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|WE.Data.RewardsTopPVP, Assembly-CSharp
+    - Name: rankMin
+      Entry: 3
+      Data: 1001
+    - Name: rankMax
+      Entry: 3
+      Data: 9999999
+    - Name: gold
+      Entry: 3
+      Data: 500
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

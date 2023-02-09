@@ -21,9 +21,8 @@ namespace WE.UI.PVP
         {
             _txtName.text = data.DisplayName;
             _imgAvatar.sprite = SpriteManager.Instance.GetSpriteAvatar(data.AvatarUrl);
-            ERankPVP eRankPVP = ERankPVP.Gold1;
+            ERankPVP eRankPVP = DataManager.Instance.dataRewardPVP.GetRankPvp(data.Elo);
             _imgHonor.sprite = SpriteManager.Instance.GetSpriteRankingPVP(eRankPVP);
-            _imgHonor.SetNativeSize();
 
             _txtHonor.text = "Gold";
 

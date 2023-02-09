@@ -26,19 +26,15 @@ namespace WE.UI.PVP
         private const string intendTime = "Intended time ";
         public override void InitUI()
         {
-            
-        }
-        public override void Show()
-        {
+            DebugCustom.LogColorJson("show popup mathching pvp hihihi");
             isMatchingSuccess = false;
             _gButtonExit.SetActive(true);
             _gFind.SetActive(true);
             _gFound.SetActive(false);
             _timewait = 0;
-            _txtTime.text = string.Format(intendTime, MAX_TIME);
-
+            _txtTime.text = intendTime + MAX_TIME.ToString();
+            DebugCustom.Log("time finding", intendTime + MAX_TIME.ToString());
             WaitingMatching();
-
         }
 
         public void FillDataPlayer(ReadyPVPMessage data)
@@ -77,8 +73,9 @@ namespace WE.UI.PVP
                                                     }
                                                     else
                                                     {
+                                                        DebugCustom.LogColor("finding time", _timewait);
                                                         if (!isMatchingSuccess)
-                                                            _txtTime.text = string.Format(intendTime, MAX_TIME - _timewait);
+                                                            _txtTime.text = intendTime + (MAX_TIME - _timewait).ToString();
                                                     }
                                                 }
                                                 catch
@@ -87,9 +84,19 @@ namespace WE.UI.PVP
                                                 }
                                             }).AddTo(this.gameObject);
         }
+       
         private void LeaveRoom()
         {
             PVPManager.Instance.Room.LeaveRoom(false, false);
+        }
+
+        public void ReturnHome()
+        {
+            base.ActionAfterShow();
+            _waitDisposable?.Dispose();
+            if (!isMatchingSuccess)
+                LeaveRoom();
+            base.Hide();
         }
     }
 

@@ -87,13 +87,13 @@ public class LeaderBoardPVP : MessageRequest
 public class EndGameData
 {
     public string DisplayName;
-    public string AvatarUrl;
+    public TypeAvatar AvatarUrl;
     public string UserId;
     public string SessionId;
     public int Score;
     public int eloPre;
     public int eloCur;
-    public Dictionary<string, string> Rewards;
+    public Dictionary<string, int> Rewards;
 }
 
 [Serializable]
@@ -131,7 +131,7 @@ public class UserPVPRanking
 {
     //public string UserId;
     public string DisplayName;
-    public string AvatarUrl;
+    public TypeAvatar AvatarUrl;
 }
 
 [Serializable]

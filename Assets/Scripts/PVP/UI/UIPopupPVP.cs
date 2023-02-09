@@ -40,6 +40,7 @@ namespace WE.UI.PVP
 
         public void InitPopupPVP(DataPVPRanking info) {
             PVPManager.Instance.InitTimeRemain(info.EndTime, info.CurrentTime);
+            lstElementRankingPvp = new List<ElementRankingPVP>();
             OnTick();
             LoadDataRanking(info);
         }
@@ -71,12 +72,57 @@ namespace WE.UI.PVP
                     currentRankingPvp.gameObject.SetActive(false);
                 } else
                 {
-
+                    notifyUserNotPlayPvp.SetActive(false);
+                    currentRankingPvp.gameObject.SetActive(true);
+                    ERankPVP _currentRank = DataManager.Instance.dataRewardPVP.GetRankPvp(data.YourScore.Score);
+                    currentRankingPvp.SetRank(data.YourScore.RankNumber);
+                    currentRankingPvp.SetBattlePoint(data.YourScore.Score);
+                    currentRankingPvp.SetUserName(Context.CurrentUserPlayfabProfile.DisplayName);
+                    currentRankingPvp.SetAvatar(TypeAvatar.Avatar8);
+                    currentRankingPvp.SetRankPVP(_currentRank);
+                    currentRankingPvp.SetReward(data.YourScore.RankNumber);
+                    DebugCustom.LogColorJson("Current ranking pvp", _currentRank);
                 }
             }
             if (!data.TopUser.IsNullOrEmpty())
             {
                 notifyNotUserInLeaderboard.SetActive(false);
+
+                for(int i = 0; i < data.TopUser.Count; i++)
+                {
+                    InfoPVPRanking _infoRanking = data.TopUser[i];
+                    int _score = _infoRanking.Score;
+                    int _ranking = _infoRanking.RankNumber;
+                    string _name = "abc";
+                    TypeAvatar _avatar = TypeAvatar.Default;
+                    if(_infoRanking.PlayerData != null)
+                    {
+                        _name = _infoRanking.PlayerData.DisplayName;
+                        _avatar = _infoRanking.PlayerData.AvatarUrl;
+                    }
+
+                    ElementRankingPVP _element = null;
+                    if (i > lstElementRankingPvp.Count - 1)
+                    {
+                        _element = Instantiate(prefabsRanking, parentTransform);
+                        lstElementRankingPvp.Add(_element);
+                    }
+                    else
+                    {
+                        _element = lstElementRankingPvp[i];
+                        _element.gameObject.SetActive(true);
+                    }
+                    _element.transform.localScale = Vector3.one;
+                    _element.transform.localPosition = Vector3.zero;
+                    _element.SetInfo(_ranking, _name, DataManager.Instance.dataRewardPVP.GetRankPvp(_score), _score, _avatar);
+                    _element.SetColorRank(_ranking);
+                }
+                DebugCustom.LogColorJson("top user", lstElementRankingPvp.Count, data.TopUser.Count);
+                if (data.TopUser.Count < lstElementRankingPvp.Count)
+                {
+                    for (int i = data.TopUser.Count; i < lstElementRankingPvp.Count; i++)
+                        lstElementRankingPvp[i].gameObject.SetActive(false);
+                }
             }
             else
             {
@@ -89,17 +135,19 @@ namespace WE.UI.PVP
             DebugCustom.LogColor("Matching UI");
             _pvpMatchingController?.Matching();
  
-            base.Hide();
+          //  base.Hide();
         }
 
         public override void AfterHideAction()
         {
+            Debug.Log("pvp popup hide");
             base.AfterHideAction();
+            lstElementRankingPvp = null;
             EventManager.StopListening(Constant.GAME_TICK_EVENT, OnTick);
         }
         public void OnDisable()
         {
-            lstElementRankingPvp = null;
+            Debug.Log("on disable popup pvp");
         }
     }
 }

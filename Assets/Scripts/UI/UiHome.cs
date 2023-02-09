@@ -20,6 +20,8 @@ namespace WE.UI
 
         public GameObject hackCoin;
         public GameObject hackLevel;
+        public GameObject hackSliverKey;
+
         [Header("==========Assign Text=======")]
         public TextMeshProUGUI textCoins;
         public TextMeshProUGUI textZone;
@@ -76,6 +78,7 @@ namespace WE.UI
             AvatarButton.onClick.AddListener(OpenUIAvatar);
             hackCoin.SetActive(Constant.IS_TESTER_JACKAL);
             hackLevel.SetActive(Constant.IS_TESTER_JACKAL);
+            hackSliverKey.SetActive(Constant.IS_TESTER_JACKAL);
             buttonMoreGame.SetActive(FireBaseRemoteConfig.GetBoolConfig("ActiveMoreGames", false));
             ResolutionManager.Instance.ZoomInUiPanel();
             if (GameplayManager.Instance.CurrentTimePlay > 180 && !Player.Instance.IsOnNoAds() &&  GameplayManager.Instance.CurrentGameplayType != GameType.Tutorial)
@@ -156,6 +159,10 @@ namespace WE.UI
         public void HackLevel()
         {
             Player.Instance.HackLevel();
+        }
+        public void HackSliverKey()
+        {
+            Player.Instance.AddEndlessKey(10);
         }
         public void OpenPopupEndless()
         {

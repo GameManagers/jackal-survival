@@ -82,7 +82,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     public void Init()
     {
         LoginState = ELoginState.LOGOUT;
-        Connect(GetServer(Server.Public));
+        Connect(GetServer(Server.Test));
     }
 
     public void Connect(string serverUri)

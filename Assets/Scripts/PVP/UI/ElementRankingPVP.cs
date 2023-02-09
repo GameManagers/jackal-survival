@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using WE.Manager;
@@ -61,7 +62,9 @@ namespace WE.UI.PVP
          */
         public void SetReward(int ranking)
         {
-           
+            var reward = DataManager.Instance.dataRewardPVP.GetRewardsTopPVP(ranking);
+            uiRewards[0].gameObject.SetActive(true);
+            uiRewards[0].SetValue(reward);
         }
 
 
@@ -72,7 +75,6 @@ namespace WE.UI.PVP
                 iconRanking.gameObject.SetActive(true);
                 labelRanking.text = string.Empty;
                 iconRanking.sprite = spriteCups[_ranking - 1];
-                iconRanking.SetNativeSize();
             }
             else
             {

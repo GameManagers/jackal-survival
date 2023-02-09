@@ -801,7 +801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9189081037698325224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5057568267762978796}
+        m_TargetAssemblyTypeName: WE.UI.PVP.UIMatchingPVP, Assembly-CSharp
+        m_MethodName: ReturnHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5670813133430486177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,13 +1082,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CloseButton: {fileID: 0}
   UiAnim: {fileID: 0}
-  blockPanel: {fileID: 0}
+  blockPanel: {fileID: 1749096005364841863}
   hackObj: {fileID: 0}
   IsControllTimeScale: 0
   IsActiveBackButton: 0
   IsGameplayUI: 0
-  _uiInfoPlayer: {fileID: 0}
-  _uiInfoOrtherPlayer: {fileID: 0}
+  _uiInfoPlayer: {fileID: 6593167892477802596}
+  _uiInfoOrtherPlayer: {fileID: 781563751779541127}
   _gButtonExit: {fileID: 5416234819887856908}
   _gFind: {fileID: 4506614039401497000}
   _gFound: {fileID: 7263360668899921439}

@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunBasePos: {fileID: 6507630472140654968}
-  vehicleType: 3
+  vehicleType: 0
   gunAnim: {fileID: 1570502641340177349}
   AttackAnim: Attack
   IdleAnim: Idle
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1817535125
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 1643893866, guid: 060a542ebbc1ac24698dda778c0cf708, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1817535125
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -2
   m_Sprite: {fileID: -290203526, guid: 0eb76880a7d5bb04cbe5ddef180f939c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

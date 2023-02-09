@@ -150,7 +150,6 @@ public class PVPRoomController : MonoBehaviour
 
     public async void LeaveRoom(bool isHaveReconnect, bool consented = true)
     {
-        DebugCustom.LogColorJson("LeaveRoom", _room);
         //if (isWaiting)
         //WaitingCanvas.Instance.Show();
         _isHaveReconnect = isHaveReconnect;
@@ -161,7 +160,11 @@ public class PVPRoomController : MonoBehaviour
 #if UNITY_IOS
             OnLeave(1006);
 #endif
-            await _room.Leave(consented);
+            {
+                Debug.Log("on leave rooom");
+                await _room.Leave(consented);
+
+            }
         }
         catch (Exception e)
         {
@@ -195,7 +198,7 @@ public class PVPRoomController : MonoBehaviour
         /**
          * tam thoi comment
          */
-      //  _onUpdateScore = OnUpdateScore;
+        _onUpdateScore = OnUpdateScore;
 
         _room.OnMessage<PlayerLeftMessage>("PLAYER_LEFT", (msg) =>
         {
@@ -208,8 +211,8 @@ public class PVPRoomController : MonoBehaviour
 
         _room.OnMessage<ReadyPVPMessage>("ENERMY_READY_PVP", (msg) =>
         {
+            DebugCustom.LogColorJson("ENERMY_READY_PVP", msg);
             OnReadyPVP?.Invoke(msg);
-            // DebugCustom.LogColorJson("ENERMY_READY_PVP", msg);
         });
         _room.OnMessage<PreparePVPMessage>("PREPARE_PVP", (msg) =>
         {
@@ -255,7 +258,7 @@ public class PVPRoomController : MonoBehaviour
     public void SendReadyPVP(ReadyPVPMessage dataPlayer)
     {
         _ = _room.Send("READY_PVP", dataPlayer);
-        // DebugCustom.LogColor("SEND_READY_PVP");
+         DebugCustom.LogColor("SEND_READY_PVP");
     }
 
     private void OnUpdateScore(GetScorePVPMessage data)
@@ -291,8 +294,10 @@ public class PVPRoomController : MonoBehaviour
     private void OnLeave(int code)
     {
         _room = null;
-        // DebugCustom.LogColorJson("OnLeave", _isHaveReconnect, code, _room);
+         DebugCustom.LogColorJson("OnLeave", _isHaveReconnect, code, _room);
         if (_isHaveReconnect && !_otherPlayerLeft)
             OnReconnect?.Invoke(code);
+        else
+            PVPManager.Instance.StateMachine.Dispose();
     }
 }

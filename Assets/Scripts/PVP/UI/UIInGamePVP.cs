@@ -10,6 +10,7 @@ using WE.Utils;
 using WE.Support;
 using DG.Tweening;
 using WE.PVP;
+using WE.PVP.Manager;
 
 namespace WE.UI.PVP
 {
@@ -42,7 +43,7 @@ namespace WE.UI.PVP
         public override void InitUI()
         {
             playerInfo.InitInfo();
-
+            oppnentsInfo.InitInfo(PVPManager.Instance.DataOtherPlayer);
             EventManager.StartListening(Constant.GAME_TICK_EVENT, OnTick);
             EventManager.StartListening(Constant.ON_RECEVICE_EXP, OnReceiveExp);
             EventManager.StartListening(Constant.ON_ENEMY_DIE, OnEnemyKill);
@@ -62,7 +63,7 @@ namespace WE.UI.PVP
 
         public void OnEnemyKill()
         {
-            UpdateScore(GameplayManager.Instance.CurrentKillCount, 99);
+            PVPMode.Instance.UpdateCurrentScore(GameplayManager.Instance.CurrentKillCount);
         }
 
         public void Warning(float timer)

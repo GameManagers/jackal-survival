@@ -66,13 +66,14 @@ namespace WE.Manager
         [FoldoutGroup("Assign UI")]
         public UIPopupPVP uIPopupPVP;
         [FoldoutGroup("Assign UI")]
+        public UIMatchingPVP uiMatchingPVP;
+        [FoldoutGroup("Assign UI")]
         public UIInGamePVP uiInGamePVP;
         [FoldoutGroup("Assign UI")]
         public UIEndGamePVP uIEndGamePVP;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
-
 
         public bool tester;
         public bool playTut;
@@ -371,6 +372,11 @@ namespace WE.Manager
             return uiInGamePVP;
         }
 
+        public UIMatchingPVP GetUIMatchingPVP()
+        {
+            return uiMatchingPVP;
+        }
+
         public void ShowPopupPVP()
         {
             Context.LoginServer(() =>
@@ -379,9 +385,14 @@ namespace WE.Manager
             });
         }
 
-        public void ShowPopupEndGamePVP()
+        public void ShowPopupEndGamePVP(EndGameMessage endGameMessage)
         {
-            uIEndGamePVP.Show();
+            uIEndGamePVP.ShowPopup(endGameMessage);
+        }
+
+        public void ShowPopupPVPUserDisconnect()
+        {
+            uIEndGamePVP.ShowFrameDisconnect();
         }
 
         private void GetLeaderboardPVPSuccess(DataPVPRanking data)
@@ -394,6 +405,7 @@ namespace WE.Manager
         {
             uITextPopup.Show("PVP mode maintenance");
         }
+
     }
 }
 

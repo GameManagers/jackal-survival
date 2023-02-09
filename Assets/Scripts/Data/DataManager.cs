@@ -16,6 +16,7 @@ namespace WE.Manager
         public DataZoneChestDrop dataZoneChestDrop;
         public DataGlobalUpgrade dataGlobalUpgrade;
         public DataEffect dataEffect;
+        public DataRewardPVP dataRewardPVP;
     }
 }
 

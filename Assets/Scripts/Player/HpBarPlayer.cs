@@ -25,6 +25,7 @@ namespace WE.Unit
         public void OnHpChange()
         {
             float val = Player.Instance.CurrentHp / Player.Instance.MaxHp;
+            DebugCustom.LogColorJson("hp player",Player.Instance.CurrentHp, Player.Instance.MaxHp);
             if (val < 0.3f)
                 bar.sprite = lowHpSprite;
             else

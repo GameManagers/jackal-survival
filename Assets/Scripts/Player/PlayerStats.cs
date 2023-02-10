@@ -193,6 +193,7 @@ namespace WE.Unit
         public void SetValueCount(float v)
         {
             ValueCount = v;
+            DebugCustom.Log("get car hp", v, Player.Instance.MaxHp);
             if (ValueCount < 0)
             {
                 ValueCount = 0;

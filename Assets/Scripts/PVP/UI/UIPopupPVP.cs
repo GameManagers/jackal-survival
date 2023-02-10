@@ -9,6 +9,7 @@ using WE.Manager;
 using WE.PVP.Manager;
 using WE.Support;
 using WE.Utils;
+using static UnityEngine.ParticleSystem;
 
 namespace WE.UI.PVP
 {
@@ -142,9 +143,37 @@ namespace WE.UI.PVP
         {
             Debug.Log("pvp popup hide");
             base.AfterHideAction();
-            lstElementRankingPvp = null;
+            ClearRankingPVP();
             EventManager.StopListening(Constant.GAME_TICK_EVENT, OnTick);
         }
+
+        private void ClearRankingPVP()
+        {
+            if(lstElementRankingPvp != null)
+            {
+                int count = lstElementRankingPvp.Count;
+                if (count > 0)
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        DeleteRanking(0);
+                    }
+                }
+                lstElementRankingPvp = null;
+            }
+        }
+
+        private void DeleteRanking(int index)
+        {
+
+            if (lstElementRankingPvp != null && lstElementRankingPvp.Count > index)
+            {
+                var rank = lstElementRankingPvp[index];
+                lstElementRankingPvp.RemoveAt(index);
+                DestroyImmediate(rank.gameObject);
+            }
+        }
+
         public void OnDisable()
         {
             Debug.Log("on disable popup pvp");

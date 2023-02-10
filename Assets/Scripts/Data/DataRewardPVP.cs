@@ -18,6 +18,8 @@ namespace WE.Data
            // RankPVP = new Dictionary<ERankPVP, RankPVP>();
            // RewardsTopPVP = new List<RewardsTopPVP>();
         }
+#endif
+
         public ERankPVP GetRankPvp(int battlePoint)
         {
             ERankPVP _rank = ERankPVP.Bronze3;
@@ -41,7 +43,6 @@ namespace WE.Data
             }
             return RewardsTopPVP[RewardsTopPVP.Count - 1].gold;
         }
-#endif
     }
 
     [System.Serializable]

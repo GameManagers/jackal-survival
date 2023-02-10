@@ -26,7 +26,6 @@ namespace WE.UI.PVP
         private const string intendTime = "Intended time ";
         public override void InitUI()
         {
-            DebugCustom.LogColorJson("show popup mathching pvp hihihi");
             isMatchingSuccess = false;
             _gButtonExit.SetActive(true);
             _gFind.SetActive(true);
@@ -44,7 +43,7 @@ namespace WE.UI.PVP
 
         public void FillDataOtherPlayer(ReadyPVPMessage data)
         {
-
+            DebugCustom.LogColorJson("fill data other player");
             _waitDisposable?.Dispose();
             isMatchingSuccess = true;
             _uiInfoOrtherPlayer.LoadInfo(data);

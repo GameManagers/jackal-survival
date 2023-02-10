@@ -59,6 +59,7 @@ namespace WE.PVP
         private void Start()
         {
             DebugCustom.LogColorJson("Init PVP mode");
+            UIManager.Instance.uIPopupPVP.Hide();
             uiGameplayPVP = UIManager.Instance.GetUIPVP();
         }
 

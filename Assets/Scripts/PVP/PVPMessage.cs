@@ -13,7 +13,7 @@ public class ReadyPVPMessage : MessageBase
     public int Status;
     public float Atk;
     public float Level;
-    public string TankId;
+    public EVehicleType TankId;
     
     public int Elo;
     public int CountMatching;
@@ -51,6 +51,7 @@ public class NeedGameStartPVPMessage : MessageBase
 [Message("GAME_SCORE_UPDATE")]
 public class GetScorePVPMessage : MessageBase
 {
+    public int Time;
     public Dictionary<string, GameScoreData> GameScores;
 }
 
@@ -106,7 +107,7 @@ public class ErrorMatching
 [Serializable]
 public class GameScoreData
 {
-    public string RocketId = "";
+    public string UserId = "";
     public string SessionId = "";
 
     public int Score;

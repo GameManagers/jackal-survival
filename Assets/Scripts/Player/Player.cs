@@ -82,6 +82,7 @@ namespace WE.Unit
         public EVehicleType CurrentTank => currentTank;
         EVehicleType currentTank;
         public int currentCoin => playerData.currentCoin;
+        public TypeAvatar CurrentAvatar => playerData.currentAvatar;
 
         public System.Action<EVehicleType> OnCarChange;
         public System.Action OnHpChange;
@@ -192,6 +193,12 @@ namespace WE.Unit
         public void ChangeName()
         {
             TigerForge.EventManager.EmitEvent(Constant.ON_CHANGE_NAME);
+        }
+
+        public void ChangeAvatar(TypeAvatar avatar)
+        {
+            PLayerData.currentAvatar = avatar;
+            TigerForge.EventManager.EmitEvent(Constant.ON_CHANGE_AVATAR);
         }
 
         public void AddEndlessKey(int val)
@@ -408,7 +415,8 @@ namespace WE.Unit
             tankMovement.Stop();
             graveStone.SetActive(true);
             SkillController.Instance.StopAction();
-            if (GameplayManager.Instance.CurrentGameplayType != GameType.Tutorial)
+            
+            if (GameplayManager.Instance.CurrentGameplayType != GameType.Tutorial )
             {
                 TimerSystem.Instance.StopTimeScale(1, () => { CheckShowPopupDie(); });
             }
@@ -421,7 +429,7 @@ namespace WE.Unit
         {
             if (adsRevieCount + revivalCount > 0)
             {
-                UIManager.Instance.ShowPopupDie();
+                if (GameplayManager.Instance.CurrentGameplayType != GameType.PVP) UIManager.Instance.ShowPopupDie();
             }
             else
             {

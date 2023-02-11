@@ -242,6 +242,7 @@ namespace WE.Unit
         public int currentCoin = 0;
         public int totalEnemyKill = 0;
         public int totalCoinSpend = 0;
+        public TypeAvatar currentAvatar = TypeAvatar.Default;
         public Dictionary<EVehicleType, int> vehicleUpgrades;
         public EVehicleType currentVehicle = EVehicleType.Machine_Gun_Vehicle;
 

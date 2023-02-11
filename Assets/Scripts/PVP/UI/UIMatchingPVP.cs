@@ -89,6 +89,12 @@ namespace WE.UI.PVP
             PVPManager.Instance.Room.LeaveRoom(false, false);
         }
 
+        public override void Hide()
+        {
+            _uiInfoOrtherPlayer.HideOpponentInfo();
+            base.Hide();
+        }
+
         public void ReturnHome()
         {
             base.ActionAfterShow();

@@ -31,6 +31,12 @@ namespace WE.Data
             return _rank;
         }
 
+        public string GetLabelRank(ERankPVP eRank)
+        {
+            return RankPVP[eRank].name;
+        }
+
+
         public int GetRewardsTopPVP(int rank)
         {
 
@@ -43,6 +49,7 @@ namespace WE.Data
             }
             return RewardsTopPVP[RewardsTopPVP.Count - 1].gold;
         }
+
     }
 
     [System.Serializable]
@@ -50,6 +57,8 @@ namespace WE.Data
     {
         [FoldoutGroup("$eRank")]
         public ERankPVP eRank;
+        [FoldoutGroup("$eRank")]
+        public string name;
         [FoldoutGroup("$eRank")]
         public int battlePoint;
     }

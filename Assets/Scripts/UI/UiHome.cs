@@ -28,7 +28,7 @@ namespace WE.UI
         public TextMeshProUGUI textNoadsCountdown;
 
         public TextMeshProUGUI textDisplayName;
-
+        public Image avatarHome;
         [Header("==========Assign Button=======")]
         public Button SettingButton;
         public Button PlayButton;
@@ -62,7 +62,7 @@ namespace WE.UI
             }
 
             textCoins.text = Player.Instance.currentCoin.ToString();
-
+            EventManager.StartListening(Constant.ON_CHANGE_AVATAR, OnChangeAvatar);
             EventManager.StartListening(Constant.ON_CHANGE_NAME, OnChangeName);
             EventManager.StartListening(Constant.ON_COINS_CHANGE, OnChangeCoin);
             EventManager.StartListening(Constant.ON_CHANGE_ZONE, OnChangeZone);
@@ -114,9 +114,15 @@ namespace WE.UI
             textDisplayName.text = Context.CurrentUserPlayfabProfile.DisplayName;
         }
 
+        public void OnChangeAvatar()
+        {
+            avatarHome.sprite = SpriteManager.Instance.GetSpriteAvatar(Player.Instance.CurrentAvatar);
+        }
+
         public override void AfterHideAction()
         {
             base.AfterHideAction();
+            EventManager.StopListening(Constant.ON_CHANGE_AVATAR, OnChangeAvatar);
             EventManager.StopListening(Constant.ON_CHANGE_NAME, OnChangeName);
             EventManager.StopListening(Constant.ON_COINS_CHANGE, OnChangeCoin);
             EventManager.StopListening(Constant.ON_CHANGE_ZONE, OnChangeZone);

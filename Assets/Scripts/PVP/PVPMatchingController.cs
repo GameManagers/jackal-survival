@@ -72,7 +72,8 @@ public class PVPMatchingController : MonoBehaviour
         dataJoin.CountMatching = PVPManager.Instance.CountMatching;
         dataJoin.Elo = Context.PvPBattlePoint;
         dataJoin.Atk = Player.Instance.AttackDamage;
-
+        dataJoin.TankId = Player.Instance.CurrentTank;
+        dataJoin.AvatarUrl = Player.Instance.CurrentAvatar;
         PVPManager.Instance.DataPlayer = dataJoin;
 
         DebugCustom.LogColorJson("dataJoin", dataJoin);

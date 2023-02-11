@@ -171,7 +171,15 @@ namespace WE.PVP.Manager
         {
             return _room != null && _room.Room != null;
         }
-
+        private void OnDestroy()
+        {
+            _stateMachine?.Dispose();
+        }
+        private void OnDisable()
+        {
+            if (Room != null)
+                Room.LeaveRoom(false);
+        }
     }
 
 }

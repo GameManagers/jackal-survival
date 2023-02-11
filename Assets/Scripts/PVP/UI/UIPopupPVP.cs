@@ -9,7 +9,8 @@ using WE.Manager;
 using WE.PVP.Manager;
 using WE.Support;
 using WE.Utils;
-using static UnityEngine.ParticleSystem;
+using WE.Unit;
+using I2.Loc;
 
 namespace WE.UI.PVP
 {
@@ -79,7 +80,7 @@ namespace WE.UI.PVP
                     currentRankingPvp.SetRank(data.YourScore.RankNumber);
                     currentRankingPvp.SetBattlePoint(data.YourScore.Score);
                     currentRankingPvp.SetUserName(Context.CurrentUserPlayfabProfile.DisplayName);
-                    currentRankingPvp.SetAvatar(TypeAvatar.Avatar8);
+                    currentRankingPvp.SetAvatar(Player.Instance.CurrentAvatar);
                     currentRankingPvp.SetRankPVP(_currentRank);
                     currentRankingPvp.SetReward(data.YourScore.RankNumber);
                     DebugCustom.LogColorJson("Current ranking pvp", _currentRank);
@@ -151,15 +152,11 @@ namespace WE.UI.PVP
         {
             if(lstElementRankingPvp != null)
             {
-                int count = lstElementRankingPvp.Count;
-                if (count > 0)
+                while (lstElementRankingPvp.Count > 0)
                 {
-                    for (int i = 0; i < count; i++)
-                    {
-                        DeleteRanking(0);
-                    }
+                    Destroy(lstElementRankingPvp[0].gameObject);
+                    lstElementRankingPvp.RemoveAt(0);
                 }
-                lstElementRankingPvp = null;
             }
         }
 

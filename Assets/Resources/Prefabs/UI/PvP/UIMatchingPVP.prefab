@@ -162,9 +162,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6083331638693189325}
   - component: {fileID: 6002508012211962559}
-  - component: {fileID: 3684283715242236307}
+  - component: {fileID: 8530802015627928867}
   m_Layer: 5
-  m_Name: Tank (1)
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,8 +187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
-  m_SizeDelta: {x: 48, y: 84}
+  m_AnchoredPosition: {x: 0, y: 33}
+  m_SizeDelta: {x: 40, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6002508012211962559
 CanvasRenderer:
@@ -198,7 +198,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605325171948455564}
   m_CullTransparentMesh: 1
---- !u!114 &3684283715242236307
+--- !u!114 &8530802015627928867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 507cf8801faf91742a1b6212c4736c21, type: 3}
+  m_Sprite: {fileID: 1643893866, guid: 060a542ebbc1ac24698dda778c0cf708, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -927,8 +927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: -112}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 17.01, y: -126}
+  m_SizeDelta: {x: 85, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &794374313066846599
 CanvasRenderer:
@@ -1067,7 +1067,8 @@ MonoBehaviour:
   _imgHonor: {fileID: 3134592916190205692}
   _txtHonor: {fileID: 5837396621576713142}
   _txtName: {fileID: 5246293804129490618}
-  _tank: {fileID: 8650567672176780103}
+  _tank: {fileID: 5920598280110877805}
+  _gun: {fileID: 8530802015627928867}
   info: {fileID: 5771951502036835831}
   _imgLoading: {fileID: 8956661419574817509}
 --- !u!1 &5803415756629984391
@@ -1891,6 +1892,7 @@ MonoBehaviour:
   _txtHonor: {fileID: 7372340466973514422}
   _txtName: {fileID: 1290378639585815684}
   _tank: {fileID: 7787818447386442645}
+  _gun: {fileID: 7120725448139697497}
   info: {fileID: 7014195716559194922}
   _imgLoading: {fileID: 6336712869780272165}
 --- !u!1 &8288024040116643816
@@ -1945,7 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607571122657744545}
   - component: {fileID: 4700877881005647251}
-  - component: {fileID: 8650567672176780103}
+  - component: {fileID: 5920598280110877805}
   m_Layer: 5
   m_Name: Tank
   m_TagString: Untagged
@@ -1971,8 +1973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33, y: -112}
-  m_SizeDelta: {x: 86, y: 136}
+  m_AnchoredPosition: {x: -33, y: -124}
+  m_SizeDelta: {x: 85, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4700877881005647251
 CanvasRenderer:
@@ -1982,7 +1984,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8311915149044361447}
   m_CullTransparentMesh: 1
---- !u!114 &8650567672176780103
+--- !u!114 &5920598280110877805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2002,7 +2004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -462729695, guid: 4ecac258c1aa60340a07c4537c820ff4, type: 3}
+  m_Sprite: {fileID: -290203526, guid: 0eb76880a7d5bb04cbe5ddef180f939c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2393,8 +2395,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 16}
-  m_SizeDelta: {x: 48.89, y: 66.79}
+  m_AnchoredPosition: {x: 1, y: 34}
+  m_SizeDelta: {x: 40, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9003463016646451159
 CanvasRenderer:

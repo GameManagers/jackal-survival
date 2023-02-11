@@ -406,6 +406,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         DebugCustom.LogError("OnLogin");
 
         Context.profile = profile;
+        Player.Instance.ChangeAvatar(profile.Avatar);
         Player.Instance.ChangeName();
         DebugCustom.LogColor(profile.DisplayName);
         DebugCustom.LogColor(profile.UserId);

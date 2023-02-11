@@ -29,9 +29,17 @@ public class SetNameRequest : MessageRequest
 }
 
 [Serializable]
+[Message("SET_AVATAR")]
+public class SetAvatarRequest : MessageRequest
+{
+    public TypeAvatar Avatar;
+}
+
+[Serializable]
 
 public class PersionModel
 {
+    public TypeAvatar Avatar;
     public string UserId;
     public string CountryCode;
     public string DisplayName;

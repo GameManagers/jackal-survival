@@ -29,6 +29,8 @@ namespace WE.Utils
         public static string ON_CHANGE_ZONE => "ON_CHANGE_ZONE";
 
         public static string ON_CHANGE_NAME => "ON_CHANGE_NAME";
+        public static string ON_CHANGE_AVATAR => "ON_CHANGE_AVATAR";
+
 
         public static string ON_RECEVICE_EXP => "ON_RECEVICE_EXP";
 

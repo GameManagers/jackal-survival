@@ -29,7 +29,7 @@ namespace WE.UI.PVP.EndGame
 
         public void SetRank(ERankPVP _rank)
         {
-            lbRanking.text = "Test";
+            lbRanking.text = DataManager.Instance.dataRewardPVP.GetLabelRank(_rank);
             imgRank.sprite = SpriteManager.Instance.GetSpriteRankingPVP(_rank);
         }
 

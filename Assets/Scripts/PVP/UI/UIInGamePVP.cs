@@ -44,7 +44,6 @@ namespace WE.UI.PVP
         {
             playerInfo.InitInfo();
             oppnentsInfo.InitInfo(PVPManager.Instance.DataOtherPlayer);
-            EventManager.StartListening(Constant.GAME_TICK_EVENT, OnTick);
             EventManager.StartListening(Constant.ON_RECEVICE_EXP, OnReceiveExp);
             EventManager.StartListening(Constant.ON_ENEMY_DIE, OnEnemyKill);
 
@@ -56,7 +55,6 @@ namespace WE.UI.PVP
 
         private void OnDisable()
         {
-            EventManager.StopListening(Constant.GAME_TICK_EVENT, OnTick);
             EventManager.StopListening(Constant.ON_ENEMY_DIE, OnEnemyKill);
             EventManager.StopListening(Constant.ON_RECEVICE_EXP, OnReceiveExp);
         }
@@ -89,9 +87,9 @@ namespace WE.UI.PVP
             skeletonGraphic.gameObject.SetActive(false);
         }
 
-        public void OnTick()
+        public void UpdateTimePlay(int time)
         {
-            textCount.text = Helper.ConvertTimer(Context.PvPTimeBattle - GameplayManager.Instance.CurrentTimePlay);
+            textCount.text = Helper.ConvertTimer(time);
         }
   
         public void PauseGame()

@@ -242,13 +242,13 @@ public class JoyStick : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoint
 
         //}
         //DebugCustom.LogColor("DealDrag_touchpos", DealDrag_touchpos);
-        if (this.DealDrag_touchpos.magnitude > this.mRadius)
-        {
-            //this.Origin += this.DealDrag_touchpos.normalized * (this.DealDrag_touchpos.magnitude - this.mRadius);
-            this.Origin = pos - DealDrag_touchpos.normalized * mRadius;
-            this.child.localPosition = this.Origin;
-            this.DealDrag_touchpos = this.DealDrag_touchpos.normalized * this.mRadius;
-        }
+        //if (this.DealDrag_touchpos.magnitude > this.mRadius)
+        //{
+        //    //this.Origin += this.DealDrag_touchpos.normalized * (this.DealDrag_touchpos.magnitude - this.mRadius);
+        //    this.Origin = pos - DealDrag_touchpos.normalized * mRadius;
+        //    this.child.localPosition = this.Origin;
+        //    this.DealDrag_touchpos = this.DealDrag_touchpos.normalized * this.mRadius;
+        //}
         this.DealDrag_touchpos1 = this.DealDrag_touchpos;
         if (this.DealDrag_touchpos1.magnitude > this.mRadiusSmall)
         {

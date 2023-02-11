@@ -4,6 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using WE.UI;
 using WE.UI.PVP;
+using WE.UI.Avatar;
 using UnityEngine.UI;
 using DG.Tweening;
 using WE.Utils;
@@ -71,6 +72,7 @@ namespace WE.Manager
         public UIInGamePVP uiInGamePVP;
         [FoldoutGroup("Assign UI")]
         public UIEndGamePVP uIEndGamePVP;
+
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
@@ -379,10 +381,14 @@ namespace WE.Manager
 
         public void ShowPopupPVP()
         {
-            Context.LoginServer(() =>
+            if(!Context.CheckNetwork())
             {
-                PVPManager.Instance.GetLeaderBoard(GetLeaderboardPVPSuccess, GetLeaderboardPVPFalse);
-            });
+                ShowTextNoInternet();
+                return;
+            }
+            
+            PVPManager.Instance.GetLeaderBoard(GetLeaderboardPVPSuccess, GetLeaderboardPVPFalse);
+
         }
 
         public void ShowPopupEndGamePVP(EndGameMessage endGameMessage)

@@ -15,7 +15,7 @@ namespace WE.PVP
     {
         public static PVPMode _instance;
         public static PVPMode Instance => _instance;
-     
+
         public event System.Action EventEndBattle;
         public event System.Action OnChangeTimerBattle;
 
@@ -47,8 +47,11 @@ namespace WE.PVP
             isDispose = false;
             PVPManager.Instance.Room.OnStartGamePVP += OnStartGamePVP;
             PVPManager.Instance.Room.OnEndGamePVP += OnEndGame_PVP;
+            PVPManager.Instance.Room.OnHpChange += Opponents_HPChange;
             PVPManager.Instance.Room.OnScoreChange += Opponents_ChangeScore;
+            PVPManager.Instance.Room.OnChangeTimePlay += OnChangeTimePlay;
             PVPManager.Instance.Room.OnEndGamePVPByDisconnect += OnEndGameByDisconnect;
+            Player.Instance.OnHpChange += Current_OnHpChange;
         }
 
         public void Init()
@@ -86,21 +89,29 @@ namespace WE.PVP
             TimeBattle = _time;
         }
 
+        private void OnChangeTimePlay(int _time)
+        {
+            uiGameplayPVP.UpdateTimePlay(_time);
+        }
+
         private void Dispose()
         {
             if (isDispose)
                 return;
-            isDispose = true;
             StopAllCoroutines();
 
             PVPManager.Instance.Room.OnStartGamePVP -= OnStartGamePVP;
             PVPManager.Instance.Room.OnEndGamePVP -= OnEndGame_PVP;
             PVPManager.Instance.Room.OnScoreChange -= Opponents_ChangeScore;
+            PVPManager.Instance.Room.OnHpChange -= Opponents_HPChange;
+            PVPManager.Instance.Room.OnChangeTimePlay -= OnChangeTimePlay;
             PVPManager.Instance.Room.OnEndGamePVPByDisconnect -= OnEndGameByDisconnect;
             if (GameplayManager.Instance != null)
             {
                 Player.Instance.OnHpChange -= Current_OnHpChange;
             }
+
+            isDispose = true;
         }
 
         public void MinusTime(float time)
@@ -119,7 +130,6 @@ namespace WE.PVP
         public void SetStartGame()
         {
             isStartGame = true;
-            Player.Instance.OnHpChange += Current_OnHpChange;
         }
 
         public void UpdateCurrentScore(int playerScore)
@@ -130,12 +140,17 @@ namespace WE.PVP
         }
         private void Current_OnHpChange()
         {
+            if (!Player.Instance.IsAlive) CurrenTank_OnUnitDie();
             uiGameplayPVP.UpdateHpBarCurrentPlayer(Player.Instance.CurrentHp, Player.Instance.MaxHp);
         }
 
         private void Opponents_ChangeScore(int _score, int _myScore)
         {
             UpdateOppenentsScore(_score, _myScore);
+        }
+        private void Opponents_HPChange(float _currentHp, float _maxHp)
+        {
+            uiGameplayPVP.Opponents_UpdateHpBar(_currentHp, _maxHp);
         }
         public void UpdateOppenentsScore(int _oppenentsScore, int _myScore)
         {
@@ -155,6 +170,11 @@ namespace WE.PVP
         {
             SendScore();
             PlayerDie();
+        }
+
+        public void SendLeaveRoom()
+        {
+            PVPManager.Instance.Room.LeaveRoom(false, true);
         }
 
         private void Update()

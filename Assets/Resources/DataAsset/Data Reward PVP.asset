@@ -53,9 +53,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 0
+    - Name: name
+      Entry: 1
+      Data: Bronze III
     - Name: battlePoint
       Entry: 3
-      Data: 200
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -74,6 +77,9 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 1
+    - Name: name
+      Entry: 1
+      Data: Bronze II
     - Name: battlePoint
       Entry: 3
       Data: 500
@@ -95,9 +101,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 2
+    - Name: name
+      Entry: 1
+      Data: Bronze I
     - Name: battlePoint
       Entry: 3
-      Data: 700
+      Data: 1000
     - Name: 
       Entry: 8
       Data: 
@@ -116,9 +125,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 3
+    - Name: name
+      Entry: 1
+      Data: Silver III
     - Name: battlePoint
       Entry: 3
-      Data: 900
+      Data: 1500
     - Name: 
       Entry: 8
       Data: 
@@ -137,9 +149,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 4
+    - Name: name
+      Entry: 1
+      Data: Silver II
     - Name: battlePoint
       Entry: 3
-      Data: 1100
+      Data: 2000
     - Name: 
       Entry: 8
       Data: 
@@ -158,9 +173,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 5
+    - Name: name
+      Entry: 1
+      Data: Silver I
     - Name: battlePoint
       Entry: 3
-      Data: 1300
+      Data: 2400
     - Name: 
       Entry: 8
       Data: 
@@ -179,9 +197,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 6
+    - Name: name
+      Entry: 1
+      Data: Gold III
     - Name: battlePoint
       Entry: 3
-      Data: 1300
+      Data: 2800
     - Name: 
       Entry: 8
       Data: 
@@ -200,9 +221,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 7
+    - Name: name
+      Entry: 1
+      Data: Gold II
     - Name: battlePoint
       Entry: 3
-      Data: 1700
+      Data: 3200
     - Name: 
       Entry: 8
       Data: 
@@ -221,9 +245,12 @@ MonoBehaviour:
     - Name: eRank
       Entry: 3
       Data: 8
+    - Name: name
+      Entry: 1
+      Data: Gold I
     - Name: battlePoint
       Entry: 3
-      Data: 2000
+      Data: 3500
     - Name: 
       Entry: 8
       Data: 

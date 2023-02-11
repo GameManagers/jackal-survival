@@ -13,6 +13,7 @@ using WE.Pooling;
 using UniRx;
 using Dragon.SDK;
 using WE.PVP;
+using WE.PVP.Manager;
 
 namespace WE.Manager
 {
@@ -96,6 +97,7 @@ namespace WE.Manager
                     canShowGameInter = false;
                     break;
                 case GameType.PVP:
+                    currentTimePlay = 120;
                     ActiveBattlePvp();
                     for (int i = 0; i < 10; i++)
                     {
@@ -184,6 +186,12 @@ namespace WE.Manager
                         EventManager.EmitEvent(Constant.TUT_ON_QUIT_TUT);
                     UIManager.Instance.ShowPopupLose();
                 }
+            } 
+            else
+            {
+                DebugCustom.Log("Send left pvp ----------");
+                PVPMode.Instance.SendLeaveRoom();
+                EndGame(true);
             }
         }
         //public void ObserbShowPopup(bool win)

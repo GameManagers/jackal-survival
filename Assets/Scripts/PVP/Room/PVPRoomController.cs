@@ -18,6 +18,7 @@ public class PVPRoomController : MonoBehaviour
     public Action<EndGameMessage> OnEndGamePVP;
     public Action OnEndGamePVPByDisconnect;
     public Action<int, int> OnScoreChange;
+    public Action<int> OnChangeTimePlay;
     public Action<float, float> OnHpChange;
     public Action<int> OnReconnect;
     public EndGameMessage DataEndGame => _dataEndgame;
@@ -160,11 +161,7 @@ public class PVPRoomController : MonoBehaviour
 #if UNITY_IOS
             OnLeave(1006);
 #endif
-            {
-                Debug.Log("on leave rooom");
-                await _room.Leave(consented);
-
-            }
+            await _room.Leave(consented);         
         }
         catch (Exception e)
         {
@@ -264,17 +261,25 @@ public class PVPRoomController : MonoBehaviour
     private void OnUpdateScore(GetScorePVPMessage data)
     {
         string idOrtherPlayer = PVPManager.Instance.DataOtherPlayer.SessionId;
+        DebugCustom.LogColorJson("id other player", idOrtherPlayer);
+
         if (data.GameScores.ContainsKey(idOrtherPlayer))
         {
-            GameScoreData othetPlayerData = data.GameScores[idOrtherPlayer];
+            GameScoreData otherPlayerData = data.GameScores[idOrtherPlayer];
+            DebugCustom.LogColorJson("data other player", otherPlayerData);
+
             GameScoreData playerData = data.GameScores[PVPManager.Instance.DataPlayer.SessionId];
-            if (othetPlayerData != null)
+            DebugCustom.LogColorJson("data current player", playerData);
+
+            if (otherPlayerData != null)
             {
-                if (OnScoreChange != null)
-                    OnScoreChange.Invoke(othetPlayerData.Score, playerData.Score);
-                if (OnHpChange != null)
-                    OnHpChange.Invoke(othetPlayerData.CurHP, othetPlayerData.MaxHP);
+                OnScoreChange?.Invoke(otherPlayerData.Score, playerData.Score);
+                OnHpChange?.Invoke(otherPlayerData.CurHP, otherPlayerData.MaxHP);
             }
+        }
+        if(data.Time >=0)
+        {
+            OnChangeTimePlay.Invoke(data.Time);
         }
     }
 
@@ -284,6 +289,7 @@ public class PVPRoomController : MonoBehaviour
         OnPreparePVP = null;
         OnStartGamePVP = null;
         OnScoreChange = null;
+        OnChangeTimePlay = null;
         OnHpChange = null;
         OnEndGamePVP = null;
         OnLeftPVP = null;

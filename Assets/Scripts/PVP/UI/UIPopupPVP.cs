@@ -32,6 +32,7 @@ namespace WE.UI.PVP
         [SerializeField]
         private GameObject notifyNotUserInLeaderboard, notifyUserNotPlayPvp;
         public Button PlayPVPButton;
+        public Button ButtonClose;
         [SerializeField] private Text _txtRemainTime;
         private List<ElementRankingPVP> lstElementRankingPvp;
 
@@ -138,6 +139,11 @@ namespace WE.UI.PVP
             _pvpMatchingController?.Matching();
  
           //  base.Hide();
+        }
+
+        public void HidePopup()
+        {
+            base.Hide();
         }
 
         public override void AfterHideAction()

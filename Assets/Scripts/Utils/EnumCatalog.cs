@@ -224,7 +224,6 @@ public enum TypeAvatar
     Avatar5 = 5,
     Avatar6 = 6,
     Avatar7 = 7,
-    Avatar8 = 8,
 }
 
 #endregion

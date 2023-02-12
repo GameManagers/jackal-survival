@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2233834366691566339}
   - component: {fileID: 8837066816094558389}
   m_Layer: 5
-  m_Name: Oponent Score
+  m_Name: Opponent Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,6 +785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139566005741956042}
+  - component: {fileID: 3806852040191416401}
   m_Layer: 5
   m_Name: Opponent Player
   m_TagString: Untagged
@@ -815,6 +816,22 @@ RectTransform:
   m_AnchoredPosition: {x: 138, y: -69}
   m_SizeDelta: {x: 278.44, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3806852040191416401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108813735611961765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c93f17727267d54aa9a2b0cc6afbf2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lbPlayerName: {fileID: 5756779213926122408}
+  iconHpBar: {fileID: 2021058464242508831}
+  lbValueHPBar: {fileID: 396688111114650725}
+  iconAvatar: {fileID: 8705028751598770448}
 --- !u!1 &2458424717773001578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2489722087656047513}
   - component: {fileID: 2489722087656047519}
-  - component: {fileID: 6082639057206752531}
+  - component: {fileID: 7005411778442021121}
   - component: {fileID: 2489722087656047516}
   m_Layer: 5
   m_Name: UI In Game PVP
@@ -1474,7 +1491,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2489722087656047512}
   m_CullTransparentMesh: 1
---- !u!114 &6082639057206752531
+--- !u!114 &7005411778442021121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1487,20 +1504,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CloseButton: {fileID: 0}
-  UiAnim: {fileID: 0}
-  blockPanel: {fileID: 0}
+  UiAnim: {fileID: 2489722087656047516}
+  blockPanel: {fileID: 2489722087176191617}
   hackObj: {fileID: 0}
   IsControllTimeScale: 0
   IsActiveBackButton: 0
   IsGameplayUI: 0
-  playerInfo: {fileID: 0}
-  oppnentsInfo: {fileID: 0}
-  scoreBarPVP: {fileID: 0}
-  textReady: {fileID: 0}
-  textCount: {fileID: 0}
-  textLevel: {fileID: 0}
-  expBar: {fileID: 0}
-  expBarFlash: {fileID: 0}
+  playerInfo: {fileID: 1240242330879084774}
+  oppnentsInfo: {fileID: 3806852040191416401}
+  scoreBarPVP: {fileID: 3356760072746971994}
+  textReady: {fileID: 1580791298675967951}
+  textCount: {fileID: 2489722086864114829}
+  textLevel: {fileID: 2489722088862595304}
+  expBar: {fileID: 2489722087563133932}
+  expBarFlash: {fileID: 2489722087007840114}
   skeletonGraphic: {fileID: 0}
   animIdle: 
   animShow: 
@@ -2291,6 +2308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2515429419027984880}
+  - component: {fileID: 1240242330879084774}
   m_Layer: 5
   m_Name: Current Player
   m_TagString: Untagged
@@ -2321,6 +2339,22 @@ RectTransform:
   m_AnchoredPosition: {x: -139.22, y: -69}
   m_SizeDelta: {x: 278.44, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1240242330879084774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656460279475795205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c93f17727267d54aa9a2b0cc6afbf2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lbPlayerName: {fileID: 1464270633849451111}
+  iconHpBar: {fileID: 2386550912201762228}
+  lbValueHPBar: {fileID: 2842841140443341645}
+  iconAvatar: {fileID: 2660810462132611302}
 --- !u!1 &5639831814081223845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,6 +2522,7 @@ GameObject:
   - component: {fileID: 3882917095184746213}
   - component: {fileID: 992215759506989125}
   - component: {fileID: 4548499032135300416}
+  - component: {fileID: 3356760072746971994}
   m_Layer: 5
   m_Name: FillBar Percent Score
   m_TagString: Untagged
@@ -2557,6 +2592,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3356760072746971994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698739465613040088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a905d9982cb182e43b7392cffe36e831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lbCurrentScore: {fileID: 3562063670629324171}
+  lbOpponentsScore: {fileID: 8837066816094558389}
 --- !u!1 &8053606278513545285
 GameObject:
   m_ObjectHideFlags: 0

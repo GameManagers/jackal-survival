@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using WE.Manager;
+using WE.Unit;
 
 namespace WE.UI.PVP
 {
@@ -25,6 +27,7 @@ namespace WE.UI.PVP
         public void InitInfo()
         {
             iconHpBar.transform.localScale = new Vector3(1, 1, 1);
+            LoadAvatar(Player.Instance.CurrentAvatar);
             LoadName(Context.CurrentUserPlayfabProfile.DisplayName);
             UpdateValueHP(1f, 1f);
         }
@@ -33,7 +36,13 @@ namespace WE.UI.PVP
         {
             iconHpBar.transform.localScale = new Vector3(1, 1, 1);
             LoadName(opponents.DisplayName);
+            LoadAvatar(opponents.AvatarUrl);
             UpdateValueHP(1f, 1f);
+        }
+
+        private void LoadAvatar(TypeAvatar _avatar)
+        {
+            iconAvatar.sprite = SpriteManager.Instance.GetSpriteAvatar(_avatar);
         }
 
         private void LoadName(string _name)

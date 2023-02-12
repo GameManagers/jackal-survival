@@ -114,7 +114,6 @@ public class PVPRoomController : MonoBehaviour
         if (_room != null)
         {
             _ = _room.Send("SEND_GAME_SCORE", data);
-            //DebugCustom.LogColor("SEND_GAME_SCORE");
         }
     }
 
@@ -139,20 +138,15 @@ public class PVPRoomController : MonoBehaviour
             InitHandle();
             _isHaveReconnect = true;
             actionSuccess?.Invoke();
-            //Debug.Log("Reconnect success");
         }
         catch (Exception ex)
         {
             actionError?.Invoke();
-            //Debug.Log("Reconnect error");
-            //DebugCustom.LogJson("Reconnect error", ex);
         }
     }
 
     public async void LeaveRoom(bool isHaveReconnect, bool consented = true)
     {
-        //if (isWaiting)
-        //WaitingCanvas.Instance.Show();
         _isHaveReconnect = isHaveReconnect;
         if (_room == null)
             return;
@@ -192,9 +186,6 @@ public class PVPRoomController : MonoBehaviour
     }
     private void InitHandle()
     {
-        /**
-         * tam thoi comment
-         */
         _onUpdateScore = OnUpdateScore;
 
         _room.OnMessage<PlayerLeftMessage>("PLAYER_LEFT", (msg) =>
@@ -215,22 +206,14 @@ public class PVPRoomController : MonoBehaviour
         {
             OnPreparePVP?.Invoke(msg);
             _isHaveReconnect = true;
-            // DebugCustom.LogColorJson("PREPARE_PVP", msg);
         });
         _room.OnMessage<StartGamePVPMessage>("GAME_START", (msg) =>
         {
             DebugCustom.LogColorJson("GAME_START revice msg", msg);
             OnStartGamePVP?.Invoke(msg);
-            //pingPongHandle.OnTimeOut = OnDisconnect;
-            //DebugCustom.LogColorJson("GAME_START", msg);
         });
         _room.OnMessage<NeedGameStartPVPMessage>("NEED_GAME_START", (msg) =>
         {
-            //OnStartGamePVP?.Invoke(msg);
-            //pingPongHandle = new PingPongHandle<BaseRoomState>(TimeSpan.FromSeconds(1), PVPManager.Instance.Config.Time_Out_Ping);
-            //pingPongHandle.SetUp(_room);
-            //pingPongHandle.OnTimeOut = OnDisconnect;
-            // DebugCustom.LogColorJson("NEED_GAME_START", msg);
             SendStartGame();
         });
 
@@ -246,10 +229,6 @@ public class PVPRoomController : MonoBehaviour
             _dataEndgame = msg;
             _isHaveReconnect = false;
             SendEndGame();
-            //if (OnEndGamePVP == null)
-            //{
-            //    GameManager.Instance.OpenHomeUI();
-            //}
         });
     }
     public void SendReadyPVP(ReadyPVPMessage dataPlayer)

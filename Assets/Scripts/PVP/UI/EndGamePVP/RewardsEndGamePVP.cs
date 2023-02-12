@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using WE.Unit;
 
 namespace WE.UI.PVP.EndGame
 {
@@ -34,6 +35,7 @@ namespace WE.UI.PVP.EndGame
             if(dictRewards["Gold"] > 0)
             {
                 rewards.text = (dictRewards["Gold"]).ToString();
+                Player.Instance.AddCoin(dictRewards["Gold"]);
             }
         }
         public void SetArrow(bool isUp)

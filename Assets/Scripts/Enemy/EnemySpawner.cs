@@ -75,6 +75,7 @@ namespace WE.Manager
             switch (GameplayManager.Instance.CurrentGameplayType)
             {
                 case GameType.Campaign:
+                case GameType.PVP:
                     currentMapSpawner = Instantiate(DataManager.Instance.dataZoneMultiplier.GetMapSpawner(Player.Instance.CurrentMap), this.transform);
                     IsLastEnemy = false;
                     currentMapSpawner.Init();
@@ -85,12 +86,6 @@ namespace WE.Manager
                 case GameType.Endless:
                     currentEndlessMapSpawner = Instantiate(endlessSpawner, this.transform);
                     currentEndlessMapSpawner.Init();
-                    break;
-                case GameType.PVP:
-                    currentMapSpawner = Instantiate(DataManager.Instance.dataZoneMultiplier.GetMapSpawner(Player.Instance.CurrentMap), this.transform);
-                    IsLastEnemy = false;
-                    currentMapSpawner.Init();
-                    totalTickCount = 0;
                     break;
                 default:
                     break;

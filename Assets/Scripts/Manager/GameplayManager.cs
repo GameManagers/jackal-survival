@@ -97,12 +97,8 @@ namespace WE.Manager
                     canShowGameInter = false;
                     break;
                 case GameType.PVP:
-                    currentTimePlay = 120;
+                    currentTimePlay = 60;
                     ActiveBattlePvp();
-                    for (int i = 0; i < 10; i++)
-                    {
-                        DropExp(Helper.GetRandomPosInScreen(), 1);
-                    }
                     SkillController.Instance.GameInit();
                     canShowGameInter = false;
                     break;

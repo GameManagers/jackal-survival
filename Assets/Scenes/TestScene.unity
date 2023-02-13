@@ -4926,14 +4926,14 @@ PrefabInstance:
     - target: {fileID: 2489722087336161294, guid: 6421a3c860b9b4c4d998403f8effa134, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1926121301}
     - target: {fileID: 2489722087336161294, guid: 6421a3c860b9b4c4d998403f8effa134, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
       objectReference: {fileID: 0}
     - target: {fileID: 2489722087336161294, guid: 6421a3c860b9b4c4d998403f8effa134, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WE.UI.UIInGamePVP, Assembly-CSharp
+      value: WE.UI.PVP.UIInGamePVP, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2489722087656047512, guid: 6421a3c860b9b4c4d998403f8effa134, type: 3}
       propertyPath: m_Name

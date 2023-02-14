@@ -11,6 +11,7 @@ using WE.Unit;
 public class MailController
 {
     public static MailController _instance;
+    public Action<bool> actionNoti;
 
     public static MailController Instance
     {
@@ -29,7 +30,7 @@ public class MailController
             foreach (var a in MailController.Instance.DataMailSystem)
             {
                 var mail = a.Value;
-                if (mail.status == 0)
+                if (mail.status == MailStatus.NEW)
                 {
                     return true;
                 }
@@ -37,8 +38,6 @@ public class MailController
         }
         return false;
     }
-
-    public Action<bool> actionNoti;
 
     public Dictionary<string, DataMail> DataMailSystem => _dataMailSystem;
 
@@ -72,13 +71,14 @@ public class MailController
                 
                 if(data != null)
                 {
-                    var mailSystem = data.data.OrderBy(o => o.GetEndTime_UTC()).ToList();
-                    if (mailSystem != null && mailSystem.Count > 0)
+                    var mailList = data.data.OrderBy(o => o.GetEndTime_UTC()).ToList();
+                    if (mailList != null && mailList.Count > 0)
                     {
-                        for (int i = 0; i < mailSystem.Count; i++)
+                        for (int i = 0; i < mailList.Count; i++)
                         {
-                            if (!_dataMailSystem.ContainsKey(mailSystem[i].mailId))
-                                _dataMailSystem.Add(mailSystem[i].mailId, mailSystem[i]);
+                            if (!_dataMailSystem.ContainsKey(mailList[i].mailId))
+                                _dataMailSystem.Add(mailList[i].mailId, mailList[i]);
+                            actionNoti?.Invoke(ActiveNoti());
                         }
                     }
                     actionSuccess?.Invoke();
@@ -230,7 +230,7 @@ public class MailController
     public class DataMail
     {
         public string mailId;
-        public int status;
+        public MailStatus status;
         public string title;
         public long timeEnd;
         public int type;

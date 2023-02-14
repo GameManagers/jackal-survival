@@ -21,7 +21,7 @@ namespace WE.UI
 
         public void InitInfo(DataMail dataMail)
         {
-            bool isRead = dataMail.status == 0 ? false : true;
+            bool isRead = dataMail.status == MailStatus.NEW ? false : true;
             _txtTitle.text = dataMail.title;
             _idMail = dataMail.mailId;
             _type = dataMail.type;
@@ -68,8 +68,8 @@ namespace WE.UI
                 var dataMailSystem = MailController.Instance.DataMailSystem;
                 if (dataMailSystem.ContainsKey(_idMail))
                 {
-                    if (dataMailSystem[_idMail].status == 0)
-                        dataMailSystem[_idMail].status = 1;
+                    if (dataMailSystem[_idMail].status == MailStatus.NEW)
+                        dataMailSystem[_idMail].status = MailStatus.READ;
                 }
                 UIManager.Instance.OpenPopupMailDetail(_idMail, _type, data);
                 _gNoti.SetActive(false);

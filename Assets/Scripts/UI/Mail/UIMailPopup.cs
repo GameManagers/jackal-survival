@@ -205,6 +205,12 @@ namespace WE.UI
             yield return new WaitForEndOfFrame();
             isFocusApp = false;
         }
+
+        public override void AfterHideAction()
+        {
+            base.AfterHideAction();
+            MailController.Instance.actionNoti.Invoke(MailController.Instance.ActiveNoti());
+        }
     }
 
 }

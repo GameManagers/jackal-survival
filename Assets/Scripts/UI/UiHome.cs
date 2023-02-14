@@ -40,8 +40,7 @@ namespace WE.UI
         public Button AvatarButton;
 
         public GameObject buttonMoreGame;
-
-
+        public Image imgNoti;
 
         Tween tween;
 
@@ -80,6 +79,9 @@ namespace WE.UI
             hackLevel.SetActive(Constant.IS_TESTER_JACKAL);
             hackSliverKey.SetActive(Constant.IS_TESTER_JACKAL);
             buttonMoreGame.SetActive(FireBaseRemoteConfig.GetBoolConfig("ActiveMoreGames", false));
+
+            MailController.Instance.actionNoti += CheckNotiMail;
+
             ResolutionManager.Instance.ZoomInUiPanel();
             if (GameplayManager.Instance.CurrentTimePlay > 180 && !Player.Instance.IsOnNoAds() &&  GameplayManager.Instance.CurrentGameplayType != GameType.Tutorial)
             {
@@ -119,6 +121,11 @@ namespace WE.UI
             avatarHome.sprite = SpriteManager.Instance.GetSpriteAvatar(Player.Instance.CurrentAvatar);
         }
 
+        public void CheckNotiMail(bool show)
+        {
+            imgNoti.gameObject.SetActive(show);
+        }
+
         public override void AfterHideAction()
         {
             base.AfterHideAction();
@@ -136,6 +143,8 @@ namespace WE.UI
             NextZoneButton.onClick.RemoveListener(NextZone);
             PreviousZoneButton.onClick.RemoveListener(PreviousZone);
             AvatarButton.onClick.RemoveListener(OpenUIAvatar);
+
+            MailController.Instance.actionNoti -= CheckNotiMail;
         }
         public void StartCamapaign()
         {

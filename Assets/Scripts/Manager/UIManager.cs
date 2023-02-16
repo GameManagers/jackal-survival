@@ -16,6 +16,7 @@ using WE.PVP.Manager;
 using DG.Tweening.Core.Easing;
 using System.Net.Sockets;
 using WE.UI.PVP.EndGame;
+using System;
 
 namespace WE.Manager
 {
@@ -72,10 +73,15 @@ namespace WE.Manager
         public UIInGamePVP uiInGamePVP;
         [FoldoutGroup("Assign UI")]
         public UIEndGamePVP uIEndGamePVP;
-
+        
+        [FoldoutGroup("Assign UI")]
+        public WaitingCanvas waitingCanvas;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
+
+
+
 
         public bool tester;
         public bool playTut;
@@ -412,6 +418,15 @@ namespace WE.Manager
             uITextPopup.Show("PVP mode maintenance");
         }
 
+        public void ShowWaitingCanvas(float timeout = 15, Action timeoutAction = null)
+        {
+            waitingCanvas.Show(timeout, timeoutAction);
+        }
+
+        public void HideWaitingCanvas()
+        {
+            waitingCanvas.Hide();
+        }
     }
 }
 

@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using WE.Manager;
 using WE.Unit;
 
 namespace WE.PVP.Manager
@@ -135,24 +136,21 @@ namespace WE.PVP.Manager
 
         public void GetLeaderBoard(Action<DataPVPRanking> doneCallback, Action<MessageError> ErrorCallback = null)
         {
+            UIManager.Instance.ShowWaitingCanvas();
             LeaderBoardPVP request = new LeaderBoardPVP();
             RocketIO.Instance.SendMessageG(request, success =>
             {
                 DebugCustom.LogColorJson("GetLeaderBoardPVP", success);
+                UIManager.Instance.HideWaitingCanvas();
                 if (doneCallback != null)
                 {
                     DataPVPRanking info = Newtonsoft.Json.JsonConvert.DeserializeObject<DataPVPRanking>(success.Body.ToString());
-                    
                     doneCallback?.Invoke(info);
                 }
-
-                //var data = Newtonsoft.Json.JsonConvert.DeserializeObject<??>(success.Body.ToString());
-                //if (data != null)
-                //{
-                //    if (doneCallback != null)
-                //        doneCallback(success);
-                //}
-            }, ErrorCallback);
+            }, error => {
+                UIManager.Instance.HideWaitingCanvas();
+                ErrorCallback?.Invoke(error);
+            } );
         }
 
         public void InitTimeRemain(long EndTime, long CurrentTime)

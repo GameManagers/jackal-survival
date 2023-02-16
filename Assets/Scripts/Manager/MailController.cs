@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using DG.Tweening.Core.Easing;
 using static MailController;
 using WE.Unit;
+using WE.Manager;
 
 public class MailController
 {
@@ -56,9 +57,11 @@ public class MailController
     public void GetMail(Action actionSuccess, Action actionError)
     {
         GetMailList getMailList = new GetMailList();
+        UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         RocketIO.Instance.SendRequestMail(getMailList, 
         success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             DebugCustom.LogColorJson("IEGetMail: ", success);
             try
             {
@@ -106,14 +109,15 @@ public class MailController
         GetMailDetail getMailDetail = new GetMailDetail();
         getMailDetail.MailId = mailId;
         getMailDetail.Type = typeMail;
+        UIManager.Instance.ShowWaitingCanvas(10 , () => UIManager.Instance.ShowTextNotConnectServer());
         RocketIO.Instance.SendRequestMail(getMailDetail, success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             try
             {
                 DataMailDetail data = JsonConvert.DeserializeObject<DataMailDetail>(success.Body.ToString());
                 if (data != null)
                 {
-                    Debug.Log(data.title);
                     actionSuccess(data);
                 }
                 else
@@ -139,8 +143,10 @@ public class MailController
         ClaimMail claimnMail = new ClaimMail();
         claimnMail.MailId = mailId;
         claimnMail.Type = typeMail;
+        UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         RocketIO.Instance.SendRequestMail(claimnMail, success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             try
             {
                 List<RewardMail> data = JsonConvert.DeserializeObject<List<RewardMail>>(success.Body.ToString());
@@ -169,9 +175,11 @@ public class MailController
 
     public void ClaimAllMail(Action<List<RewardMail>> actionSuccess, Action actionError)
     {
+        UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         ClaimAllMail mail = new ClaimAllMail();
         RocketIO.Instance.SendRequestMail(mail, success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             List<RewardMail> data = JsonConvert.DeserializeObject<List<RewardMail>>(success.Body.ToString());
             if (data != null)
             {
@@ -187,12 +195,13 @@ public class MailController
 
     public void RemoveMail(string mailId, int typeMail, Action actionSuccess, Action actionError)
     {
-
+        UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         DeleteMail mail = new DeleteMail();
         mail.MailId = mailId;
         mail.Type = typeMail;
         RocketIO.Instance.SendRequestMail(mail, success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             DebugCustom.LogColorJson("IERemoveMail: ", success);
             _dataMailSystem.Remove(mailId);
             actionSuccess?.Invoke();
@@ -206,9 +215,11 @@ public class MailController
 
     public void RemoveAllMail(Action actionSuccess, Action actionError)
     {
+        UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         DeleteAllMail mail = new DeleteAllMail();
         RocketIO.Instance.SendRequestMail(mail, success =>
         {
+            UIManager.Instance.HideWaitingCanvas();
             DebugCustom.LogColorJson("IERemoveMail: ", success);
             _dataMailSystem.Clear();
             actionSuccess?.Invoke();

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PVPConfig : MonoBehaviour
+public class PVPConfig
 {
+    public int RequestCompleteZone => 2;
     public float Time_Out_Reconnect => 20;
     public float Time_Out_Start_Game => 35;
 

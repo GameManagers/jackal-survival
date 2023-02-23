@@ -10,6 +10,7 @@ using WE.UI;
 using WE.Unit;
 using WE.PVP;
 using WE.PVP.Manager;
+using WE.Manager;
 
 public class RocketIO : SingletonClass<RocketIO>, IService
 {
@@ -146,12 +147,13 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         } 
         else
         {
-          if(Logining)
+            if(Logining)
             {
                 return _loginAsyncSubject;
-
-            } else
+            } 
+            else
             {
+                if (showLoading) UIManager.Instance.ShowWaitingCanvas();
                 _loginAsyncSubject = new Subject<Unit>(); 
             }
 

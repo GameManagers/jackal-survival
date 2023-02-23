@@ -332,8 +332,14 @@ namespace WE.Manager
 
         public void ShowTextNotConnectServer()
         {
-            uITextPopup.Show("Server maintenance");
+            uITextPopup.Show("Server Maintenance");
         }
+
+        public void ShowTextCompleteZone()
+        {
+            uITextPopup.Show("Complete Zone 2 To Play");
+        }
+
         public void ShowTextAds(int id)
         {
             if(id == 0)
@@ -390,6 +396,12 @@ namespace WE.Manager
             if(!Context.CheckNetwork())
             {
                 ShowTextNoInternet();
+                return;
+            }
+
+            if(Player.Instance.PLayerData.maxMapUnlock <= PVPManager.Instance.Config.RequestCompleteZone)
+            {
+                ShowTextCompleteZone();
                 return;
             }
             

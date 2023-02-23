@@ -87,9 +87,11 @@ public class PVPMatchingController : MonoBehaviour
 
     private void InitRoom()
     {
+        UIManager.Instance.ShowWaitingCanvas();
         PVPManager.Instance.MatchMaking(
             success =>
             {
+                UIManager.Instance.HideWaitingCanvas();
                 Debug.Log("Success match making");
                 PVPManager.Instance.InitClient();
                 InitHandle();
@@ -97,6 +99,7 @@ public class PVPMatchingController : MonoBehaviour
             },
             error =>
             {
+                UIManager.Instance.HideWaitingCanvas();
                 Debug.Log("Error match making");
             });
     }

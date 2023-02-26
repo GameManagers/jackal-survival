@@ -60,7 +60,7 @@ namespace WE.UI
             }
             int currentMap = Player.Instance.CurrentMap;
             textZone.text = "CHAPTER " + currentMap.ToString();
-            Player.Instance.AddRecord(GameplayManager.Instance.CurrentTimePlay);
+            Player.Instance.AddRecord(timePlay);
             currentKill = GameplayManager.Instance.CurrentKillCount;
             textKillCount.text = currentKill.ToString();
             currentCoin = 0;

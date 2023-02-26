@@ -16,34 +16,15 @@ namespace WE.PVP
         public static PVPMode _instance;
         public static PVPMode Instance => _instance;
 
-        public event System.Action EventEndBattle;
-        public event System.Action OnChangeTimerBattle;
-
         private bool isStartGame = false;
-        public bool IsStartGame => isStartGame;
-
         private ObscuredInt playerScore, oppenentsScore;
         private UIInGamePVP uiGameplayPVP;
-        private bool isEndGame = false;
-
-        private int counterSendScore = 0;
-        private bool isSendInUpdate = false;
-        private float tmpCachedTimeSend = 0f;
         public int PlayerScore => playerScore;
         private bool isDispose = false;
-        public float TimeBattle
-        {
-            private set;
-            get;
-        }
 
         private void Awake()
         {
             _instance = this;
-            Debug.Log("on awake pvp mode");
-
-            isStartGame = false;
-            isEndGame = false;
             isDispose = false;
             PVPManager.Instance.Room.OnStartGamePVP += OnStartGamePVP;
             PVPManager.Instance.Room.OnEndGamePVP += OnEndGame_PVP;
@@ -52,11 +33,6 @@ namespace WE.PVP
             PVPManager.Instance.Room.OnChangeTimePlay += OnChangeTimePlay;
             PVPManager.Instance.Room.OnEndGamePVPByDisconnect += OnEndGameByDisconnect;
             Player.Instance.OnHpChange += Current_OnHpChange;
-        }
-
-        public void Init()
-        {
-            Debug.Log("on init pvp mode");
         }
 
         private void Start()
@@ -83,10 +59,9 @@ namespace WE.PVP
             Dispose();
             _instance = null;
         }
-
-        public void SetTimeBattle(int _time)
+        public void SetStartGame()
         {
-            TimeBattle = _time;
+            isStartGame = true;
         }
 
         private void OnChangeTimePlay(int _time)
@@ -114,27 +89,9 @@ namespace WE.PVP
             isDispose = true;
         }
 
-        public void MinusTime(float time)
-        {
-            if (!isStartGame)
-                return;
-            TimeBattle -= time;
-            if (TimeBattle <= 0)
-            {
-                isStartGame = false;
-                EventEndBattle?.Invoke();
-            }
-            OnChangeTimerBattle?.Invoke();
-        }
-
-        public void SetStartGame()
-        {
-            isStartGame = true;
-        }
-
         public void UpdateCurrentScore(int playerScore)
         {
-            DebugCustom.LogColor("Score", playerScore);
+            // DebugCustom.LogColor("Score", playerScore);
             this.playerScore = playerScore;
             UpdateScore(this.PlayerScore, oppenentsScore);
         }
@@ -177,27 +134,6 @@ namespace WE.PVP
             PVPManager.Instance.Room.LeaveRoom(false, true);
         }
 
-        private void Update()
-        {
-            if (!isStartGame || isEndGame)
-                return;
-            if (TimeBattle <= 1f && !isSendInUpdate)
-            {
-                isSendInUpdate = true;
-                counterSendScore = 3;
-                tmpCachedTimeSend = 0.25f;
-                SendScore();
-            }
-            if (isSendInUpdate && counterSendScore > 0 && tmpCachedTimeSend <= 0f)
-            {
-                DebugCustom.Log("Send Score in Update");
-                counterSendScore--;
-                tmpCachedTimeSend = 0.25f;
-                SendScore();
-            }
-            tmpCachedTimeSend -= Time.deltaTime;
-        }
-
         public void SendScore()
         {
             SendScorePVPMessage data = new SendScorePVPMessage();
@@ -219,7 +155,6 @@ namespace WE.PVP
         {
             DebugCustom.LogColor("[PVP Mode] Receive Message End Game PVP");
             PVPManager.Instance.Room.LeaveRoom(false, false);
-            isEndGame = true;
 
             Player.Instance.tankMovement.Stop();
             TimerSystem.Instance.StopTimeScale(1, () => {});

@@ -23,7 +23,7 @@ namespace WE.UI.PVP
         private int _timewait = 0;
         private const int MAX_TIME = 35;
 
-        private const string intendTime = "Intended time ";
+        private const string intendTime = "Estimating time: ";
         public override void InitUI()
         {
             isMatchingSuccess = false;

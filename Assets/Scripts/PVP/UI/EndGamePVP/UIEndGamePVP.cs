@@ -32,6 +32,10 @@ namespace WE.UI.PVP.EndGame
 
         public override void InitUI()
         {
+            frameWiner.gameObject.SetActive(false);
+            frameLoser.gameObject.SetActive(false);
+
+            frameDisconnectPVP.gameObject.SetActive(false);
         }
 
         public void ShowPopup(EndGameMessage message)
@@ -110,6 +114,8 @@ namespace WE.UI.PVP.EndGame
 
         public void ShowFrameDisconnect()
         {
+            frameWiner.gameObject.SetActive(false);
+            frameLoser.gameObject.SetActive(false);
 
             frameDisconnectPVP.gameObject.SetActive(true);
             frameDisconnectPVP.SetPlayerAvatar();

@@ -238,13 +238,13 @@ namespace WE.Manager
         public void Init()
         {
             flashImage.color = new Color(1, 1, 1, 0);
+            InitServer();
             if (!Player.Instance.IsPlayTut() && playTut)
             {
                 GameplayManager.Instance.StartGame(GameType.Tutorial);
             }
             else
             {
-                InitServer();
                 uiHome.Show();
             }
         }

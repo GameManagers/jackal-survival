@@ -134,10 +134,11 @@ public class PVPMatchingController : MonoBehaviour
 
     private IEnumerator PlayBattle()
     {
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(3);
         _uiMatchingPVP.Hide();
         _uiMatchingPVP = null;
         PVPManager.Instance.Room.SendStartGame();
+        PVPManager.Instance.StateMachine.TriggerStartGame();
         PVPManager.Instance.gameObject.AddComponent<PVPMode>();
     }
     private void RemoveHandle()

@@ -143,7 +143,7 @@ public class PVPStateMachine : MonoBehaviour
     private void StartGamePVP()
     {
         OnStartGame?.Invoke();
-        // DebugCustom.LogColor("StartGamePVP", PVPManager.Instance.IsInRoom);
+        DebugCustom.LogColor("StartGamePVP", PVPManager.Instance.IsInRoom);
         PVPManager.Instance.Room.OnLeftPVP = () =>
         {
             /**

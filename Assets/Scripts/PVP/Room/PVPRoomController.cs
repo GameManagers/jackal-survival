@@ -181,6 +181,9 @@ public class PVPRoomController : MonoBehaviour
         {
             if (OnLeftPVP != null)
             {
+                OnLeftPVP.Invoke();
+                PVPManager.Instance.StateMachine.TriggerEndGame();
+                _otherPlayerLeft = false;
             }
         }
     }
@@ -258,7 +261,7 @@ public class PVPRoomController : MonoBehaviour
         }
         if(data.Time >=0)
         {
-            OnChangeTimePlay.Invoke(data.Time);
+            OnChangeTimePlay?.Invoke(data.Time);
         }
     }
 

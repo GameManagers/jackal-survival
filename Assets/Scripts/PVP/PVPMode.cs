@@ -50,7 +50,8 @@ namespace WE.PVP
             {
                 DebugCustom.LogColor("OnStartGamePVP success");
                 PVPManager.Instance.StateMachine.TriggerPlaying();
-                GameplayManager.Instance.StartGame(GameType.PVP);
+                GameplayManager.Instance.ActiveBattlePvp();
+             //   GameplayManager.Instance.StartGame(GameType.PVP);
             }
         }
 

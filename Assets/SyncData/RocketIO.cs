@@ -19,7 +19,7 @@ public class RocketIO : SingletonClass<RocketIO>, IService
     private SocketManager socketManager;
     private static Socket socket;
 
-    private const string server = "http://34.87.155.178:8000/socket.io/";
+    private const string server = "http://34.105.211.203:8000/socket.io/";
     private const string server_test = "http://192.168.0.103:8000/socket.io/";
 
     public bool IsPublicServer = true;

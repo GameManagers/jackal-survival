@@ -88,24 +88,25 @@ namespace Dragon.SDK
             _instance = this;
             MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
             {
+               
                 if (TypeAdsUse.HasFlag(TypeAdsMax.Inter))
-                    InitializeInterstitialAds();
+                 // InitializeInterstitialAds();
 
                 if (TypeAdsUse.HasFlag(TypeAdsMax.Reward))
-                    InitializeRewardedAds();
+                 // InitializeRewardedAds();
 
                 if (TypeAdsUse.HasFlag(TypeAdsMax.Inter_Reward))
-                    InitializeRewardedInterstitialAds();
+                 // InitializeRewardedInterstitialAds();
 
                 if (TypeAdsUse.HasFlag(TypeAdsMax.Banner))
-                    InitializeBannerAds();
+                  //InitializeBannerAds();
 
                 if (TypeAdsUse.HasFlag(TypeAdsMax.MRec))
-                    InitializeMRecAds();
+                  //InitializeMRecAds();
 
                 if (TypeAdsUse.HasFlag(TypeAdsMax.AOA))
                 {
-                    InitializeAOA();
+                //  InitializeAOA();
                 }
                 //MaxSdk.ShowMediationDebugger();
             };

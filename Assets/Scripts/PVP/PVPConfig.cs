@@ -34,9 +34,9 @@ public class PVPConfig
             return URL_HTTP_Publish;
         }
     }
-    public string URL_Publish => "ws://34.87.155.178:3978";
+    public string URL_Publish => "ws://34.105.211.203:3978";
     public string URL_Test => "ws://192.168.0.103:3978";
 
-    public string URL_HTTP_Publish => "http://34.87.155.178:8000/api/match";
+    public string URL_HTTP_Publish => "http://34.105.211.203:8000/api/match";
     public string URL_HTTP_Test => "http://192.168.0.103:8000/api/match";
 }

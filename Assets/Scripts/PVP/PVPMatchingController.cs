@@ -44,6 +44,7 @@ public class PVPMatchingController : MonoBehaviour
     {
         ReadyPVPMessage dataJoin = CreateDataJoin();
         bool isInitRoom = false;
+        UIManager.Instance.ShowWaitingCanvas();
         isInitRoom = await PVPManager.Instance.JoinRoom(type, roomName, dataJoin, OnErrorInitRoom);
         if (isInitRoom)
         { 
@@ -51,16 +52,11 @@ public class PVPMatchingController : MonoBehaviour
              * Kh?i t?o UI Matching PVP
              */
             Debug.Log("Init room PVP");
-            //    _uiMatchingPVP = Instantiate(_prefabUiMatchingPVP);
-            //   _uiMatchingPVP.gameObject.SetActive(true);
+            UIManager.Instance.HideWaitingCanvas();
             _uiMatchingPVP = UIManager.Instance.GetUIMatchingPVP();
             _uiMatchingPVP.Show();
             _uiMatchingPVP.FillDataPlayer(dataJoin);
             PVPManager.Instance.Room.SendReadyPVP(dataJoin);
-           
-
-           // PVPManager.Instance.Room.SendStartGame();
-            //PVPManager.Instance.gameObject.AddComponent<PVPMode>();
         }
     }
     private ReadyPVPMessage CreateDataJoin()
@@ -136,9 +132,11 @@ public class PVPMatchingController : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3);
         _uiMatchingPVP.Hide();
+        RemoveHandle();
         _uiMatchingPVP = null;
-        PVPManager.Instance.Room.SendStartGame();
-        PVPManager.Instance.StateMachine.TriggerStartGame();
+        //PVPManager.Instance.Room.SendStartGame();
+        GameplayManager.Instance.StartGame(GameType.PVP);
+      //  PVPManager.Instance.StateMachine.TriggerStartGame();
         PVPManager.Instance.gameObject.AddComponent<PVPMode>();
     }
     private void RemoveHandle()

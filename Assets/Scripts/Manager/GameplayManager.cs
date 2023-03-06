@@ -98,8 +98,12 @@ namespace WE.Manager
                     break;
                 case GameType.PVP:
                     currentTimePlay = 60;
-                    ActiveBattlePvp();
+                 //   ActiveBattlePvp();
                     SkillController.Instance.GameInit();
+                    UIManager.Instance.StartGamePVP();
+                    UIManager.Instance.GetUIPVP().DisableTextReady(true);
+                    PVPManager.Instance.Room.SendStartGame();
+                    PVPManager.Instance.StateMachine.TriggerStartGame();
                     canShowGameInter = false;
                     break;
                 default:
@@ -145,7 +149,6 @@ namespace WE.Manager
         }
         public void ActiveBattlePvp()
         {
-            UIManager.Instance.StartGamePVP();
             UIManager.Instance.GetUIPVP().DisableTextReady(false);
             PVPMode.Instance.SetStartGame();
         }

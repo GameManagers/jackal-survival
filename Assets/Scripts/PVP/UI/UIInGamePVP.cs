@@ -49,7 +49,7 @@ namespace WE.UI.PVP
 
             expBar.localScale = new Vector3(0, 1, 1);
             textLevel.text = "LV.1";
-            textCount.text = "00:00";
+            textCount.text = "03:00";
             currentExp = 0;
         }
 

@@ -32,10 +32,6 @@ namespace WE.UI.PVP.EndGame
 
         public override void InitUI()
         {
-            frameWiner.gameObject.SetActive(false);
-            frameLoser.gameObject.SetActive(false);
-
-            frameDisconnectPVP.gameObject.SetActive(false);
         }
 
         public void ShowPopup(EndGameMessage message)
@@ -66,6 +62,7 @@ namespace WE.UI.PVP.EndGame
                 case EResultPVP.Win:
                     frameWiner.gameObject.SetActive(true);
                     frameLoser.gameObject.SetActive(true);
+                    frameDisconnectPVP.gameObject.SetActive(false);
                     _dataPlayer.Score = PVPMode.Instance.PlayerScore;
                     frameWiner.ShowInfo(_dataPlayer);
                     frameWiner.SetCurrentBattlePoint(_dataPlayer.eloCur);
@@ -79,6 +76,7 @@ namespace WE.UI.PVP.EndGame
                 case EResultPVP.Loser:
                     frameWiner.gameObject.SetActive(true);
                     frameLoser.gameObject.SetActive(true);
+                    frameDisconnectPVP.gameObject.SetActive(false);
                     Vector3 winerPosition = frameWiner.transform.position;
                     frameWiner.transform.position = frameLoser.transform.position;
                     frameLoser.transform.position = winerPosition;
@@ -96,6 +94,7 @@ namespace WE.UI.PVP.EndGame
                 case EResultPVP.Equal:
                     frameEqual.gameObject.SetActive(true);
                     frameLoser.gameObject.SetActive(true);
+                    frameDisconnectPVP.gameObject.SetActive(false);
                     frameEqual.transform.position = frameWiner.transform.position;
                     frameLoser.ShowInfo(_dataOpponents);
                     frameEqual.ShowInfo(_dataPlayer);

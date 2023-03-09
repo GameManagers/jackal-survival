@@ -177,6 +177,7 @@ public class MailController
     {
         UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         ClaimAllMail mail = new ClaimAllMail();
+        mail.Mails = GetBaseMail();
         RocketIO.Instance.SendRequestMail(mail, success =>
         {
             UIManager.Instance.HideWaitingCanvas();
@@ -217,6 +218,7 @@ public class MailController
     {
         UIManager.Instance.ShowWaitingCanvas(10, () => UIManager.Instance.ShowTextNotConnectServer());
         DeleteAllMail mail = new DeleteAllMail();
+        mail.Mails = GetBaseMail();
         RocketIO.Instance.SendRequestMail(mail, success =>
         {
             UIManager.Instance.HideWaitingCanvas();
@@ -229,6 +231,26 @@ public class MailController
             actionError?.Invoke();
             DebugCustom.LogError(error);
         });
+    }
+
+    /**
+     * Lay danh sach mail system va update
+     */
+    private List<MailBase> GetBaseMail()
+    {
+        var mailList = new List<MailBase>();
+        foreach (var a in DataMailSystem)
+        {
+            var mail = a.Value;
+
+            if (mail.type == 2) continue;
+
+            var mailItem = new MailBase();
+            mailItem.MailId = mail.mailId;
+            mailItem.Type = mail.type;
+            mailList.Add(mailItem);
+        }
+        return mailList;
     }
 
     [Serializable]

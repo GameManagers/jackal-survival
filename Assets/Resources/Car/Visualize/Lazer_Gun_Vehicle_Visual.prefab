@@ -160,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1817535125
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -2
   m_Sprite: {fileID: -1898895289, guid: e23d09b5edd197c4c9374171cf8838a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1817535125
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297367475559030259, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4297367475559030259, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingOrder
@@ -396,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155741053793114989, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5155741053793114989, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingOrder
@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6793943723207135287, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6793943723207135287, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingOrder
@@ -444,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631447994013414084, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7631447994013414084, guid: 927468b603cbcf445bb9eb2f408eafe4, type: 3}
       propertyPath: m_SortingOrder

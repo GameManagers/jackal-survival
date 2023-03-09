@@ -36,14 +36,14 @@ public class DeleteMail : MailMessageBase
 
 public class ClaimAllMail : MessageRequest
 {
-
+    public List<MailBase> Mails;
 }
 
 [Message("6008")]
 
 public class DeleteAllMail : MessageRequest
 {
-
+    public List<MailBase> Mails;
 }
 
 
@@ -53,3 +53,8 @@ public class MailMessageBase : MessageRequest
     public int Type;
 }
 
+public class MailBase
+{
+    public string MailId;
+    public int Type;
+}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Claims;
 using UnityEngine;
+using WE.Manager;
 using WE.Unit;
 
 namespace WE.UI
@@ -101,17 +102,14 @@ namespace WE.UI
             MailController.Instance.ClaimAllMail(
                rewards =>
                {
-                   if (rewards != null && rewards.Count > 0)
-                   {
-                       for (int i = 0; i < rewards.Count; i++)
-                       {
-                           Player.Instance.AddCoin(rewards[i].value);
-                       }
-                   }
+                   if (rewards != null && rewards.Count > 0)                  
+                       UIManager.Instance.GetUIPopupReward().Show(rewards);  
+                   else                  
+                       UIManager.Instance.GetUITextPopup().Show("No rewards");                 
                },
                () =>
                {
-                   DebugCustom.LogColor("Claimn Reward Error");
+                   DebugCustom.LogColor("Claim Reward Error");
                });
         }
 

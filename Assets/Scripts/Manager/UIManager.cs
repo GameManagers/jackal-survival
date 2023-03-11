@@ -73,7 +73,9 @@ namespace WE.Manager
         public UIInGamePVP uiInGamePVP;
         [FoldoutGroup("Assign UI")]
         public UIEndGamePVP uIEndGamePVP;
-        
+
+        [FoldoutGroup("Assign UI")]
+        public UIPopupReward uiPopupReward;
         [FoldoutGroup("Assign UI")]
         public WaitingCanvas waitingCanvas;
 
@@ -377,13 +379,22 @@ namespace WE.Manager
         }
         public void ShowPopupRename()
         {
-            Debug.Log("Show popup rename");
             uIChangeName.Show();
         }
 
         public UIInGamePVP GetUIPVP()
         {
             return uiInGamePVP;
+        }
+
+        public UITextPopup GetUITextPopup()
+        {
+            return uITextPopup;
+        }
+
+        public UIPopupReward GetUIPopupReward()
+        {
+            return uiPopupReward;
         }
 
         public UIMatchingPVP GetUIMatchingPVP()

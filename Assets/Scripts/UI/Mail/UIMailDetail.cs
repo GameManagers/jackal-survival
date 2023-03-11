@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static MailController;
 using WE.Unit;
+using WE.Manager;
 
 namespace WE.UI
 {
@@ -111,10 +112,7 @@ namespace WE.UI
 
                 if (rewards != null && rewards.Count > 0)
                 {
-                    for (int i = 0; i < rewards.Count; i++)
-                    {
-                        Player.Instance.AddCoin(rewards[i].value);
-                    }
+                    UIManager.Instance.GetUIPopupReward().Show(rewards);
                 }
             }, 
             () =>

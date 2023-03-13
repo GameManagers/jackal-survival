@@ -78,10 +78,11 @@ namespace WE.Manager
         public UIPopupReward uiPopupReward;
         [FoldoutGroup("Assign UI")]
         public WaitingCanvas waitingCanvas;
+        [FoldoutGroup("Assign UI")]
+        public UICheatServer uiCheatServer;
 
         [FoldoutGroup("Assign Text")] 
         public UITextPopup uITextPopup;
-
 
 
 
@@ -449,6 +450,11 @@ namespace WE.Manager
         public void HideWaitingCanvas()
         {
             waitingCanvas.Hide();
+        }
+
+        public void OpenCheatServer()
+        {
+            uiCheatServer.Show();
         }
     }
 }

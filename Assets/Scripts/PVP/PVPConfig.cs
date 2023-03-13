@@ -8,35 +8,7 @@ public class PVPConfig
     public float Time_Out_Reconnect => 20;
     public float Time_Out_Start_Game => 35;
 
-    public string URL
-    {
-        get
-        {
+    public string URL => RocketIO.Instance.GetPVPRoomUrl;
 
-            if (!RocketIO.Instance.IsPublicServer)
-            {
-                return URL_Test;
-            }
-            
-            return URL_Publish;
-        }
-    }
-
-    public string URL_HTTP
-    {
-        get
-        {
-            if (!RocketIO.Instance.IsPublicServer)
-            {
-                return URL_HTTP_Test;
-            }
-
-            return URL_HTTP_Publish;
-        }
-    }
-    public string URL_Publish => "ws://34.105.211.203:3978";
-    public string URL_Test => "ws://192.168.0.103:3978";
-
-    public string URL_HTTP_Publish => "http://34.105.211.203:8000/api/match";
-    public string URL_HTTP_Test => "http://192.168.0.103:8000/api/match";
+    public string URL_HTTP => RocketIO.Instance.GetPVPMatchMarker;
 }

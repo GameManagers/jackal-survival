@@ -308,10 +308,10 @@ namespace WE.Support
             TimeSpan timer = TimeSpan.FromSeconds(second);
 
             if (timer.TotalDays > 1)
-                return Math.Round(second / 86400).ToString() + "d " + Math.Round((second % 86400) / 3600).ToString() + "h";
+                return Math.Floor(second / 86400).ToString() + "d " + Math.Floor((second % 86400) / 3600).ToString() + "h";
             if (timer.TotalHours > 1)
-                return Math.Round(second / 3600).ToString() + "h " + Math.Round((second % 3600) / 60).ToString() + "m";
-            return Math.Round(second / 60).ToString() + "m " + Math.Round(second % 60).ToString() + "s";
+                return Math.Floor(second / 3600).ToString() + "h " + Math.Floor((second % 3600) / 60).ToString() + "m";
+            return Math.Floor(second / 60).ToString() + "m " + Math.Floor(second % 60).ToString() + "s";
         }
         public static string GetPercent(float minVal, float currentValue, float totalvalue)
         {

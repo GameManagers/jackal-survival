@@ -87,6 +87,14 @@ namespace WE.Utils
         public static string HP_CHEST = "Hp_Chest";
         public static string COIN_CHEST = "Coin_Chest";
         #endregion
+
+        #region server Constant
+        public static string ServerPublic = "Server_Public";
+        public static string ServerTest = "Server_Test";
+        public static string PVPRoom = "PVP_Room";
+        public static string PVPMatchMarker = "PVP_MathMarker";
+        public static string IPV4ServerTest = "IPV4_Test";
+        #endregion
     }
 }
 

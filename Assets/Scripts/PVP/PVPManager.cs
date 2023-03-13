@@ -20,7 +20,6 @@ namespace WE.PVP.Manager
         private PVPConfig _pvpConfig;
         private PVPRoomController _room;
         private int _countMatching = 0;
-        private bool isActive = false;
 
         public ReadyPVPMessage DataPlayer;
         public ReadyPVPMessage DataOtherPlayer;
@@ -159,7 +158,6 @@ namespace WE.PVP.Manager
             DateTime endTime = DateTimeHelper.ParseUnixTimestampNormal(EndTime);
             DateTime currentUTC = DateTimeHelper.ParseUnixTimestampNormal(CurrentTime);
             TimeRemain = endTime - currentUTC;
-            isActive = true;
         }
         public bool IsInRoom
         {

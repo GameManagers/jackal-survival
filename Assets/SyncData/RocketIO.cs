@@ -11,6 +11,7 @@ using WE.Unit;
 using WE.PVP;
 using WE.PVP.Manager;
 using WE.Manager;
+using WE.Utils;
 
 public class RocketIO : SingletonClass<RocketIO>, IService
 {
@@ -21,10 +22,58 @@ public class RocketIO : SingletonClass<RocketIO>, IService
 
     private const string server = "http://34.105.211.203:8000/socket.io/";
     private const string server_test = "http://192.168.0.103:8000/socket.io/";
-
-    public bool IsPublicServer = true;
+    private string URL_Publish => "ws://34.105.211.203:3978";
+    private string URL_Test => "ws://192.168.0.103:3978";
+    private string URL_HTTP_Publish => "http://34.105.211.203:8000/api/match";
+    private string URL_HTTP_Test => "http://192.168.0.103:8000/api/match";
 
     public ConnectState connectState = ConnectState.INITIAL;
+
+    public string GetIpServerTest
+    {
+        get
+        {
+            return PlayerPrefs.GetString(Constant.ServerTest, server_test);
+        }
+        set
+        {
+            PlayerPrefs.SetString(Constant.ServerTest, value);
+        }
+    }
+
+    public string GetPVPRoomUrl
+    {
+        get
+        {
+            if (IsPublicServer) return URL_Publish;
+            return PlayerPrefs.GetString(Constant.PVPRoom, URL_Test);
+        }
+        set
+        {
+            PlayerPrefs.SetString(Constant.PVPRoom, value);
+        }
+    }
+
+    public string GetPVPMatchMarker
+    {
+        get
+        {
+            if (IsPublicServer) return URL_HTTP_Publish;
+            return PlayerPrefs.GetString(Constant.PVPMatchMarker, URL_HTTP_Test);
+        }
+        set
+        {
+            PlayerPrefs.SetString(Constant.PVPMatchMarker, value);
+        }
+    }
+
+    public bool IsPublicServer
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(Constant.ServerPublic, 1) == 1;
+        }
+    }
 
     public enum ConnectState
     {
@@ -51,8 +100,8 @@ public class RocketIO : SingletonClass<RocketIO>, IService
                 }
             case Server.Test:
                 {
-                    IsPublicServer = false;
-                    return server_test;
+                    DebugCustom.Log("ipservertest", GetIpServerTest);
+                    return GetIpServerTest;
                 }
             default:
                 return server;
@@ -80,10 +129,15 @@ public class RocketIO : SingletonClass<RocketIO>, IService
         get { return Application.internetReachability != NetworkReachability.NotReachable; }
     }
 
+    private string CurrentIPServer()
+    {
+        if(IsPublicServer) return GetServer(Server.Public);
+        return GetIpServerTest;
+    }
     public void Init()
     {
         LoginState = ELoginState.LOGOUT;
-        Connect(GetServer(Server.Public));
+        Connect(CurrentIPServer());
     }
 
     public void Connect(string serverUri)

@@ -584,7 +584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jackal
+  m_Text: Survivor Team
 --- !u!1 &1744616369971140145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6609881088470143402}
   m_HandleRect: {fileID: 8042352618790838696}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.4871795
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

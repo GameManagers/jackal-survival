@@ -21,6 +21,7 @@ namespace WE.UI
         public GameObject hackCoin;
         public GameObject hackLevel;
         public GameObject hackSliverKey;
+        public GameObject cheatServer;
 
         [Header("==========Assign Text=======")]
         public TextMeshProUGUI textCoins;
@@ -78,6 +79,7 @@ namespace WE.UI
             hackCoin.SetActive(Constant.IS_TESTER_JACKAL);
             hackLevel.SetActive(Constant.IS_TESTER_JACKAL);
             hackSliverKey.SetActive(Constant.IS_TESTER_JACKAL);
+            cheatServer.SetActive(Constant.IS_TESTER_JACKAL);
             buttonMoreGame.SetActive(FireBaseRemoteConfig.GetBoolConfig("ActiveMoreGames", false));
 
             MailController.Instance.actionNoti += CheckNotiMail;
@@ -186,6 +188,10 @@ namespace WE.UI
         public void OpenPopupMoreGame()
         {
             UIManager.Instance.OpenPopupMoreGames();
+        }
+        public void OpenCheatServerPopup()
+        {
+            UIManager.Instance.OpenCheatServer();
         }
 
         public void OpenPopupMail()

@@ -31,6 +31,8 @@ namespace WE.PVP
             PVPManager.Instance.Room.OnHpChange += Opponents_HPChange;
             PVPManager.Instance.Room.OnScoreChange += Opponents_ChangeScore;
             PVPManager.Instance.Room.OnChangeTimePlay += OnChangeTimePlay;
+            PVPManager.Instance.Room.OnAttackHide += OnAttackSkill;
+
             PVPManager.Instance.Room.OnEndGamePVPByDisconnect += OnEndGameByDisconnect;
             Player.Instance.OnHpChange += Current_OnHpChange;
         }
@@ -70,6 +72,11 @@ namespace WE.PVP
             uiGameplayPVP.UpdateTimePlay(_time);
         }
 
+        private void OnAttackSkill(int type)
+        {
+            uiGameplayPVP.HideInfoOtherPlayer();
+        }
+
         private void Dispose()
         {
             if (isDispose)
@@ -82,6 +89,8 @@ namespace WE.PVP
             PVPManager.Instance.Room.OnHpChange -= Opponents_HPChange;
             PVPManager.Instance.Room.OnChangeTimePlay -= OnChangeTimePlay;
             PVPManager.Instance.Room.OnEndGamePVPByDisconnect -= OnEndGameByDisconnect;
+            PVPManager.Instance.Room.OnAttackHide -= OnAttackSkill;
+
             if (GameplayManager.Instance != null)
             {
                 Player.Instance.OnHpChange -= Current_OnHpChange;

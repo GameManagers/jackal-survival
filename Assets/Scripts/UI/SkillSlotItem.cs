@@ -9,6 +9,7 @@ using WE.Manager;
 using WE.Utils;
 using WE.Pooling;
 using Dragon.SDK;
+using WE.PVP.Manager;
 
 namespace WE.UI
 {
@@ -201,6 +202,8 @@ namespace WE.UI
         public void SetSelect()
         {
             anim.Play("Selected");
+            DebugCustom.Log("on select skill test ");
+            PVPManager.Instance.Room.SendAttackSkill(3);
         }
         public void SetUnSelect()
         {

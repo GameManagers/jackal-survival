@@ -92,6 +92,10 @@ namespace WE.UI.PVP
             textCount.text = Helper.ConvertTimer(time);
         }
   
+        public void HideInfoOtherPlayer()
+        {
+            scoreBarPVP.HideOtherScore();
+        }
         public void PauseGame()
         {
             UIManager.Instance.PauseGame();

@@ -17,7 +17,9 @@ public class PVPRoomController : MonoBehaviour
     public Action<StartGamePVPMessage> OnStartGamePVP;
     public Action<EndGameMessage> OnEndGamePVP;
     public Action OnEndGamePVPByDisconnect;
+    public Action<int> OnAttackHide;    
     public Action<int, int> OnScoreChange;
+   
     public Action<int> OnChangeTimePlay;
     public Action<float, float> OnHpChange;
     public Action<int> OnReconnect;
@@ -27,6 +29,7 @@ public class PVPRoomController : MonoBehaviour
     private ColyseusClient _client;
     private ColyseusRoom<BaseRoomState> _room;
     private Action<GetScorePVPMessage> _onUpdateScore;
+    private Action<AttackSkillMessage> _onAttackSkill;
 
     private string _roomId;
     private string _sessionId;
@@ -127,6 +130,20 @@ public class PVPRoomController : MonoBehaviour
         else
             DebugCustom.LogColor("Room Null Can not SEND_PLAYER_DIE");
     }
+
+    public void SendAttackSkill(int type)
+    {
+        if (_room != null)
+        {
+            AttackSkillMessage atkMsg = new AttackSkillMessage();
+            atkMsg.Type = type;
+            _ = _room.Send("ATTACK_SKILL", atkMsg);
+            DebugCustom.LogColor("ATTACK_SKILL");
+        }
+        else
+            DebugCustom.LogColor("Room Null Can not SEND_PLAYER_DIE");
+    }
+
     public async void Reconnect(Action actionSuccess, Action actionError)
     {
         try
@@ -187,10 +204,11 @@ public class PVPRoomController : MonoBehaviour
             }
         }
     }
+
     private void InitHandle()
     {
         _onUpdateScore = OnUpdateScore;
-
+        _onAttackSkill = OnAttackSkill;
         _room.OnMessage<PlayerLeftMessage>("PLAYER_LEFT", (msg) =>
         {
             if (msg.GameState == 0 || msg.GameState == 1)
@@ -208,6 +226,12 @@ public class PVPRoomController : MonoBehaviour
         _room.OnMessage<PreparePVPMessage>("PREPARE_PVP", (msg) =>
         {
             OnPreparePVP?.Invoke(msg);
+            _isHaveReconnect = true;
+        });
+        _room.OnMessage<AttackSkillMessage>("ATTACK_SKILL", (msg) =>
+        {
+
+            _onAttackSkill.Invoke(msg);
             _isHaveReconnect = true;
         });
         _room.OnMessage<StartGamePVPMessage>("GAME_START", (msg) =>
@@ -239,7 +263,10 @@ public class PVPRoomController : MonoBehaviour
         _ = _room.Send("READY_PVP", dataPlayer);
          DebugCustom.LogColor("SEND_READY_PVP");
     }
-
+    private void OnAttackSkill(AttackSkillMessage data)
+    {
+        OnAttackHide?.Invoke(data.Type);
+    }
     private void OnUpdateScore(GetScorePVPMessage data)
     {
         string idOrtherPlayer = PVPManager.Instance.DataOtherPlayer.SessionId;

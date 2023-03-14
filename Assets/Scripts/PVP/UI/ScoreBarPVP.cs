@@ -29,5 +29,10 @@ namespace WE.UI.PVP
                 lbOpponentsScore.text = $"{0}";
             }
         }
+
+        public void HideOtherScore()
+        {
+            lbOpponentsScore.gameObject.SetActive(false);
+        }
     }
 }

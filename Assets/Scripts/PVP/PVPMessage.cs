@@ -69,6 +69,13 @@ public class PlayerDieMessage : MessageBase
 {
 }
 
+
+[Message("ATTACK_SKILL")]
+public class AttackSkillMessage : MessageBase
+{
+    public int Type;
+}
+
 [Message("PLAYER_LEFT")]
 public class PlayerLeftMessage : MessageBase
 {
